@@ -17,6 +17,7 @@ import argparse
 import html
 import json
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -105,6 +106,15 @@ def main() -> int:
     parser.add_argument("--root", default=str(here.parent))
     parser.add_argument("--offline", action="store_true")
     parser.add_argument("--skip-ld-reference", action="store_true")
+    parser.add_argument(
+        "--pharmcat-work-dir",
+        default=None,
+        help="Keep the PharmCAT-shaped VCF and PharmCAT's own reports here. "
+             "By default they are staged in a temporary directory and deleted "
+             "afterwards: the 500 reports run to a few hundred megabytes, and "
+             "the per-patient comparison is kept in qc/pharmcat_parity.csv "
+             "either way.",
+    )
     args = parser.parse_args()
 
     config = yaml.safe_load(Path(args.config).read_text(encoding="utf-8"))
@@ -210,7 +220,18 @@ def main() -> int:
         pd.read_parquet(coverage_path) if coverage_path.exists() else None
     )
     results.append(qc.gate_outcome_coverage(expected, coverage_cases))
-    results.append(qc.gate_pharmcat_parity())
+    log("8.2 PharmCAT parity (skipped quickly if PharmCAT is not installed) ...")
+    with tempfile.TemporaryDirectory(prefix="synthpgx_pharmcat_") as scratch:
+        results.append(
+            qc.gate_pharmcat_parity(
+                expected,
+                genotypes_long,
+                validation.get("pharmcat", {}),
+                int(manifest["seed"]),
+                work_dir=Path(args.pharmcat_work_dir or scratch),
+                report_path=qc_dir / "pharmcat_parity.csv",
+            )
+        )
 
     # --- 8.3 -------------------------------------------------------
     log("8.3 privacy ...")

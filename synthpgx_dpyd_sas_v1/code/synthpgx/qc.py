@@ -19,6 +19,8 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
+from . import pharmcat, vcfio
+
 SUPER_POPS = ["AFR", "AMR", "EAS", "EUR", "SAS"]
 SAS_SUB_POPS = ["GIH", "ITU", "PJL", "BEB", "STU"]
 
@@ -530,11 +532,217 @@ def gate_refusals(refusal_cases: pd.DataFrame, required: float,
     )
 
 
-def gate_pharmcat_parity() -> GateResult:
+# Disagreements with PharmCAT that this build understands and can account for.
+# Anything outside this set is counted as unexplained and fails the gate: the
+# point of the cross-check is to surface differences, not to absorb them.
+EXPLAINED_DISAGREEMENTS = {
+    "engine_refused_low_quality",
+    "engine_refused_ambiguous_phase",
+    "tie_break_equal_activity",
+}
+
+
+def _classify_pharmcat_row(row: pd.Series) -> str:
+    """Name the reason one patient's two calls differ."""
+    if not bool(row["pharmcat_called"]):
+        return "pharmcat_did_not_call"
+    if bool(row["diplotype_agrees"]) and bool(row["phenotype_agrees"]):
+        return "agree"
+
+    category = str(row.get("refusal_category_expected") or "")
+    # The engine declines to answer in two situations PharmCAT has no
+    # counterpart for. Neither is a miscall by either caller.
+    if category == "low_quality_call":
+        return "engine_refused_low_quality"
+    if category == "ambiguous_phase" or bool(row.get("phase_ambiguous_expected")):
+        return "engine_refused_ambiguous_phase"
+
+    same_consequence = bool(row["phenotype_agrees"]) and bool(
+        row["activity_score_agrees"]
+    )
+    if same_consequence and int(row["n_variant_copies"]) > 2:
+        return "tie_break_equal_activity"
+    if same_consequence:
+        return "naming_difference_same_consequence"
+    return "unexplained_call_difference"
+
+
+def gate_pharmcat_parity(
+    expected: pd.DataFrame,
+    genotypes_long: pd.DataFrame,
+    spec: dict[str, Any],
+    seed: int,
+    work_dir: str | Path,
+    report_path: str | Path | None = None,
+) -> GateResult:
+    """Cross-check a seed-fixed sample of patients against PharmCAT.
+
+    PharmCAT is an independent implementation of the same CPIC tables, so it
+    is the only check here that can catch an error shared by this dataset's
+    caller and its own expected output. It is not a gold standard: where the
+    two disagree, the gate's job is to say which of a small number of
+    understood reasons applies, and to fail if a disagreement is not one of
+    them.
+
+    Returns SKIPPED, never PASS, when PharmCAT is not installed.
+    """
+    gene = str(spec.get("gene", "DPYD"))
+    try:
+        install = pharmcat.find_install(spec.get("install_dir"))
+    except pharmcat.PharmcatUnavailable as exc:
+        return GateResult(
+            f"Parity with PharmCAT ({gene})", "8.2", "SKIPPED",
+            f"PharmCAT was not run: {exc}. This is a genuine gap, not a pass.",
+        )
+
+    sample_size = int(spec.get("sample_size", 500))
+    patient_ids = sorted(expected["patient_id"].astype(str).unique())
+    if not patient_ids:
+        return GateResult(
+            f"Parity with PharmCAT ({gene})", "8.2", "SKIPPED",
+            "No patients to sample.",
+        )
+    rng = np.random.default_rng(seed + int(spec.get("seed_offset", 8_002)))
+    size = min(sample_size, len(patient_ids))
+    sample = sorted(
+        rng.choice(np.array(patient_ids), size=size, replace=False).tolist()
+    )
+
+    work_dir = Path(work_dir)
+    work_dir.mkdir(parents=True, exist_ok=True)
+    calls_by_patient: dict[str, list[dict[str, Any]]] = {}
+    in_sample = genotypes_long[genotypes_long["patient_id"].astype(str).isin(sample)]
+    for call in in_sample.to_dict("records"):
+        calls_by_patient.setdefault(str(call["patient_id"]), []).append(call)
+
+    try:
+        sites = vcfio.read_pharmcat_positions(install.positions, gene)
+        vcf_path = vcfio.write_pharmcat_vcf(
+            work_dir / f"pharmcat_sample_{gene}.vcf",
+            sample, sites, calls_by_patient, gene,
+        )
+        output_dir = pharmcat.run(install, vcf_path, work_dir / "reports", gene)
+        called = pharmcat.parse_reports(output_dir, gene)
+    except pharmcat.PharmcatUnavailable as exc:
+        return GateResult(
+            f"Parity with PharmCAT ({gene})", "8.2", "SKIPPED",
+            f"PharmCAT {install.version} was found but did not run: {exc}.",
+        )
+    except ValueError as exc:
+        # A catalog variant with no PharmCAT position would silently vanish
+        # from the comparison, which would overstate agreement.
+        return GateResult(
+            f"Parity with PharmCAT ({gene})", "8.2", "FAIL", str(exc),
+            metrics=install.as_metrics(),
+        )
+
+    merged = (
+        expected.assign(patient_id=expected["patient_id"].astype(str))
+        [expected["patient_id"].astype(str).isin(sample)]
+        .merge(called, on="patient_id", how="left")
+    )
+    merged["pharmcat_called"] = merged["pharmcat_called"].fillna(False).astype(bool)
+
+    dosage = (
+        in_sample.assign(
+            copies=in_sample["genotype"].map({"0/1": 1, "1|0": 1, "0|1": 1, "1/1": 2,
+                                              "1|1": 2}).fillna(0)
+        )
+        .groupby(in_sample["patient_id"].astype(str))["copies"]
+        .sum()
+    )
+    merged["n_variant_copies"] = (
+        merged["patient_id"].map(dosage).fillna(0).astype(int)
+    )
+    merged["expected_diplotype_normalised"] = merged["diplotype_expected"].map(
+        pharmcat.split_diplotype
+    )
+    merged["diplotype_agrees"] = (
+        merged["expected_diplotype_normalised"] == merged["pharmcat_diplotype"]
+    )
+    merged["phenotype_agrees"] = (
+        merged["phenotype_expected"].astype(str)
+        == merged["pharmcat_phenotype"].astype(str)
+    )
+    engine_score = pd.to_numeric(merged["activity_score_expected"], errors="coerce")
+    pharmcat_score = pd.to_numeric(merged["pharmcat_activity_score"], errors="coerce")
+    merged["activity_score_agrees"] = (
+        np.isclose(engine_score, pharmcat_score, equal_nan=True)
+        | (engine_score.isna() & pharmcat_score.isna())
+    )
+    merged["disagreement_class"] = merged.apply(_classify_pharmcat_row, axis=1)
+
+    if report_path is not None:
+        columns = [
+            "patient_id", "diplotype_expected", "expected_diplotype_normalised",
+            "pharmcat_diplotype", "phenotype_expected", "pharmcat_phenotype",
+            "activity_score_expected", "pharmcat_activity_score",
+            "n_variant_copies", "pharmcat_n_possible_diplotypes",
+            "refusal_category_expected", "phase_ambiguous_expected",
+            "diplotype_agrees", "phenotype_agrees", "activity_score_agrees",
+            "disagreement_class",
+        ]
+        report_path = Path(report_path)
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        merged[columns].sort_values("patient_id").to_csv(report_path, index=False)
+
+    details = (
+        merged.groupby("disagreement_class")
+        .agg(
+            n=("patient_id", "size"),
+            example_patient=("patient_id", "min"),
+        )
+        .reset_index()
+        .sort_values(["n", "disagreement_class"], ascending=[False, True])
+    )
+    details["share"] = details["n"] / len(merged)
+    examples = merged.set_index("patient_id")
+    details["example_expected"] = [
+        str(examples.loc[p, "expected_diplotype_normalised"])
+        for p in details["example_patient"]
+    ]
+    details["example_pharmcat"] = [
+        str(examples.loc[p, "pharmcat_diplotype"]) for p in details["example_patient"]
+    ]
+
+    diplotype_rate = float(merged["diplotype_agrees"].mean())
+    phenotype_rate = float(merged["phenotype_agrees"].mean())
+    unexplained = merged[
+        ~merged["disagreement_class"].isin(EXPLAINED_DISAGREEMENTS | {"agree"})
+    ]
+    max_unexplained = int(spec.get("max_unexplained", 0))
+    status = "PASS" if len(unexplained) <= max_unexplained else "FAIL"
+
+    breakdown = ", ".join(
+        f"{row.disagreement_class} {row.n}"
+        for row in details.itertuples()
+        if row.disagreement_class != "agree"
+    )
+    summary = (
+        f"PharmCAT {install.version} on {len(merged)} patients: "
+        f"{diplotype_rate:.2%} diplotype agreement, "
+        f"{phenotype_rate:.2%} phenotype agreement. "
+        + (f"Disagreements: {breakdown}. " if breakdown else "No disagreements. ")
+        + (
+            f"{len(unexplained)} unexplained (limit {max_unexplained})."
+            if len(unexplained)
+            else "Every disagreement falls into a known class."
+        )
+    )
+    metrics = {
+        "n_sampled": len(merged),
+        "diplotype_agreement": diplotype_rate,
+        "phenotype_agreement": phenotype_rate,
+        "n_unexplained": int(len(unexplained)),
+        "pharmcat_allele_definition_version": (
+            str(merged["pharmcat_allele_definition_version"].dropna().iloc[0])
+            if merged["pharmcat_allele_definition_version"].notna().any()
+            else None
+        ),
+        **install.as_metrics(),
+    }
     return GateResult(
-        "Parity with PharmCAT", "8.2", "SKIPPED",
-        "PharmCAT is not installed in this environment, so the 500-sample "
-        "cross-check was not run. This is a genuine gap in v1, not a pass.",
+        f"Parity with PharmCAT ({gene})", "8.2", status, summary, details, metrics
     )
 
 

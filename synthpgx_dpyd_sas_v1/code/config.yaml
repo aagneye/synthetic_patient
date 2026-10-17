@@ -312,6 +312,19 @@ validation:
     require_determinism: true
     require_ground_truth_match: 1.0
     require_refusal_match: 1.0
+  pharmcat:
+    # Cross-check against PharmCAT, an independent implementation of the same
+    # CPIC tables. PharmCAT is not vendored: point install_dir at an unpacked
+    # release, or set $PHARMCAT_HOME. The directory needs the release jar and
+    # the pharmcat_positions VCF that ships with it. Without one the gate
+    # reports SKIPPED, never PASS.
+    install_dir: null
+    gene: DPYD
+    sample_size: 500
+    seed_offset: 8002          # sampling seed = dataset seed + this
+    # Disagreements outside the classes in qc.EXPLAINED_DISAGREEMENTS fail the
+    # gate. Raising this would hide exactly what the check exists to find.
+    max_unexplained: 0
   strata:
     min_effective_n: 200
   privacy:
