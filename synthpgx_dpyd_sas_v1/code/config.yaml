@@ -1,0 +1,319 @@
+# SynthPGx-DPYD-SAS v1 -- generation configuration
+#
+# SYNTHETIC. In silico cohort validation. Not clinical evidence.
+#
+# Every number in this file is either SOURCED (copied from a fetched record,
+# with the record named) or ASSUMPTION (chosen to be plausible, unverified).
+# The two are never mixed silently: assumptions are tagged where they appear
+# and are reported in the datasheet and the QC report.
+
+dataset:
+  name: SynthPGx-DPYD-SAS
+  version: "1.0"
+  gene: DPYD
+  cancer_type: colorectal
+  label: "SYNTHETIC. In silico cohort validation. Not clinical evidence."
+
+seed: 42
+
+# ----------------------------------------------------------------------
+# Cohorts (build brief Part 9)
+# ----------------------------------------------------------------------
+cohorts:
+  equity_panel:
+    # Equal-sized per ancestry, so flagged-risk rates are comparable.
+    purpose: F4 population-equity measurement
+    per_population: 2000
+    populations: [AFR, AMR, EAS, EUR, SAS]
+    sas_sub_pop_weights: null   # uniform across sub-populations
+
+  sas_realistic:
+    # SAS-weighted mixture. The weights below are ASSUMPTIONS standing in for
+    # India's real sub-population structure; 1000 Genomes carries only five
+    # South Asian panels and none of them samples tribal, rural, Northeast or
+    # island populations. See DATASHEET.md.
+    purpose: F1 / F2 / F6
+    total: 10000
+    populations: [SAS]
+    sas_sub_pop_weights:
+      GIH: 0.26   # ASSUMPTION
+      ITU: 0.22   # ASSUMPTION
+      PJL: 0.20   # ASSUMPTION
+      BEB: 0.18   # ASSUMPTION
+      STU: 0.14   # ASSUMPTION
+
+  cro_demo:
+    purpose: F6 CRO demonstration cohort
+    total: 500
+    populations: [SAS]
+    sas_sub_pop_weights:
+      GIH: 0.26
+      ITU: 0.22
+      PJL: 0.20
+      BEB: 0.18
+      STU: 0.14
+
+refusal_panel:
+  purpose: F3 refusal-path test
+  per_category: 90          # 6 categories -> at least 500 engineered rows
+  coverage_per_target: 25   # enriched rows per CPIC activity score (NOT a population sample)
+
+# ----------------------------------------------------------------------
+# Method A: coalescent background
+# ----------------------------------------------------------------------
+genotypes:
+  region_flank_bp: 20000
+  recombination_map: HapMapII_GRCh38   # SOURCED: stdpopsim, GRCh38 native
+  mutation_rate: null                  # null -> stdpopsim HomSap default
+  background_sites_for_qc: 3000
+  background_min_maf: 0.01
+
+  demography:
+    # SOURCED backbone: Jouganous et al. 2017, as packaged by stdpopsim.
+    base_model: OutOfAfrica_4J17
+    added_populations:
+      SAS:
+        # ASSUMPTION. The base model has no South Asian population. These
+        # parameters shape the BACKGROUND genome only; the catalog-variant
+        # frequencies that Layer A is tested on come from gnomAD, not from
+        # this demography. Realised Fst is reported in the QC report.
+        splits_from: CEU
+        split_time_generations: 1200
+        initial_size: 25000
+        growth_rate: 0.0
+        rationale: >-
+          Placed on the Eurasian branch after the out-of-Africa bottleneck so
+          that SAS sits between EUR and EAS in PCA space, which is the
+          qualitative structure the equity analysis depends on.
+      AMR:
+        # ASSUMPTION, same caveat as SAS.
+        admixture_time_generations: 20
+        initial_size: 18000
+        growth_rate: 0.0
+        ancestral_proportions:
+          CEU: 0.55
+          YRI: 0.15
+          CHB: 0.30
+        rationale: >-
+          A three-way admixture standing in for the gnomAD "amr" grouping.
+          Proportions are illustrative, not an ancestry estimate for any real
+          population.
+
+  quality:
+    # Simulated read depth and genotype quality, so that filters and the
+    # quality refusal path can be exercised. ASSUMPTION: shapes chosen to look
+    # like a routine targeted panel.
+    dp_mean: 85
+    dp_sd: 25
+    dp_min: 8
+    gq_mean: 75
+    gq_sd: 15
+    gq_max: 99
+    low_quality_fraction: 0.0   # the refusal panel supplies low-quality rows
+    phased_fraction: 0.0        # unphased by default, as a clinical VCF is
+
+engine:
+  # Thresholds the Layer A quality gate uses. ASSUMPTION: these are this
+  # dataset's defaults. Build brief open question 3 asks the team to take the
+  # real values from the engine source; when they differ, change them here and
+  # regenerate expected_engine_output.
+  min_dp: 20
+  min_gq: 30
+  supported_ancestries: [AFR, AMR, EAS, EUR, SAS]
+
+  # Activity score -> DrugSafetyOutcome and dose action.
+  # The activity scores, phenotypes and recommendation text are SOURCED from
+  # the CPIC API. This table is the mapping of that text onto the five
+  # DrugSafetyOutcome enum values, kept in config so it is auditable rather
+  # than buried in code.
+  outcome_map:
+    "2.0":
+      outcome: RECOMMENDATION_AS_IS
+      dose_action: standard
+    "1.5":
+      outcome: WITH_CAVEAT
+      dose_action: reduce_50pct
+    "1.0":
+      outcome: WITH_CAVEAT
+      dose_action: reduce_50pct
+    "0.5":
+      outcome: ALTERNATIVE_RECOMMENDED
+      dose_action: avoid_or_lt25pct_with_TDM
+    "0.0":
+      outcome: CONTRAINDICATED
+      dose_action: avoid
+
+  # Path to an anukriti-swarm checkout. When absent, refusal_rule_id_expected
+  # is written as null and refusal_category_expected carries the meaning
+  # instead. Rule IDs are never invented.
+  swarm_source: null
+
+# ----------------------------------------------------------------------
+# Method B: clinical covariates
+# ----------------------------------------------------------------------
+clinical_covariates:
+  seed_rows: 600
+  age_years:
+    mean: 62      # ASSUMPTION: colorectal-cancer-like age distribution
+    sd: 11
+    min: 25
+    max: 85
+  renal_function_egfr:
+    mean: 82      # ASSUMPTION
+    sd: 20
+    min: 15
+    max: 130
+  age_egfr_correlation: -0.45   # ASSUMPTION: renal function falls with age
+  sex:
+    F: 0.45       # ASSUMPTION
+    M: 0.55
+  regimen:        # ASSUMPTION: regimen mix
+    5FU_bolus: 0.08
+    5FU_infusional: 0.15
+    capecitabine: 0.22
+    FOLFOX: 0.28
+    FOLFIRI: 0.12
+    XELOX: 0.15
+  regimen_age_shift: 0.35       # ASSUMPTION: older patients skew oral
+  dose_mg_m2:                   # ASSUMPTION: standard starting doses
+    5FU_bolus:      {mean: 425.0, cv: 0.08}
+    5FU_infusional: {mean: 2400.0, cv: 0.08}
+    capecitabine:   {mean: 1250.0, cv: 0.08}
+    FOLFOX:         {mean: 2400.0, cv: 0.08}
+    FOLFIRI:        {mean: 2400.0, cv: 0.08}
+    XELOX:          {mean: 1000.0, cv: 0.08}
+  co_medication_probability: 0.18   # ASSUMPTION
+
+# ----------------------------------------------------------------------
+# Layer B: simulated outcomes
+# ----------------------------------------------------------------------
+# EVERY coefficient below is on the log-odds scale. None of them is evidence.
+# They exist so the pipeline has outcome labels to carry; they do not show that
+# any variant causes toxicity, and they must never feed back into Layer A.
+outcomes:
+  version: "outcome-model-v1"
+  sensitivity_draws: 3
+
+  centring:
+    age_years: 62
+    renal_function_egfr: 90
+
+  coefficients:
+    intercept:
+      value: -0.85
+      uncertainty_sd: 0.15
+      provenance: ASSUMPTION
+      note: >-
+        Gives a baseline grade 3+ toxicity probability near 0.30 for an average
+        unscreened patient, inside the 0.30-0.40 range the build brief cites.
+      source_pmids: [29152729]
+    activity_deficit_per_unit:
+      value: 1.60
+      uncertainty_sd: 0.40
+      provenance: ASSUMPTION
+      note: >-
+        Direction and ordering are SOURCED from CPIC, whose implication text
+        states decreased DPD activity carries increased risk of severe or fatal
+        toxicity, and places intermediate metabolisers at 30-70 percent of
+        normal leukocyte DPD activity. The magnitude is an assumption.
+      source_pmids: [29152729]
+    sas_override_carrier:
+      value: 0.55
+      uncertainty_sd: 0.30
+      provenance: ASSUMPTION
+      note: >-
+        Direction is SOURCED from Naushad et al. 2021 (PMID 33105068, n=2000),
+        which reports V732I as associated with 5-FU/capecitabine toxicity in
+        pooled Indian data. That paper is paywalled, so no odds ratio was
+        transcribed and this magnitude is an assumption with wide uncertainty.
+        This term is what a CPIC-only screen misses.
+      source_pmids: [33105068, 38886557]
+    age_per_decade:
+      value: 0.12
+      uncertainty_sd: 0.06
+      provenance: ASSUMPTION
+      source_pmids: []
+    egfr_per_10_below_ref:
+      value: 0.10
+      uncertainty_sd: 0.05
+      provenance: ASSUMPTION
+      source_pmids: []
+    co_medication:
+      value: 0.30
+      uncertainty_sd: 0.15
+      provenance: ASSUMPTION
+      source_pmids: []
+    mortality_activity_deficit_per_unit:
+      value: 1.20
+      uncertainty_sd: 0.40
+      provenance: ASSUMPTION
+      source_pmids: []
+
+  regimen_effects:   # ASSUMPTION, log-odds
+    5FU_bolus: 0.25
+    5FU_infusional: 0.0
+    capecitabine: 0.10
+    FOLFOX: 0.30
+    FOLFIRI: 0.35
+    XELOX: 0.25
+
+  mortality_baseline: 0.0075          # ASSUMPTION, within the cited 0.005-0.01
+  p_hospitalised_given_g3plus: 0.42   # ASSUMPTION
+  p_dose_reduced_given_g3plus: 0.70   # ASSUMPTION
+  p_dose_reduced_given_no_g3plus: 0.08  # ASSUMPTION
+
+  grade_distribution:                 # ASSUMPTION, CTCAE v5.0 grades
+    no_g3plus:
+      grades: [0, 1, 2]
+      weights: [0.35, 0.37, 0.28]
+    g3plus:
+      grades: [3, 4]
+      weights: [0.82, 0.18]
+
+  toxicity_types:                     # ASSUMPTION
+    neutropenia: {p_given_g3plus: 0.45}
+    diarrhea:    {p_given_g3plus: 0.40}
+    mucositis:   {p_given_g3plus: 0.30}
+    handfoot:    {p_given_g3plus: 0.18, oral_multiplier: 2.6}
+    neurotox:    {p_given_g3plus: 0.22, oxaliplatin_multiplier: 1.0}
+
+  cycles:
+    min: 1
+    max: 12
+    max_if_death: 4
+
+# ----------------------------------------------------------------------
+# Splits (build brief Part 9)
+# ----------------------------------------------------------------------
+splits:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+  by: patient
+  lock_test_set: true
+
+# ----------------------------------------------------------------------
+# Quality gates (build brief Part 8)
+# ----------------------------------------------------------------------
+validation:
+  allele_frequency:
+    common_maf_threshold: 0.05
+    common_abs_tolerance: 0.01     # absolute, for MAF > 5%
+    rare_rel_tolerance: 0.25       # relative, for rarer variants
+    min_expected_count: 5          # below this, report but do not fail
+  hardy_weinberg:
+    min_p_value: 0.01
+  linkage_disequilibrium:
+    reference: ensembl_1000genomes
+    max_frobenius_distance: null   # reported, not gated, in v1
+  population_structure:
+    require_real_reference: false  # 1000 Genomes genotypes are not bundled
+  engine:
+    require_determinism: true
+    require_ground_truth_match: 1.0
+    require_refusal_match: 1.0
+  strata:
+    min_effective_n: 200
+  privacy:
+    max_epsilon_identifiability: 0.35
+    nnaa_tolerance: 0.10           # |NNAA - 0.5| must not exceed this
