@@ -241,11 +241,38 @@ and the same code path expands those instead.
 inventing R/V/U identifiers, the `anukriti-swarm` source is not present here,
 so the semantic `refusal_category_expected` carries the meaning instead.
 
-### 10. Three checks were skipped and are gaps, not passes
+### 10. One check is skipped, and PharmCAT parity is not 100%
 
-PharmCAT parity (not installed), PCA against real 1000 Genomes samples (not
-bundled), and train-synthetic-test-real ML utility (needs the DPYD v4
-classifier and a real functionally-labelled held-out variant set).
+Two gaps remain, and they are gaps, not passes: PCA against real 1000 Genomes
+samples (the reference genotypes are not bundled) is reported for the synthetic
+cohort only, and train-synthetic-test-real ML utility is **skipped** outright —
+it needs the DPYD v4 classifier and a real functionally-labelled held-out
+variant set, neither of which is in this repository.
+
+PharmCAT parity now runs. It is no longer a gap, but it is not a clean bill of
+health either. PharmCAT 3.4.0 over a seed-fixed sample of 500 patients agrees
+with `expected_engine_output.parquet` on **88.40%** of diplotypes and **98.20%**
+of phenotypes. The 59 disagreements fall into three classes, all understood,
+none of which changes a CPIC recommendation:
+
+| Class | n | What it is |
+|---|---|---|
+| `tie_break_equal_activity` | 50 | Patient carries more than two variant alleles. CPIC says to use the two lowest activity values but does not say which of several equal-activity alleles to name. Layer A sorts by name; PharmCAT keeps a homozygous allele on both chromosomes. Activity score and phenotype agree in all 50. |
+| `engine_refused_low_quality` | 8 | A call below `min_dp` 20 or `min_gq` 30 makes Layer A return `Indeterminate`. The PharmCAT-shaped VCF carries `GT` only — DP and GQ are not invented for reference rows — so PharmCAT has no quality signal and calls normally. |
+| `engine_refused_ambiguous_phase` | 1 | Two Decreased-function variants, unphased. Both callers name the same diplotype and the same activity score; PharmCAT follows CPIC's unphased convention and reports a phenotype, Layer A declines because phase would change the answer. |
+
+In both refusal classes the engine is the more conservative of the two. The
+tie-break class is a difference in the diplotype *label* only, and is the one
+worth revisiting: anything that joins on the diplotype string will see a
+1-in-10 mismatch against PharmCAT on this cohort. It was not changed in v1
+because doing so would alter labels the deployed engine may already have
+produced. Full counts, worked examples and the reasoning are in
+`qc/open_questions.md`; the per-patient comparison is `qc/pharmcat_parity.csv`.
+
+PharmCAT is not bundled. On a machine without it the gate reports SKIPPED, which
+is a gap and not a pass. PharmCAT is a second implementation of the same CPIC
+tables, not a gold standard: it cannot adjudicate the South Asian override,
+which has no CPIC counterpart by construction.
 
 ### 11. Corrections this build made to its own brief
 

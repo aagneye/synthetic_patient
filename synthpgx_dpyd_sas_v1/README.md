@@ -79,7 +79,9 @@ synthpgx_dpyd_sas_v1/
   qc/
     qc_report.html                every Part 8 gate
     qc_metrics.json               the same metrics, machine-readable
-    open_questions.md             every value that could not be sourced
+    open_questions.md             every value that could not be sourced,
+                                  and every PharmCAT disagreement
+    pharmcat_parity.csv           per-patient PharmCAT cross-check, 500 rows
     generation_manifest.json      what was run, with what, when
   code/
     fetch_reference.py  generate.py  validate.py  config.yaml
@@ -110,6 +112,36 @@ gate fails.
 Useful flags: `--scale 0.02` for a fast smoke run, `--swarm-source <path>` to
 supply real refusal rule IDs, `--clinical-seed <csv>` to expand real patient
 profiles instead of the assumption-built seed cohort.
+
+### The PharmCAT parity gate
+
+`validate.py` cross-checks 500 patients against [PharmCAT](https://pharmcat.org),
+an independent implementation of the same CPIC tables. PharmCAT is deliberately
+**not** vendored here: the check is only worth something against a release you
+can download yourself. It needs Java 17+ and an unpacked PharmCAT release
+holding both the jar and the `pharmcat_positions` VCF that ships with it:
+
+```bash
+mkdir -p ~/pharmcat && cd ~/pharmcat
+curl -LO https://github.com/PharmGKB/PharmCAT/releases/download/v3.4.0/pharmcat-3.4.0-all.jar
+curl -LO https://github.com/PharmGKB/PharmCAT/releases/download/v3.4.0/pharmcat_positions_3.4.0.vcf
+export PHARMCAT_HOME=~/pharmcat
+```
+
+Set `$PHARMCAT_HOME`, or point `validation.pharmcat.install_dir` in
+`config.yaml` at the same directory. Without it the gate reports SKIPPED — a
+gap, never a pass. With it, expect validation to take about 70 seconds longer.
+
+The per-patient VCFs in `data/vcf/` are *not* what PharmCAT is fed. They carry
+only non-reference calls, as a variant caller emits; PharmCAT's matcher needs
+every position in its allele definition present, so that a missing row means
+"not sequenced" rather than "reference". `vcfio.write_pharmcat_vcf` emits a
+separate multi-sample VCF covering all 83 DPYD definition positions, taking REF
+and ALT from PharmCAT's own positions file. Its FORMAT is `GT` alone: DP and GQ
+are not invented for the reference rows, which is why PharmCAT has no
+counterpart to the engine's quality-refusal path. Pass
+`--pharmcat-work-dir <path>` to keep that VCF and PharmCAT's own reports
+(a few hundred megabytes) instead of staging them in a temporary directory.
 
 ## Where the numbers come from
 
@@ -174,8 +206,17 @@ throughout and `refusal_category_expected` carries the meaning instead. Pass
 
 Skipped gates in the QC report are gaps, not passes.
 
-- **PharmCAT parity** was not run; PharmCAT is not installed. `pharmvar_version`
-  is null because the PharmVar API needs credentials.
+- **PharmCAT parity runs, and it is not 100%.** PharmCAT 3.4.0 over a seed-fixed
+  sample of 500 patients agrees on **88.40%** of diplotypes and **98.20%** of
+  phenotypes. All 59 disagreements fall into three understood classes — a
+  diplotype tie-break among equal-activity alleles (50), and the engine's two
+  refusal paths, which PharmCAT has no counterpart for (8 low-quality calls, 1
+  ambiguous phase). None changes a CPIC recommendation. Counts, worked examples
+  and what to do about each are in `qc/open_questions.md`; the per-patient
+  comparison is `qc/pharmcat_parity.csv`. The gate fails on any disagreement
+  outside those classes. PharmCAT is not bundled, so on a machine without it the
+  gate reports SKIPPED rather than passing.
+- **`pharmvar_version` is null** because the PharmVar API needs credentials.
 - **PCA against real 1000 Genomes samples** was not run; the reference
   genotypes are not bundled. Population structure is reported for the synthetic
   cohort only.
