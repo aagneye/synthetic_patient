@@ -1,0 +1,6 @@
+protein,pmid,cohort_n,cohort_description,maf_indian,effect_direction,effect_note,effect_size_reported,in_silico
+V732I,33105068,2000,Indian subjects screened on Infinium Global Screening Array,0.0844,toxicity_associated,Pooled Indian data: V732I associated with 5-FU/capecitabine toxicity,,"damaging (paper), thermolabile (CUPSAT)"
+S534N,33105068,2000,Indian subjects screened on Infinium Global Screening Array,,toxicity_associated,Pooled Indian data: S534N associated with 5-FU/capecitabine toxicity,,"damaging (paper), thermolabile (CUPSAT)"
+C29R,33105068,2000,Indian subjects screened on Infinium Global Screening Array,0.2491,null_association,Pooled Indian data: C29R exhibited null association (negative control),,not reported as damaging
+I543V,33105068,2000,Indian subjects screened on Infinium Global Screening Array,0.09047,null_association,Pooled Indian data: I543V exhibited null association (negative control),,"thermolabile (CUPSAT), not damaging"
+M166V,33105068,2000,Indian subjects screened on Infinium Global Screening Array,0.08993,null_association,Pooled Indian data: M166V exhibited null association (negative control). Same variant as rs2297595 / c.496A>G cited from Hariprakash 2018.,,damaging (paper)

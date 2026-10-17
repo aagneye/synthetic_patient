@@ -1,0 +1,126 @@
+{
+  "gene": {
+    "chr": "chr1",
+    "chromosequenceid": "NC_000001.11",
+    "clinpgxid": "PA145",
+    "ensemblid": "ENSG00000188641",
+    "frequencymethods": "Methods:\nThe DPYD frequency table was created using data from ExAC (http://exac.broadinstitute.org/) and the 1000 Genomes project (http://www.ensembl.org/Homo_sapiens/Info/Index).\nThe average allele frequencies by race were calculated by taking the number with the variant in all studies divided by the total number of individuals tested for the variant in all studies.\nAll nucleotide changes are according to reference sequence NM_000110.3 and all protein changes are according to reference sequence NP_000101.2\nCaveats\nIf 1000 Genomes and/or ExAC did not return any frequency data for a given variant, cells were left blank\n\nBiogeographical groups. Biogeographical groups are derived from PMID 30506572. Further details can be found at https://www.pharmgkb.org/page/biogeographicalGroups. These tables group individuals from particular geographic locations into larger biogeographical groups. It is difficult to group populations with certainty, because some populations are often admixed, or at the least, a combination of different ethnicities. Therefore, the margin of error is increased when different subpopulations are grouped together.\n\n\n\n\n\n\n\n",
+    "functionmethods": null,
+    "genesequenceid": "NG_008807.2",
+    "hgncid": "HGNC:3012",
+    "includediplotypefrequencies": false,
+    "includephenotypefrequencies": false,
+    "lookupmethod": "ACTIVITY_SCORE",
+    "mrnasequenceid": "NM_000110.4",
+    "ncbiid": "282617",
+    "notesonallelenaming": "Legacy Name/Class",
+    "notesondiplotype": "The DPYD phenotype is assigned using a gene activity score (DPYD-AS; based on the DPYD Allele Functionality Table), calculated as the sum of the two DPYD variants with the lowest variant activity value. Briefly, carriers of two no function variants (DPYD-AS: 0) OR one decreased function variant (DPD-AS: 0.5) are classified as DPYD poor metabolizers; carriers of two decreased function variants OR carriers of only one no function variant (DPYD-AS: 1) OR carriers of only one decreased function variant (DPYD-AS: 1.5) are considered DPYD intermediate metabolizers , and those with only normal function variants are classified as DPYD normal metabolizers (DPYD-AS: 2). If two decreased/no function variants are present, each decreased/no function variant is considered to be on a different gene copy. Irrespective of the presence of decreased/no function variants, patients may carry multiple normal function variants. As an individual only carries a maximum of two fully functional DPYD copies, common normal function variants may be located on the same gene copy as other normal function variants or decreased/no function variants.",
+    "proteinsequenceid": "NP_000101.2",
+    "symbol": "DPYD",
+    "url": "https://cpicpgx.org/gene/dpyd/",
+    "version": 459
+  },
+  "pmid_verification": {
+    "18452418": {
+      "first_author": "He YF",
+      "journal": "J Clin Pharm Ther",
+      "pubdate": "2008 Jun",
+      "title": "Analysis of the DPYD gene implicated in 5-fluorouracil catabolism in Chinese cancer patients."
+    },
+    "23328581": {
+      "first_author": "Offer SM",
+      "journal": "Cancer Res",
+      "pubdate": "2013 Mar 15",
+      "title": "Phenotypic profiling of DPYD variations relevant to 5-fluorouracil sensitivity using real-time cellular analysis and in vitro measurement of enzyme activity."
+    },
+    "23588312": {
+      "first_author": "Offer SM",
+      "journal": "Clin Pharmacol Ther",
+      "pubdate": "2013 Jul",
+      "title": "A DPYD variant (Y186C) in individuals of african ancestry is associated with reduced DPD enzyme activity."
+    },
+    "24648345": {
+      "first_author": "Offer SM",
+      "journal": "Cancer Res",
+      "pubdate": "2014 May 1",
+      "title": "Comparative functional analysis of DPYD variants of potential clinical relevance to dihydropyrimidine dehydrogenase activity."
+    },
+    "25410891": {
+      "first_author": "Sistonen J",
+      "journal": "Pharmacogenomics",
+      "pubdate": "2014 Sep",
+      "title": "Predicting 5-fluorouracil toxicity: DPD genotype and 5,6-dihydrouracil:uracil ratio."
+    },
+    "28295243": {
+      "first_author": "Nie Q",
+      "journal": "Clin Pharmacol Ther",
+      "pubdate": "2017 Oct",
+      "title": "Quantitative Contribution of rs75017182 to Dihydropyrimidine Dehydrogenase mRNA Splicing and Enzyme Activity."
+    },
+    "29152729": {
+      "first_author": "Amstutz U",
+      "journal": "Clin Pharmacol Ther",
+      "pubdate": "2018 Feb",
+      "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Dihydropyrimidine Dehydrogenase Genotype and Fluoropyrimidine Dosing: 2017 Update."
+    },
+    "29239269": {
+      "first_author": "Hariprakash JM",
+      "journal": "Pharmacogenomics",
+      "pubdate": "2018 Feb",
+      "title": "Pharmacogenetic landscape of DPYD variants in south Asian populations by integration of genome-scale data."
+    },
+    "33105068": {
+      "first_author": "Naushad SM",
+      "journal": "J Gene Med",
+      "pubdate": "2021 Jan",
+      "title": "Pharmacogenetic profiling of dihydropyrimidine dehydrogenase (DPYD) variants in the Indian population."
+    },
+    "38886557": {
+      "first_author": "Chan TH",
+      "journal": "Br J Cancer",
+      "pubdate": "2024 Aug",
+      "title": "DPYD genetic polymorphisms in non-European patients with severe fluoropyrimidine-related toxicity: a systematic review."
+    }
+  },
+  "sources": {
+    "layer_a_truth": {
+      "endpoint": "https://api.cpicpgx.org/v1/",
+      "name": "CPIC",
+      "note": "Allele function, activity value, diplotype->phenotype, recommendations."
+    },
+    "primary": {
+      "dataset": "gnomad_r3",
+      "endpoint": "https://gnomad.broadinstitute.org/api",
+      "name": "gnomAD",
+      "note": "Spec 6.4.3: gnomAD v3.1.2 is the primary frequency source. 1000 Genomes is supplemental only, because 1000 Genomes samples are also inside gnomAD and must not be double-counted.",
+      "populations_used": {
+        "afr": "AFR",
+        "amr": "AMR",
+        "eas": "EAS",
+        "nfe": "EUR",
+        "sas": "SAS"
+      }
+    },
+    "secondary": {
+      "dataset": "gnomad_r4",
+      "name": "gnomAD",
+      "note": "Used only when the variant is absent from the primary dataset."
+    },
+    "supplemental": {
+      "endpoint": "https://rest.ensembl.org/",
+      "name": "1000 Genomes phase 3 via Ensembl REST",
+      "note": "Never used for injection targets; reported for comparison only.",
+      "populations_used": [
+        "GIH",
+        "ITU",
+        "PJL",
+        "BEB",
+        "STU"
+      ]
+    },
+    "unavailable": {
+      "GenomeIndia": "No machine-readable endpoint reached; all values null.",
+      "PharmVar": "API returned HTTP 401 without credentials."
+    }
+  }
+}
