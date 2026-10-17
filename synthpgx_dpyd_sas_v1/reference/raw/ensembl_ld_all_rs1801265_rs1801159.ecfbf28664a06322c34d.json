@@ -1,0 +1,23 @@
+[
+ {
+  "d_prime": "0.799643",
+  "population_name": "1000GENOMES:phase_3:PUR",
+  "r2": "0.053679",
+  "variation1": "rs1801265",
+  "variation2": "rs1801159"
+ },
+ {
+  "d_prime": "0.459875",
+  "population_name": "1000GENOMES:phase_3:STU",
+  "r2": "0.063891",
+  "variation1": "rs1801265",
+  "variation2": "rs1801159"
+ },
+ {
+  "d_prime": "0.786946",
+  "population_name": "GGVP:GWJ",
+  "r2": "0.057613",
+  "variation1": "rs1801265",
+  "variation2": "rs1801159"
+ }
+]

@@ -1,0 +1,108 @@
+{
+ "MAF": null,
+ "ambiguity": "B",
+ "evidence": [
+  "Frequency",
+  "Cited"
+ ],
+ "mappings": [
+  {
+   "allele_string": "C/G/T",
+   "ancestral_allele": "C",
+   "assembly_name": "GRCh38",
+   "coord_system": "chromosome",
+   "end": 97699533,
+   "location": "1:97699533-97699533",
+   "seq_region_name": "1",
+   "start": 97699533,
+   "strand": 1
+  }
+ ],
+ "minor_allele": null,
+ "most_severe_consequence": "missense_variant",
+ "name": "rs139834141",
+ "populations": [
+  {
+   "allele": "C",
+   "allele_count": 53412,
+   "frequency": 1,
+   "population": "gnomADe:fin"
+  },
+  {
+   "allele": "C",
+   "allele_count": 44714,
+   "frequency": 1,
+   "population": "gnomADe:amr"
+  },
+  {
+   "allele": "T",
+   "allele_count": 1,
+   "frequency": 6.843e-07,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "C",
+   "allele_count": 1461295,
+   "frequency": 1,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "C",
+   "allele_count": 1111565,
+   "frequency": 1,
+   "population": "gnomADe:nfe"
+  },
+  {
+   "allele": "T",
+   "allele_count": 1,
+   "frequency": 8.996e-07,
+   "population": "gnomADe:nfe"
+  },
+  {
+   "allele": "C",
+   "allele_count": 86238,
+   "frequency": 1,
+   "population": "gnomADe:sas"
+  },
+  {
+   "allele": "C",
+   "allele_count": 26110,
+   "frequency": 1,
+   "population": "gnomADe:asj"
+  },
+  {
+   "allele": "C",
+   "allele_count": 5764,
+   "frequency": 1,
+   "population": "gnomADe:mid"
+  },
+  {
+   "allele": "C",
+   "allele_count": 60368,
+   "frequency": 1,
+   "population": "gnomADe:remaining"
+  },
+  {
+   "allele": "C",
+   "allele_count": 33444,
+   "frequency": 1,
+   "population": "gnomADe:afr"
+  },
+  {
+   "allele": "C",
+   "allele_count": 39680,
+   "frequency": 1,
+   "population": "gnomADe:eas"
+  }
+ ],
+ "source": "Variants (including SNPs and indels) imported from dbSNP",
+ "synonyms": [
+  "PA166159771",
+  "NM_000110.3:c.498G>A",
+  "NM_000110.4:c.498G>C",
+  "NM_000110.3:c.498G>C",
+  "NP_000101.2:p.Met166Ile",
+  "NM_000110.4:c.498G>A"
+ ],
+ "var_class": "SNP"
+}

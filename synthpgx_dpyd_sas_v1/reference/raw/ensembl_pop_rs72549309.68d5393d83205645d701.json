@@ -1,0 +1,341 @@
+{
+ "MAF": null,
+ "ambiguity": null,
+ "clinical_significance": [
+  "pathogenic"
+ ],
+ "evidence": [
+  "Frequency",
+  "Cited",
+  "ESP",
+  "Phenotype_or_Disease",
+  "ExAC",
+  "TOPMed",
+  "gnomAD"
+ ],
+ "mappings": [
+  {
+   "allele_string": "ATGAATGA/ATGA",
+   "ancestral_allele": "ATGAATGA",
+   "assembly_name": "GRCh38",
+   "coord_system": "chromosome",
+   "end": 97740418,
+   "location": "1:97740411-97740418",
+   "seq_region_name": "1",
+   "start": 97740411,
+   "strand": 1
+  }
+ ],
+ "minor_allele": null,
+ "most_severe_consequence": "frameshift_variant",
+ "name": "rs72549309",
+ "populations": [
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 5760,
+   "frequency": 1,
+   "population": "gnomADe:mid"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 39620,
+   "frequency": 1,
+   "population": "gnomADe:eas"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 33435,
+   "frequency": 1,
+   "population": "gnomADe:afr"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 1,
+   "frequency": 2.991e-05,
+   "population": "gnomADe:afr"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 53240,
+   "frequency": 1,
+   "population": "gnomADe:fin"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 26094,
+   "frequency": 1,
+   "population": "gnomADe:asj"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 157,
+   "frequency": 0.0001413,
+   "population": "gnomADe:nfe"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 1110849,
+   "frequency": 0.9999,
+   "population": "gnomADe:nfe"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 86228,
+   "frequency": 1,
+   "population": "gnomADe:sas"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 2,
+   "frequency": 4.473e-05,
+   "population": "gnomADe:amr"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 44708,
+   "frequency": 1,
+   "population": "gnomADe:amr"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 6,
+   "frequency": 9.945e-05,
+   "population": "gnomADe:remaining"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 60328,
+   "frequency": 0.9999,
+   "population": "gnomADe:remaining"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 166,
+   "frequency": 0.0001137,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 1460262,
+   "frequency": 0.9999,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 5184,
+   "frequency": 1,
+   "population": "gnomADg:eas"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 294,
+   "frequency": 1,
+   "population": "gnomADg:mid"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 4826,
+   "frequency": 1,
+   "population": "gnomADg:sas"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 41548,
+   "frequency": 1,
+   "population": "gnomADg:afr"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 67991,
+   "frequency": 0.9998,
+   "population": "gnomADg:nfe"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 17,
+   "frequency": 0.00025,
+   "population": "gnomADg:nfe"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 152188,
+   "frequency": 0.9999,
+   "population": "gnomADg:ALL"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 18,
+   "frequency": 0.0001183,
+   "population": "gnomADg:ALL"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 2114,
+   "frequency": 1,
+   "population": "gnomADg:remaining"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 15271,
+   "frequency": 0.9999,
+   "population": "gnomADg:amr"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 1,
+   "frequency": 6.548e-05,
+   "population": "gnomADg:amr"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 912,
+   "frequency": 1,
+   "population": "gnomADg:ami"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 10576,
+   "frequency": 1,
+   "population": "gnomADg:fin"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 3472,
+   "frequency": 1,
+   "population": "gnomADg:asj"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 2898,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492703"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 496,
+   "frequency": 1,
+   "population": "ALFA:SAMN11605645"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 146,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492699"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 1,
+   "frequency": 7.117e-05,
+   "population": "ALFA:SAMN10492705"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 14049,
+   "frequency": 0.9999,
+   "population": "ALFA:SAMN10492705"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 112,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492704"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 98,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492702"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 610,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492700"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 26,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492701"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 86,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492697"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 114,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492696"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 1,
+   "frequency": 0.0001032,
+   "population": "ALFA:SAMN10492695"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 9689,
+   "frequency": 0.9999,
+   "population": "ALFA:SAMN10492695"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 2784,
+   "frequency": 1,
+   "population": "ALFA:SAMN10492698"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 7981,
+   "frequency": 0.9669,
+   "population": "ESP6500:EA"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 273,
+   "frequency": 0.03307,
+   "population": "ESP6500:EA"
+  },
+  {
+   "allele": "ATGA",
+   "allele_count": 86,
+   "frequency": 0.02016,
+   "population": "ESP6500:AA"
+  },
+  {
+   "allele": "ATGAATGA",
+   "allele_count": 4180,
+   "frequency": 0.9798,
+   "population": "ESP6500:AA"
+  },
+  {
+   "allele": "ATGAATGA",
+   "frequency": 0.999928326,
+   "population": "TOPMed"
+  },
+  {
+   "allele": "ATGA",
+   "frequency": 7.1674e-05,
+   "population": "TOPMed"
+  }
+ ],
+ "source": "Variants (including SNPs and indels) imported from dbSNP",
+ "synonyms": [
+  "NM_000110.3:c.299_302del",
+  "NP_000101.2:p.Phe100fs",
+  "NM_000110.4:c.299_302del",
+  "NP_001153773.1:p.Phe100fs",
+  "NM_001160301.1:c.299_302del",
+  "rs539032572",
+  "VCV000495550",
+  "RCV001836843",
+  "RCV000589260",
+  "612779.0003",
+  "PA166153902"
+ ],
+ "var_class": "indel"
+}

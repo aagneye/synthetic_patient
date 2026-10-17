@@ -1,0 +1,114 @@
+[
+ {
+  "d_prime": "0.505367",
+  "population_name": "1000GENOMES:phase_3:BEB",
+  "r2": "0.059398",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.999998",
+  "population_name": "1000GENOMES:phase_3:CDX",
+  "r2": "0.230291",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.642890",
+  "population_name": "1000GENOMES:phase_3:CEU",
+  "r2": "0.222653",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.999979",
+  "population_name": "1000GENOMES:phase_3:CLM",
+  "r2": "0.223131",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.607052",
+  "population_name": "1000GENOMES:phase_3:FIN",
+  "r2": "0.212952",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.909385",
+  "population_name": "1000GENOMES:phase_3:GBR",
+  "r2": "0.335384",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.642413",
+  "population_name": "1000GENOMES:phase_3:IBS",
+  "r2": "0.199369",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.999975",
+  "population_name": "1000GENOMES:phase_3:ITU",
+  "r2": "0.139874",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.701227",
+  "population_name": "1000GENOMES:phase_3:KHV",
+  "r2": "0.195053",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.849669",
+  "population_name": "1000GENOMES:phase_3:LWK",
+  "r2": "0.081117",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.821157",
+  "population_name": "1000GENOMES:phase_3:MXL",
+  "r2": "0.159572",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.999996",
+  "population_name": "1000GENOMES:phase_3:PEL",
+  "r2": "0.153678",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.831441",
+  "population_name": "1000GENOMES:phase_3:PJL",
+  "r2": "0.201069",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.436817",
+  "population_name": "1000GENOMES:phase_3:PUR",
+  "r2": "0.052866",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.619666",
+  "population_name": "1000GENOMES:phase_3:TSI",
+  "r2": "0.164296",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ },
+ {
+  "d_prime": "0.999881",
+  "population_name": "GGVP:GWJ",
+  "r2": "0.075233",
+  "variation1": "rs1801265",
+  "variation2": "rs2297595"
+ }
+]

@@ -1,0 +1,23 @@
+[
+ {
+  "d_prime": "0.403940",
+  "population_name": "1000GENOMES:phase_3:CEU",
+  "r2": "0.061767",
+  "variation1": "rs1801265",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.748318",
+  "population_name": "1000GENOMES:phase_3:GBR",
+  "r2": "0.086195",
+  "variation1": "rs1801265",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.361104",
+  "population_name": "1000GENOMES:phase_3:PEL",
+  "r2": "0.083209",
+  "variation1": "rs1801265",
+  "variation2": "rs17376848"
+ }
+]

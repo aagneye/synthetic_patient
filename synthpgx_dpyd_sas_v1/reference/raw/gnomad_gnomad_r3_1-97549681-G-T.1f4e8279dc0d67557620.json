@@ -1,0 +1,577 @@
+{
+ "data": {
+  "variant": {
+   "exome": null,
+   "genome": {
+    "ac": 1,
+    "an": 152130,
+    "populations": [
+     {
+      "ac": 0,
+      "an": 2090,
+      "id": "oth"
+     },
+     {
+      "ac": 0,
+      "an": 1032,
+      "id": "oth_XX"
+     },
+     {
+      "ac": 0,
+      "an": 1058,
+      "id": "oth_XY"
+     },
+     {
+      "ac": 0,
+      "an": 15254,
+      "id": "amr"
+     },
+     {
+      "ac": 0,
+      "an": 6784,
+      "id": "amr_XX"
+     },
+     {
+      "ac": 0,
+      "an": 8470,
+      "id": "amr_XY"
+     },
+     {
+      "ac": 0,
+      "an": 10618,
+      "id": "fin"
+     },
+     {
+      "ac": 0,
+      "an": 2574,
+      "id": "fin_XX"
+     },
+     {
+      "ac": 0,
+      "an": 8044,
+      "id": "fin_XY"
+     },
+     {
+      "ac": 0,
+      "an": 912,
+      "id": "ami"
+     },
+     {
+      "ac": 0,
+      "an": 470,
+      "id": "ami_XX"
+     },
+     {
+      "ac": 0,
+      "an": 442,
+      "id": "ami_XY"
+     },
+     {
+      "ac": 0,
+      "an": 5178,
+      "id": "eas"
+     },
+     {
+      "ac": 0,
+      "an": 2278,
+      "id": "eas_XX"
+     },
+     {
+      "ac": 0,
+      "an": 2900,
+      "id": "eas_XY"
+     },
+     {
+      "ac": 0,
+      "an": 316,
+      "id": "mid"
+     },
+     {
+      "ac": 0,
+      "an": 164,
+      "id": "mid_XX"
+     },
+     {
+      "ac": 0,
+      "an": 152,
+      "id": "mid_XY"
+     },
+     {
+      "ac": 0,
+      "an": 41434,
+      "id": "afr"
+     },
+     {
+      "ac": 0,
+      "an": 22140,
+      "id": "afr_XX"
+     },
+     {
+      "ac": 0,
+      "an": 19294,
+      "id": "afr_XY"
+     },
+     {
+      "ac": 0,
+      "an": 4826,
+      "id": "sas"
+     },
+     {
+      "ac": 0,
+      "an": 1166,
+      "id": "sas_XX"
+     },
+     {
+      "ac": 0,
+      "an": 3660,
+      "id": "sas_XY"
+     },
+     {
+      "ac": 0,
+      "an": 3468,
+      "id": "asj"
+     },
+     {
+      "ac": 0,
+      "an": 1866,
+      "id": "asj_XX"
+     },
+     {
+      "ac": 0,
+      "an": 1602,
+      "id": "asj_XY"
+     },
+     {
+      "ac": 1,
+      "an": 68034,
+      "id": "nfe"
+     },
+     {
+      "ac": 0,
+      "an": 39360,
+      "id": "nfe_XX"
+     },
+     {
+      "ac": 1,
+      "an": 28674,
+      "id": "nfe_XY"
+     },
+     {
+      "ac": 0,
+      "an": 77834,
+      "id": "XX"
+     },
+     {
+      "ac": 1,
+      "an": 74296,
+      "id": "XY"
+     },
+     {
+      "ac": 0,
+      "an": 208,
+      "id": "1kg:esn"
+     },
+     {
+      "ac": 0,
+      "an": 96,
+      "id": "1kg:esn_XX"
+     },
+     {
+      "ac": 0,
+      "an": 112,
+      "id": "1kg:esn_XY"
+     },
+     {
+      "ac": 0,
+      "an": 198,
+      "id": "1kg:pur"
+     },
+     {
+      "ac": 0,
+      "an": 94,
+      "id": "1kg:pur_XX"
+     },
+     {
+      "ac": 0,
+      "an": 104,
+      "id": "1kg:pur_XY"
+     },
+     {
+      "ac": 0,
+      "an": 204,
+      "id": "1kg:pjl"
+     },
+     {
+      "ac": 0,
+      "an": 98,
+      "id": "1kg:pjl_XX"
+     },
+     {
+      "ac": 0,
+      "an": 106,
+      "id": "1kg:pjl_XY"
+     },
+     {
+      "ac": 0,
+      "an": 190,
+      "id": "1kg:clm"
+     },
+     {
+      "ac": 0,
+      "an": 100,
+      "id": "1kg:clm_XX"
+     },
+     {
+      "ac": 0,
+      "an": 90,
+      "id": "1kg:clm_XY"
+     },
+     {
+      "ac": 0,
+      "an": 204,
+      "id": "1kg:jpt"
+     },
+     {
+      "ac": 0,
+      "an": 92,
+      "id": "1kg:jpt_XX"
+     },
+     {
+      "ac": 0,
+      "an": 112,
+      "id": "1kg:jpt_XY"
+     },
+     {
+      "ac": 0,
+      "an": 204,
+      "id": "1kg:chb"
+     },
+     {
+      "ac": 0,
+      "an": 114,
+      "id": "1kg:chb_XX"
+     },
+     {
+      "ac": 0,
+      "an": 90,
+      "id": "1kg:chb_XY"
+     },
+     {
+      "ac": 0,
+      "an": 204,
+      "id": "1kg:stu"
+     },
+     {
+      "ac": 0,
+      "an": 92,
+      "id": "1kg:stu_XX"
+     },
+     {
+      "ac": 0,
+      "an": 112,
+      "id": "1kg:stu_XY"
+     },
+     {
+      "ac": 0,
+      "an": 204,
+      "id": "1kg:itu"
+     },
+     {
+      "ac": 0,
+      "an": 84,
+      "id": "1kg:itu_XX"
+     },
+     {
+      "ac": 0,
+      "an": 120,
+      "id": "1kg:itu_XY"
+     },
+     {
+      "ac": 0,
+      "an": 206,
+      "id": "1kg:tsi"
+     },
+     {
+      "ac": 0,
+      "an": 100,
+      "id": "1kg:tsi_XX"
+     },
+     {
+      "ac": 0,
+      "an": 106,
+      "id": "1kg:tsi_XY"
+     },
+     {
+      "ac": 0,
+      "an": 126,
+      "id": "1kg:mxl"
+     },
+     {
+      "ac": 0,
+      "an": 64,
+      "id": "1kg:mxl_XX"
+     },
+     {
+      "ac": 0,
+      "an": 62,
+      "id": "1kg:mxl_XY"
+     },
+     {
+      "ac": 1,
+      "an": 238,
+      "id": "1kg:ceu"
+     },
+     {
+      "ac": 0,
+      "an": 120,
+      "id": "1kg:ceu_XX"
+     },
+     {
+      "ac": 1,
+      "an": 118,
+      "id": "1kg:ceu_XY"
+     },
+     {
+      "ac": 0,
+      "an": 168,
+      "id": "1kg:msl"
+     },
+     {
+      "ac": 0,
+      "an": 84,
+      "id": "1kg:msl_XX"
+     },
+     {
+      "ac": 0,
+      "an": 84,
+      "id": "1kg:msl_XY"
+     },
+     {
+      "ac": 0,
+      "an": 200,
+      "id": "1kg:beb"
+     },
+     {
+      "ac": 0,
+      "an": 104,
+      "id": "1kg:beb_XX"
+     },
+     {
+      "ac": 0,
+      "an": 96,
+      "id": "1kg:beb_XY"
+     },
+     {
+      "ac": 0,
+      "an": 234,
+      "id": "1kg:yri"
+     },
+     {
+      "ac": 0,
+      "an": 116,
+      "id": "1kg:yri_XX"
+     },
+     {
+      "ac": 0,
+      "an": 118,
+      "id": "1kg:yri_XY"
+     },
+     {
+      "ac": 0,
+      "an": 196,
+      "id": "1kg:fin"
+     },
+     {
+      "ac": 0,
+      "an": 120,
+      "id": "1kg:fin_XX"
+     },
+     {
+      "ac": 0,
+      "an": 76,
+      "id": "1kg:fin_XY"
+     },
+     {
+      "ac": 0,
+      "an": 202,
+      "id": "1kg:khv"
+     },
+     {
+      "ac": 0,
+      "an": 108,
+      "id": "1kg:khv_XX"
+     },
+     {
+      "ac": 0,
+      "an": 94,
+      "id": "1kg:khv_XY"
+     },
+     {
+      "ac": 0,
+      "an": 182,
+      "id": "1kg:cdx"
+     },
+     {
+      "ac": 0,
+      "an": 96,
+      "id": "1kg:cdx_XX"
+     },
+     {
+      "ac": 0,
+      "an": 86,
+      "id": "1kg:cdx_XY"
+     },
+     {
+      "ac": 0,
+      "an": 132,
+      "id": "1kg:lwk"
+     },
+     {
+      "ac": 0,
+      "an": 76,
+      "id": "1kg:lwk_XX"
+     },
+     {
+      "ac": 0,
+      "an": 56,
+      "id": "1kg:lwk_XY"
+     },
+     {
+      "ac": 0,
+      "an": 184,
+      "id": "1kg:acb"
+     },
+     {
+      "ac": 0,
+      "an": 94,
+      "id": "1kg:acb_XX"
+     },
+     {
+      "ac": 0,
+      "an": 90,
+      "id": "1kg:acb_XY"
+     },
+     {
+      "ac": 0,
+      "an": 106,
+      "id": "1kg:asw"
+     },
+     {
+      "ac": 0,
+      "an": 58,
+      "id": "1kg:asw_XX"
+     },
+     {
+      "ac": 0,
+      "an": 48,
+      "id": "1kg:asw_XY"
+     },
+     {
+      "ac": 0,
+      "an": 214,
+      "id": "1kg:ibs"
+     },
+     {
+      "ac": 0,
+      "an": 106,
+      "id": "1kg:ibs_XX"
+     },
+     {
+      "ac": 0,
+      "an": 108,
+      "id": "1kg:ibs_XY"
+     },
+     {
+      "ac": 0,
+      "an": 180,
+      "id": "1kg:gbr"
+     },
+     {
+      "ac": 0,
+      "an": 88,
+      "id": "1kg:gbr_XX"
+     },
+     {
+      "ac": 0,
+      "an": 92,
+      "id": "1kg:gbr_XY"
+     },
+     {
+      "ac": 0,
+      "an": 172,
+      "id": "1kg:pel"
+     },
+     {
+      "ac": 0,
+      "an": 88,
+      "id": "1kg:pel_XX"
+     },
+     {
+      "ac": 0,
+      "an": 84,
+      "id": "1kg:pel_XY"
+     },
+     {
+      "ac": 0,
+      "an": 202,
+      "id": "1kg:gih"
+     },
+     {
+      "ac": 0,
+      "an": 92,
+      "id": "1kg:gih_XX"
+     },
+     {
+      "ac": 0,
+      "an": 110,
+      "id": "1kg:gih_XY"
+     },
+     {
+      "ac": 0,
+      "an": 210,
+      "id": "1kg:chs"
+     },
+     {
+      "ac": 0,
+      "an": 106,
+      "id": "1kg:chs_XX"
+     },
+     {
+      "ac": 0,
+      "an": 104,
+      "id": "1kg:chs_XY"
+     },
+     {
+      "ac": 0,
+      "an": 232,
+      "id": "1kg:gwd"
+     },
+     {
+      "ac": 0,
+      "an": 116,
+      "id": "1kg:gwd_XX"
+     },
+     {
+      "ac": 0,
+      "an": 116,
+      "id": "1kg:gwd_XY"
+     },
+     {
+      "ac": 0,
+      "an": 2506,
+      "id": "1kg:XX"
+     },
+     {
+      "ac": 1,
+      "an": 2494,
+      "id": "1kg:XY"
+     }
+    ]
+   },
+   "rsids": [
+    "rs199549923"
+   ],
+   "variant_id": "1-97549681-G-T"
+  }
+ }
+}

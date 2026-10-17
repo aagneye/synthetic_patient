@@ -1,0 +1,31 @@
+[
+ {
+  "atcid": [
+   "L01BC06"
+  ],
+  "clinpgxid": "PA448771",
+  "drugbankid": "DB01101",
+  "drugid": "RxNorm:194000",
+  "flowchart": "https://files.cpicpgx.org/images/flow_chart/Capecitabine_CDS_Flow_Chart.jpg",
+  "guidelineid": 100419,
+  "name": "capecitabine",
+  "rxnormid": "194000",
+  "umlscui": null,
+  "version": 268
+ },
+ {
+  "atcid": [
+   "L01BC02",
+   "L01BC52"
+  ],
+  "clinpgxid": "PA128406956",
+  "drugbankid": "DB00544",
+  "drugid": "RxNorm:4492",
+  "flowchart": "https://files.cpicpgx.org/images/flow_chart/5-Fluorouracil_CDS_Flow_Chart.jpg",
+  "guidelineid": 100419,
+  "name": "fluorouracil",
+  "rxnormid": "4492",
+  "umlscui": null,
+  "version": 268
+ }
+]

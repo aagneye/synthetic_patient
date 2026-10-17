@@ -1,0 +1,23 @@
+[
+ {
+  "chr": "chr1",
+  "chromosequenceid": "NC_000001.11",
+  "clinpgxid": "PA145",
+  "ensemblid": "ENSG00000188641",
+  "frequencymethods": "Methods:\nThe DPYD frequency table was created using data from ExAC (http://exac.broadinstitute.org/) and the 1000 Genomes project (http://www.ensembl.org/Homo_sapiens/Info/Index).\nThe average allele frequencies by race were calculated by taking the number with the variant in all studies divided by the total number of individuals tested for the variant in all studies.\nAll nucleotide changes are according to reference sequence NM_000110.3 and all protein changes are according to reference sequence NP_000101.2\nCaveats\nIf 1000 Genomes and/or ExAC did not return any frequency data for a given variant, cells were left blank\n\nBiogeographical groups. Biogeographical groups are derived from PMID 30506572. Further details can be found at https://www.pharmgkb.org/page/biogeographicalGroups. These tables group individuals from particular geographic locations into larger biogeographical groups. It is difficult to group populations with certainty, because some populations are often admixed, or at the least, a combination of different ethnicities. Therefore, the margin of error is increased when different subpopulations are grouped together.\n\n\n\n\n\n\n\n",
+  "functionmethods": null,
+  "genesequenceid": "NG_008807.2",
+  "hgncid": "HGNC:3012",
+  "includediplotypefrequencies": false,
+  "includephenotypefrequencies": false,
+  "lookupmethod": "ACTIVITY_SCORE",
+  "mrnasequenceid": "NM_000110.4",
+  "ncbiid": "282617",
+  "notesonallelenaming": "Legacy Name/Class",
+  "notesondiplotype": "The DPYD phenotype is assigned using a gene activity score (DPYD-AS; based on the DPYD Allele Functionality Table), calculated as the sum of the two DPYD variants with the lowest variant activity value. Briefly, carriers of two no function variants (DPYD-AS: 0) OR one decreased function variant (DPD-AS: 0.5) are classified as DPYD poor metabolizers; carriers of two decreased function variants OR carriers of only one no function variant (DPYD-AS: 1) OR carriers of only one decreased function variant (DPYD-AS: 1.5) are considered DPYD intermediate metabolizers , and those with only normal function variants are classified as DPYD normal metabolizers (DPYD-AS: 2). If two decreased/no function variants are present, each decreased/no function variant is considered to be on a different gene copy. Irrespective of the presence of decreased/no function variants, patients may carry multiple normal function variants. As an individual only carries a maximum of two fully functional DPYD copies, common normal function variants may be located on the same gene copy as other normal function variants or decreased/no function variants.",
+  "proteinsequenceid": "NP_000101.2",
+  "symbol": "DPYD",
+  "url": "https://cpicpgx.org/gene/dpyd/",
+  "version": 459
+ }
+]

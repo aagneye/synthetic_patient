@@ -1,0 +1,44 @@
+[
+ {
+  "d_prime": "1.000000",
+  "population_name": "1000GENOMES:phase_3:ESN",
+  "r2": "0.246193",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.474304",
+  "population_name": "1000GENOMES:phase_3:GWD",
+  "r2": "0.073649",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.438865",
+  "population_name": "1000GENOMES:phase_3:ITU",
+  "r2": "0.061633",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.490981",
+  "population_name": "1000GENOMES:phase_3:MSL",
+  "r2": "0.241062",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "1.000000",
+  "population_name": "GGVP:GWF",
+  "r2": "0.195628",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ },
+ {
+  "d_prime": "0.436016",
+  "population_name": "GGVP:GWJ",
+  "r2": "0.060730",
+  "variation1": "rs2297595",
+  "variation2": "rs17376848"
+ }
+]

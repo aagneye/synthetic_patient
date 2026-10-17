@@ -1,0 +1,758 @@
+[
+ {
+  "genesymbol": "DPYD",
+  "id": 778369,
+  "matchesreferencesequence": false,
+  "name": "c.1003G>T (*11)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778371,
+  "matchesreferencesequence": false,
+  "name": "c.1024G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778373,
+  "matchesreferencesequence": false,
+  "name": "c.1057C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778375,
+  "matchesreferencesequence": false,
+  "name": "c.1108A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 3942827,
+  "matchesreferencesequence": false,
+  "name": "c.1129-5923C>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 38
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778377,
+  "matchesreferencesequence": false,
+  "name": "c.1129-5923C>G, c.1236G>A (HapB3)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778379,
+  "matchesreferencesequence": false,
+  "name": "c.1156G>T (*12)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778381,
+  "matchesreferencesequence": false,
+  "name": "c.1180C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778383,
+  "matchesreferencesequence": false,
+  "name": "c.1181G>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778385,
+  "matchesreferencesequence": false,
+  "name": "c.1218G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778387,
+  "matchesreferencesequence": false,
+  "name": "c.1260T>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778389,
+  "matchesreferencesequence": false,
+  "name": "c.1278G>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778391,
+  "matchesreferencesequence": false,
+  "name": "c.1294G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778393,
+  "matchesreferencesequence": false,
+  "name": "c.1314T>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778395,
+  "matchesreferencesequence": false,
+  "name": "c.1349C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778397,
+  "matchesreferencesequence": false,
+  "name": "c.1358C>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778399,
+  "matchesreferencesequence": false,
+  "name": "c.1371C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778401,
+  "matchesreferencesequence": false,
+  "name": "c.1403C>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778403,
+  "matchesreferencesequence": false,
+  "name": "c.1475C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778405,
+  "matchesreferencesequence": false,
+  "name": "c.1484A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778407,
+  "matchesreferencesequence": false,
+  "name": "c.1519G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778409,
+  "matchesreferencesequence": false,
+  "name": "c.1543G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778411,
+  "matchesreferencesequence": false,
+  "name": "c.1577C>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778413,
+  "matchesreferencesequence": false,
+  "name": "c.1601G>A (*4)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778415,
+  "matchesreferencesequence": false,
+  "name": "c.1615G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778417,
+  "matchesreferencesequence": false,
+  "name": "c.1627A>G (*5)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778419,
+  "matchesreferencesequence": false,
+  "name": "c.1679T>G (*13)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778421,
+  "matchesreferencesequence": false,
+  "name": "c.1682G>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778423,
+  "matchesreferencesequence": false,
+  "name": "c.1774C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778425,
+  "matchesreferencesequence": false,
+  "name": "c.1775G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778427,
+  "matchesreferencesequence": false,
+  "name": "c.1777G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778429,
+  "matchesreferencesequence": false,
+  "name": "c.1796T>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778431,
+  "matchesreferencesequence": false,
+  "name": "c.1896T>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778433,
+  "matchesreferencesequence": false,
+  "name": "c.1898delC (*3)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778437,
+  "matchesreferencesequence": false,
+  "name": "c.1905+1G>A (*2A)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778435,
+  "matchesreferencesequence": false,
+  "name": "c.1905C>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778439,
+  "matchesreferencesequence": false,
+  "name": "c.1906A>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778441,
+  "matchesreferencesequence": false,
+  "name": "c.1990G>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778443,
+  "matchesreferencesequence": false,
+  "name": "c.2021G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778445,
+  "matchesreferencesequence": false,
+  "name": "c.2161G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778447,
+  "matchesreferencesequence": false,
+  "name": "c.2186C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778449,
+  "matchesreferencesequence": false,
+  "name": "c.2194G>A (*6)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778451,
+  "matchesreferencesequence": false,
+  "name": "c.2195T>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778453,
+  "matchesreferencesequence": false,
+  "name": "c.2279C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778455,
+  "matchesreferencesequence": false,
+  "name": "c.2303C>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778457,
+  "matchesreferencesequence": false,
+  "name": "c.2336C>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778459,
+  "matchesreferencesequence": false,
+  "name": "c.2482G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778461,
+  "matchesreferencesequence": false,
+  "name": "c.2582A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778463,
+  "matchesreferencesequence": false,
+  "name": "c.2623A>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778465,
+  "matchesreferencesequence": false,
+  "name": "c.2639G>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778467,
+  "matchesreferencesequence": false,
+  "name": "c.2656C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778469,
+  "matchesreferencesequence": false,
+  "name": "c.2657G>A (*9B)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778471,
+  "matchesreferencesequence": false,
+  "name": "c.2846A>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778473,
+  "matchesreferencesequence": false,
+  "name": "c.2872A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778475,
+  "matchesreferencesequence": false,
+  "name": "c.2915A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778477,
+  "matchesreferencesequence": false,
+  "name": "c.2921A>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778479,
+  "matchesreferencesequence": false,
+  "name": "c.2933A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778337,
+  "matchesreferencesequence": false,
+  "name": "c.295_298delTCAT (*7)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778483,
+  "matchesreferencesequence": false,
+  "name": "c.2977C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778481,
+  "matchesreferencesequence": false,
+  "name": "c.2978T>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778485,
+  "matchesreferencesequence": false,
+  "name": "c.2983G>T (*10)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778487,
+  "matchesreferencesequence": false,
+  "name": "c.3049G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778489,
+  "matchesreferencesequence": false,
+  "name": "c.3061G>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778491,
+  "matchesreferencesequence": false,
+  "name": "c.3067C>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778339,
+  "matchesreferencesequence": false,
+  "name": "c.313G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778341,
+  "matchesreferencesequence": false,
+  "name": "c.343A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778343,
+  "matchesreferencesequence": false,
+  "name": "c.451A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778329,
+  "matchesreferencesequence": false,
+  "name": "c.46C>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778345,
+  "matchesreferencesequence": false,
+  "name": "c.496A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778347,
+  "matchesreferencesequence": false,
+  "name": "c.498G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778349,
+  "matchesreferencesequence": false,
+  "name": "c.525G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778351,
+  "matchesreferencesequence": false,
+  "name": "c.557A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778353,
+  "matchesreferencesequence": false,
+  "name": "c.601A>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778331,
+  "matchesreferencesequence": false,
+  "name": "c.61C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778333,
+  "matchesreferencesequence": false,
+  "name": "c.62G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778355,
+  "matchesreferencesequence": false,
+  "name": "c.632A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778357,
+  "matchesreferencesequence": false,
+  "name": "c.703C>T (*8)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778359,
+  "matchesreferencesequence": false,
+  "name": "c.775A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778335,
+  "matchesreferencesequence": false,
+  "name": "c.85T>C (*9A)",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778361,
+  "matchesreferencesequence": false,
+  "name": "c.868A>G",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778363,
+  "matchesreferencesequence": false,
+  "name": "c.929T>C",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778365,
+  "matchesreferencesequence": false,
+  "name": "c.934C>T",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778367,
+  "matchesreferencesequence": false,
+  "name": "c.967G>A",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ },
+ {
+  "genesymbol": "DPYD",
+  "id": 778327,
+  "matchesreferencesequence": true,
+  "name": "Reference",
+  "pharmvarid": null,
+  "structuralvariation": false,
+  "version": 106
+ }
+]

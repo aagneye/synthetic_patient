@@ -1,0 +1,1147 @@
+{
+ "header": {
+  "type": "esummary",
+  "version": "0.3"
+ },
+ "result": {
+  "23588312": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "23588312"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS524159"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC3821392"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC3821392;manuscript-id: NIHMS524159;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/clpt.2013.69"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "clpt201369"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Offer SM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Lee AM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Mattison LK"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Fossum C"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Wegner NJ"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Diasio RB"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1038/clpt.2013.69",
+   "epubdate": "2013 Apr 3",
+   "essn": "1532-6535",
+   "fulljournalname": "Clinical pharmacology and therapeutics",
+   "history": [
+    {
+     "date": "2013/04/17 06:00",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2013/04/17 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2013/08/30 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2014/01/01 00:00",
+     "pubstatus": "pmc-release"
+    }
+   ],
+   "issn": "0009-9236",
+   "issue": "1",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Diasio RB",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "0372741",
+   "pages": "158-66",
+   "pmcrefcount": 43,
+   "pubdate": "2013 Jul",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, N.I.H., Extramural",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [
+    {
+     "note": "",
+     "pmid": 24037119,
+     "refsource": "Clin Pharmacol Ther. 2014 Feb;95(2):136. doi: 10.1038/clpt.2013.183.",
+     "reftype": "Comment in"
+    },
+    {
+     "note": "",
+     "pmid": 24107927,
+     "refsource": "Clin Pharmacol Ther. 2014 Feb;95(2):137. doi: 10.1038/clpt.2013.207.",
+     "reftype": "Comment in"
+    }
+   ],
+   "reportnumber": "",
+   "sortfirstauthor": "Offer SM",
+   "sortpubdate": "2013/07/01 00:00",
+   "sorttitle": "dpyd variant y186c in individuals of african ancestry is associated with reduced dpd enzyme activity",
+   "source": "Clin Pharmacol Ther",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "A DPYD variant (Y186C) in individuals of african ancestry is associated with reduced DPD enzyme activity.",
+   "uid": "23588312",
+   "vernaculartitle": "",
+   "volume": "94"
+  },
+  "24648345": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "24648345"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS577303"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC4012613"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC4012613;manuscript-id: NIHMS577303;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1158/0008-5472.CAN-13-2482"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "0008-5472.CAN-13-2482"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Offer SM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Fossum CC"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Wegner NJ"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Stuflesser AJ"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Butterfield GL"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Diasio RB"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1158/0008-5472.CAN-13-2482",
+   "epubdate": "2014 Mar 19",
+   "essn": "1538-7445",
+   "fulljournalname": "Cancer research",
+   "history": [
+    {
+     "date": "2014/03/21 06:00",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2014/03/22 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2014/07/07 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2015/05/01 00:00",
+     "pubstatus": "pmc-release"
+    }
+   ],
+   "issn": "0008-5472",
+   "issue": "9",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Diasio RB",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "2984705R",
+   "pages": "2545-54",
+   "pmcrefcount": 38,
+   "pubdate": "2014 May 1",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Comparative Study",
+    "Journal Article",
+    "Research Support, N.I.H., Extramural"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Offer SM",
+   "sortpubdate": "2014/05/01 00:00",
+   "sorttitle": "comparative functional analysis of dpyd variants of potential clinical relevance to dihydropyrimidine dehydrogenase activity",
+   "source": "Cancer Res",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Comparative functional analysis of DPYD variants of potential clinical relevance to dihydropyrimidine dehydrogenase activity.",
+   "uid": "24648345",
+   "vernaculartitle": "",
+   "volume": "74"
+  },
+  "25410891": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "25410891"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.2217/pgs.14.126"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Sistonen J"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "B\u00fcchel B"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Froehlich TK"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Kummer D"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Fontana S"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Joerger M"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "van Kuilenburg AB"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Largiad\u00e8r CR"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.2217/pgs.14.126",
+   "epubdate": "",
+   "essn": "1744-8042",
+   "fulljournalname": "Pharmacogenomics",
+   "history": [
+    {
+     "date": "2014/11/21 06:00",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2014/11/21 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2015/09/09 06:00",
+     "pubstatus": "medline"
+    }
+   ],
+   "issn": "1462-2416",
+   "issue": "13",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Largiad\u00e8r CR",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "100897350",
+   "pages": "1653-66",
+   "pmcrefcount": "",
+   "pubdate": "2014 Sep",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "4",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Sistonen J",
+   "sortpubdate": "2014/09/01 00:00",
+   "sorttitle": "predicting 5 fluorouracil toxicity dpd genotype and 5 6 dihydrouracil uracil ratio",
+   "source": "Pharmacogenomics",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Predicting 5-fluorouracil toxicity: DPD genotype and 5,6-dihydrouracil:uracil ratio.",
+   "uid": "25410891",
+   "vernaculartitle": "",
+   "volume": "15"
+  },
+  "28295243": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "28295243"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS987444"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC6138243"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC6138243;manuscript-id: NIHMS987444;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/cpt.685"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Nie Q"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Shrestha S"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Tapper EE"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Trogstad-Isaacson CS"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Bouchonville KJ"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Lee AM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Wu R"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Jerde CR"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Wang Z"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Kubica PA"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Offer SM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Diasio RB"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1002/cpt.685",
+   "epubdate": "2017 May 26",
+   "essn": "1532-6535",
+   "fulljournalname": "Clinical pharmacology and therapeutics",
+   "history": [
+    {
+     "date": "2017/01/18 00:00",
+     "pubstatus": "received"
+    },
+    {
+     "date": "2017/02/28 00:00",
+     "pubstatus": "revised"
+    },
+    {
+     "date": "2017/03/01 00:00",
+     "pubstatus": "accepted"
+    },
+    {
+     "date": "2017/03/16 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2017/09/25 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2017/03/16 06:00",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2018/10/01 00:00",
+     "pubstatus": "pmc-release"
+    }
+   ],
+   "issn": "0009-9236",
+   "issue": "4",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Diasio RB",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "0372741",
+   "pages": "662-670",
+   "pmcrefcount": 39,
+   "pubdate": "2017 Oct",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Nie Q",
+   "sortpubdate": "2017/10/01 00:00",
+   "sorttitle": "quantitative contribution of rs75017182 to dihydropyrimidine dehydrogenase mrna splicing and enzyme activity",
+   "source": "Clin Pharmacol Ther",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Quantitative Contribution of rs75017182 to Dihydropyrimidine Dehydrogenase mRNA Splicing and Enzyme Activity.",
+   "uid": "28295243",
+   "vernaculartitle": "",
+   "volume": "102"
+  },
+  "29152729": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "29152729"
+    },
+    {
+     "idtype": "mid",
+     "idtypen": 8,
+     "value": "NIHMS912821"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC5760397"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC5760397;manuscript-id: NIHMS912821;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/cpt.911"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Amstutz U"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Henricks LM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Offer SM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Barbarino J"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Schellens JHM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Swen JJ"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Klein TE"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "McLeod HL"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Caudle KE"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Diasio RB"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Schwab M"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1002/cpt.911",
+   "epubdate": "2017 Nov 20",
+   "essn": "1532-6535",
+   "fulljournalname": "Clinical pharmacology and therapeutics",
+   "history": [
+    {
+     "date": "2017/08/04 00:00",
+     "pubstatus": "received"
+    },
+    {
+     "date": "2017/09/19 00:00",
+     "pubstatus": "revised"
+    },
+    {
+     "date": "2017/10/11 00:00",
+     "pubstatus": "accepted"
+    },
+    {
+     "date": "2017/11/21 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2019/04/10 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2017/11/21 06:00",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2019/02/01 00:00",
+     "pubstatus": "pmc-release"
+    }
+   ],
+   "issn": "0009-9236",
+   "issue": "2",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Schwab M",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "0372741",
+   "pages": "210-216",
+   "pmcrefcount": 41,
+   "pubdate": "2018 Feb",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Journal Article",
+    "Practice Guideline",
+    "Systematic Review"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Amstutz U",
+   "sortpubdate": "2018/02/01 00:00",
+   "sorttitle": "clinical pharmacogenetics implementation consortium cpic guideline for dihydropyrimidine dehydrogenase genotype and fluoropyrimidine dosing 2017 update",
+   "source": "Clin Pharmacol Ther",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Clinical Pharmacogenetics Implementation Consortium (CPIC) Guideline for Dihydropyrimidine Dehydrogenase Genotype and Fluoropyrimidine Dosing: 2017 Update.",
+   "uid": "29152729",
+   "vernaculartitle": "",
+   "volume": "103"
+  },
+  "29239269": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "29239269"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.2217/pgs-2017-0101"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Hariprakash JM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Vellarikkal SK"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Keechilat P"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Verma A"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Jayarajan R"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Dixit V"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Ravi R"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Senthivel V"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Kumar A"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Sehgal P"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Sonakar AK"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Ambawat S"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Giri AK"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Philip A"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Sivadas A"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Faruq M"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Bharadwaj D"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Sivasubbu S"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Scaria V"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.2217/pgs-2017-0101",
+   "epubdate": "2017 Dec 14",
+   "essn": "1744-8042",
+   "fulljournalname": "Pharmacogenomics",
+   "history": [
+    {
+     "date": "2017/12/15 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2018/12/20 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2017/12/15 06:00",
+     "pubstatus": "entrez"
+    }
+   ],
+   "issn": "1462-2416",
+   "issue": "3",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Scaria V",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "100897350",
+   "pages": "227-241",
+   "pmcrefcount": "",
+   "pubdate": "2018 Feb",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Hariprakash JM",
+   "sortpubdate": "2018/02/01 00:00",
+   "sorttitle": "pharmacogenetic landscape of dpyd variants in south asian populations by integration of genome scale data",
+   "source": "Pharmacogenomics",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Pharmacogenetic landscape of DPYD variants in south Asian populations by integration of genome-scale data.",
+   "uid": "29239269",
+   "vernaculartitle": "",
+   "volume": "19"
+  },
+  "33105068": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "33105068"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1002/jgm.3289"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Naushad SM"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Hussain T"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Alrokayan SA"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Kutala VK"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1002/jgm.3289",
+   "epubdate": "2020 Nov 20",
+   "essn": "1521-2254",
+   "fulljournalname": "The journal of gene medicine",
+   "history": [
+    {
+     "date": "2020/07/17 00:00",
+     "pubstatus": "received"
+    },
+    {
+     "date": "2020/10/12 00:00",
+     "pubstatus": "revised"
+    },
+    {
+     "date": "2020/10/20 00:00",
+     "pubstatus": "accepted"
+    },
+    {
+     "date": "2020/10/27 06:00",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2022/01/05 06:00",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2020/10/26 17:16",
+     "pubstatus": "entrez"
+    }
+   ],
+   "issn": "1099-498X",
+   "issue": "1",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Kutala VK",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "9815764",
+   "pages": "e3289",
+   "pmcrefcount": "",
+   "pubdate": "2021 Jan",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Journal Article",
+    "Research Support, Non-U.S. Gov't"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Naushad SM",
+   "sortpubdate": "2021/01/01 00:00",
+   "sorttitle": "pharmacogenetic profiling of dihydropyrimidine dehydrogenase dpyd variants in the indian population",
+   "source": "J Gene Med",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "Pharmacogenetic profiling of dihydropyrimidine dehydrogenase (DPYD) variants in the Indian population.",
+   "uid": "33105068",
+   "vernaculartitle": "",
+   "volume": "23"
+  },
+  "38886557": {
+   "articleids": [
+    {
+     "idtype": "pubmed",
+     "idtypen": 1,
+     "value": "38886557"
+    },
+    {
+     "idtype": "pmc",
+     "idtypen": 8,
+     "value": "PMC11300675"
+    },
+    {
+     "idtype": "pmcid",
+     "idtypen": 5,
+     "value": "pmc-id: PMC11300675;"
+    },
+    {
+     "idtype": "doi",
+     "idtypen": 3,
+     "value": "10.1038/s41416-024-02754-z"
+    },
+    {
+     "idtype": "pii",
+     "idtypen": 4,
+     "value": "10.1038/s41416-024-02754-z"
+    }
+   ],
+   "attributes": [
+    "Has Abstract"
+   ],
+   "authors": [
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Chan TH"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Zhang JE"
+    },
+    {
+     "authtype": "Author",
+     "clusterid": "",
+     "name": "Pirmohamed M"
+    }
+   ],
+   "availablefromurl": "",
+   "bookname": "",
+   "booktitle": "",
+   "chapter": "",
+   "doccontriblist": [],
+   "docdate": "",
+   "doctype": "citation",
+   "edition": "",
+   "elocationid": "doi: 10.1038/s41416-024-02754-z",
+   "epubdate": "2024 Jun 17",
+   "essn": "1532-1827",
+   "fulljournalname": "British journal of cancer",
+   "history": [
+    {
+     "date": "2023/12/08 00:00",
+     "pubstatus": "received"
+    },
+    {
+     "date": "2024/06/05 00:00",
+     "pubstatus": "accepted"
+    },
+    {
+     "date": "2024/06/03 00:00",
+     "pubstatus": "revised"
+    },
+    {
+     "date": "2024/08/06 00:41",
+     "pubstatus": "medline"
+    },
+    {
+     "date": "2024/06/18 00:43",
+     "pubstatus": "pubmed"
+    },
+    {
+     "date": "2024/06/17 23:37",
+     "pubstatus": "entrez"
+    },
+    {
+     "date": "2024/06/17 00:00",
+     "pubstatus": "pmc-release"
+    }
+   ],
+   "issn": "0007-0920",
+   "issue": "3",
+   "lang": [
+    "eng"
+   ],
+   "lastauthor": "Pirmohamed M",
+   "locationlabel": "",
+   "medium": "",
+   "nlmuniqueid": "0370635",
+   "pages": "498-514",
+   "pmcrefcount": 101,
+   "pubdate": "2024 Aug",
+   "publisherlocation": "",
+   "publishername": "",
+   "pubstatus": "256",
+   "pubtype": [
+    "Systematic Review",
+    "Journal Article"
+   ],
+   "recordstatus": "PubMed - indexed for MEDLINE",
+   "references": [],
+   "reportnumber": "",
+   "sortfirstauthor": "Chan TH",
+   "sortpubdate": "2024/08/01 00:00",
+   "sorttitle": "dpyd genetic polymorphisms in non european patients with severe fluoropyrimidine related toxicity a systematic review",
+   "source": "Br J Cancer",
+   "srccontriblist": [],
+   "srcdate": "",
+   "title": "DPYD genetic polymorphisms in non-European patients with severe fluoropyrimidine-related toxicity: a systematic review.",
+   "uid": "38886557",
+   "vernaculartitle": "",
+   "volume": "131"
+  },
+  "uids": [
+   "23588312",
+   "24648345",
+   "25410891",
+   "28295243",
+   "29152729",
+   "29239269",
+   "33105068",
+   "38886557"
+  ]
+ }
+}

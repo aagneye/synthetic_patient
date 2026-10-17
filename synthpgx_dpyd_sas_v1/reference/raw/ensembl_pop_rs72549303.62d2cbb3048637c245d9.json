@@ -1,0 +1,120 @@
+{
+ "MAF": null,
+ "ambiguity": null,
+ "clinical_significance": [
+  "pathogenic",
+  "drug response"
+ ],
+ "evidence": [
+  "Cited",
+  "Phenotype_or_Disease"
+ ],
+ "mappings": [
+  {
+   "allele_string": "GG/G",
+   "ancestral_allele": "GG",
+   "assembly_name": "GRCh38",
+   "coord_system": "chromosome",
+   "end": 97450067,
+   "location": "1:97450066-97450067",
+   "seq_region_name": "1",
+   "start": 97450066,
+   "strand": 1
+  }
+ ],
+ "minor_allele": null,
+ "most_severe_consequence": "frameshift_variant",
+ "name": "rs72549303",
+ "populations": [
+  {
+   "allele": "GG",
+   "allele_count": 68027,
+   "frequency": 1,
+   "population": "gnomADg:nfe"
+  },
+  {
+   "allele": "G",
+   "allele_count": 1,
+   "frequency": 1.47e-05,
+   "population": "gnomADg:nfe"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 294,
+   "frequency": 1,
+   "population": "gnomADg:mid"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 3466,
+   "frequency": 1,
+   "population": "gnomADg:asj"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 15288,
+   "frequency": 1,
+   "population": "gnomADg:amr"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 2114,
+   "frequency": 1,
+   "population": "gnomADg:remaining"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 4830,
+   "frequency": 1,
+   "population": "gnomADg:sas"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 41570,
+   "frequency": 1,
+   "population": "gnomADg:afr"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 10624,
+   "frequency": 1,
+   "population": "gnomADg:fin"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 912,
+   "frequency": 1,
+   "population": "gnomADg:ami"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 5190,
+   "frequency": 1,
+   "population": "gnomADg:eas"
+  },
+  {
+   "allele": "GG",
+   "allele_count": 152315,
+   "frequency": 1,
+   "population": "gnomADg:ALL"
+  },
+  {
+   "allele": "G",
+   "allele_count": 1,
+   "frequency": 6.565e-06,
+   "population": "gnomADg:ALL"
+  }
+ ],
+ "source": "Variants (including SNPs and indels) imported from dbSNP",
+ "synonyms": [
+  "PA166153897",
+  "VCV000635266",
+  "RCV000786628",
+  "RCV002267740",
+  "612779.0005",
+  "NM_000110.4:c.1898del",
+  "NP_000101.2:p.Pro633fs",
+  "NM_000110.3:c.1898del"
+ ],
+ "var_class": "indel"
+}

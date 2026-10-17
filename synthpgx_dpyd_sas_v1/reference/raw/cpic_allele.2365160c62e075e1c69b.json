@@ -1,0 +1,2179 @@
+[
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778369,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0001,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778370,
+  "inferredfrequency": false,
+  "name": "c.1003G>T (*11)",
+  "strength": "Moderate",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778371,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0031082802,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778372,
+  "inferredfrequency": false,
+  "name": "c.1024G>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778373,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778374,
+  "inferredfrequency": false,
+  "name": "c.1057C>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778375,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.00028279895,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778376,
+  "inferredfrequency": false,
+  "name": "c.1108A>G",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "28295243"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 3942827,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 3942828,
+  "inferredfrequency": false,
+  "name": "c.1129-5923C>G",
+  "strength": "Strong",
+  "version": 179
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "28295243"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778377,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0031082802,
+   "Central/South Asian": 0.019658487,
+   "East Asian": 0.0,
+   "European": 0.023735587,
+   "Latino": 0.005925072,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": "c.1129-5923C>G is likely HapB3 causal variant. c.1236G>A (E412E) is a proxy SNP for intronic c.1129-5923C>G, which is LD.",
+  "genesymbol": "DPYD",
+  "id": 778378,
+  "inferredfrequency": false,
+  "name": "c.1129-5923C>G, c.1236G>A (HapB3)",
+  "strength": "Strong",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778379,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778380,
+  "inferredfrequency": false,
+  "name": "c.1156G>T (*12)",
+  "strength": "Moderate",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778381,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0001,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778382,
+  "inferredfrequency": false,
+  "name": "c.1180C>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778383,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.32841415e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0008968254
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778384,
+  "inferredfrequency": false,
+  "name": "c.1181G>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778385,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.06372611,
+   "Central/South Asian": 0.00017881053,
+   "East Asian": 0.0,
+   "European": 0.0002832076,
+   "Latino": 0.0022634026,
+   "Sub-Saharan African": 0.08245437
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778386,
+  "inferredfrequency": false,
+  "name": "c.1218G>A",
+  "strength": "Moderate",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778387,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0005544641,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778388,
+  "inferredfrequency": false,
+  "name": "c.1260T>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778389,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3647595e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778390,
+  "inferredfrequency": false,
+  "name": "c.1278G>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778391,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0001,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778392,
+  "inferredfrequency": false,
+  "name": "c.1294G>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778393,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.00068351155,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778394,
+  "inferredfrequency": false,
+  "name": "c.1314T>G",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778395,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 8.888889e-05,
+   "Sub-Saharan African": 0.003892857
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778396,
+  "inferredfrequency": false,
+  "name": "c.1349C>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778397,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0030573248,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.002017857
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778398,
+  "inferredfrequency": false,
+  "name": "c.1358C>G",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778399,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.015828025,
+   "Central/South Asian": 8.935568e-05,
+   "East Asian": 0.0,
+   "European": 0.00017700421,
+   "Latino": 0.00071320933,
+   "Sub-Saharan African": 0.020694444
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778400,
+  "inferredfrequency": false,
+  "name": "c.1371C>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778401,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 3.9617094e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778402,
+  "inferredfrequency": false,
+  "name": "c.1403C>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778403,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0002,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778404,
+  "inferredfrequency": false,
+  "name": "c.1475C>T",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778405,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778406,
+  "inferredfrequency": false,
+  "name": "c.1484A>G",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778407,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3648505e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778408,
+  "inferredfrequency": false,
+  "name": "c.1519G>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778409,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 9.100371e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778410,
+  "inferredfrequency": false,
+  "name": "c.1543G>A",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778411,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0003390512,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778412,
+  "inferredfrequency": false,
+  "name": "c.1577C>G",
+  "strength": "Limited",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778413,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.009713376,
+   "Central/South Asian": 0.008595228,
+   "East Asian": 0.0,
+   "European": 0.019760394,
+   "Latino": 0.009438756,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778414,
+  "inferredfrequency": false,
+  "name": "c.1601G>A (*4)",
+  "strength": "Moderate",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778415,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0031082802,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3374884e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0041011903
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778416,
+  "inferredfrequency": false,
+  "name": "c.1615G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23328581"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778417,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.14005096,
+   "Central/South Asian": 0.09372777,
+   "East Asian": 0.25466427,
+   "European": 0.19492984,
+   "Latino": 0.3070716,
+   "Sub-Saharan African": 0.157875
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778418,
+  "inferredfrequency": false,
+  "name": "c.1627A>G (*5)",
+  "strength": "Strong",
+  "version": 392
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "23328581"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778419,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.00055783015,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778420,
+  "inferredfrequency": false,
+  "name": "c.1679T>G (*13)",
+  "strength": "Moderate",
+  "version": 392
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778421,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0001,
+   "East Asian": 0.0,
+   "European": 1.3742599e-05,
+   "Latino": 0.0001,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778422,
+  "inferredfrequency": false,
+  "name": "c.1682G>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778423,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0015735973,
+   "European": 1.3284529e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778424,
+  "inferredfrequency": false,
+  "name": "c.1774C>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778425,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778426,
+  "inferredfrequency": false,
+  "name": "c.1775G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778427,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.365011e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778428,
+  "inferredfrequency": false,
+  "name": "c.1777G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778429,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 9.0990965e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778430,
+  "inferredfrequency": false,
+  "name": "c.1796T>C",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778431,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.03187898,
+   "Central/South Asian": 0.03587631,
+   "East Asian": 0.12373856,
+   "European": 0.03787994,
+   "Latino": 0.08113257,
+   "Sub-Saharan African": 0.007970238
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778432,
+  "inferredfrequency": false,
+  "name": "c.1896T>C",
+  "strength": "Moderate",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778433,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778434,
+  "inferredfrequency": false,
+  "name": "c.1898delC (*3)",
+  "strength": "Moderate",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "23328581"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778437,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0031082802,
+   "Central/South Asian": 0.005076194,
+   "East Asian": 0.0,
+   "European": 0.007917321,
+   "Latino": 0.00078298897,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "No function",
+  "functioncomments": "This rsID, when combined with rs1801159, makes up DPYD*2B",
+  "genesymbol": "DPYD",
+  "id": 778438,
+  "inferredfrequency": false,
+  "name": "c.1905+1G>A (*2A)",
+  "strength": "Strong",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778435,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 5.4979286e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778436,
+  "inferredfrequency": false,
+  "name": "c.1905C>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778439,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0002,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778440,
+  "inferredfrequency": false,
+  "name": "c.1906A>C",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778441,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778442,
+  "inferredfrequency": false,
+  "name": "c.1990G>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778443,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778444,
+  "inferredfrequency": false,
+  "name": "c.2021G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778445,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 8.9406414e-05,
+   "East Asian": 0.0,
+   "European": 0.0001946586,
+   "Latino": 0.00023592282,
+   "Sub-Saharan African": 0.0009821429
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778446,
+  "inferredfrequency": false,
+  "name": "c.2161G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778447,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.364734e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778448,
+  "inferredfrequency": false,
+  "name": "c.2186C>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23328581"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778449,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.016,
+   "Central/South Asian": 0.09505568,
+   "East Asian": 0.018249057,
+   "European": 0.044963934,
+   "Latino": 0.027319003,
+   "Sub-Saharan African": 0.02695635
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778450,
+  "inferredfrequency": false,
+  "name": "c.2194G>A (*6)",
+  "strength": "Moderate",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778451,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0019285714
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778452,
+  "inferredfrequency": false,
+  "name": "c.2195T>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778453,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0060296794,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778454,
+  "inferredfrequency": false,
+  "name": "c.2279C>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778455,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0018162305,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778456,
+  "inferredfrequency": false,
+  "name": "c.2303C>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778457,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0010211836,
+   "European": 1.3281931e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778458,
+  "inferredfrequency": false,
+  "name": "c.2336C>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778459,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 8.9115194e-05,
+   "East Asian": 0.0,
+   "European": 0.0001131909,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778460,
+  "inferredfrequency": false,
+  "name": "c.2482G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778461,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.00029061755,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778462,
+  "inferredfrequency": false,
+  "name": "c.2582A>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778463,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.00028225806,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778464,
+  "inferredfrequency": false,
+  "name": "c.2623A>C",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778465,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0007,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778466,
+  "inferredfrequency": false,
+  "name": "c.2639G>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778467,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.001,
+   "East Asian": 0.0001,
+   "European": 0.00036403185,
+   "Latino": 0.0001,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778468,
+  "inferredfrequency": false,
+  "name": "c.2656C>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778469,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.00016493561,
+   "East Asian": 0.00032379513,
+   "European": 1.3373986e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": "This rsID, when combined with rs1801265 makes up DPYD*9B",
+  "genesymbol": "DPYD",
+  "id": 778470,
+  "inferredfrequency": false,
+  "name": "c.2657G>A (*9B)",
+  "strength": "Moderate",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778471,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0031082802,
+   "Central/South Asian": 0.000640429,
+   "East Asian": 0.0,
+   "European": 0.0037400308,
+   "Latino": 0.0020888615,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778472,
+  "inferredfrequency": false,
+  "name": "c.2846A>T",
+  "strength": "Strong",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778473,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.364737e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778474,
+  "inferredfrequency": false,
+  "name": "c.2872A>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778475,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.00922293,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 8.924864e-05,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778476,
+  "inferredfrequency": false,
+  "name": "c.2915A>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778477,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778478,
+  "inferredfrequency": false,
+  "name": "c.2921A>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778479,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778480,
+  "inferredfrequency": false,
+  "name": "c.2933A>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778337,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.00018195312,
+   "Latino": 0.0001,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778338,
+  "inferredfrequency": false,
+  "name": "c.295_298delTCAT (*7)",
+  "strength": "Moderate",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778483,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0005154524,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778484,
+  "inferredfrequency": false,
+  "name": "c.2977C>T",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778481,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0019285714
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778482,
+  "inferredfrequency": false,
+  "name": "c.2978T>G",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778485,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778486,
+  "inferredfrequency": false,
+  "name": "c.2983G>T (*10)",
+  "strength": "Moderate",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778487,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.364737e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778488,
+  "inferredfrequency": false,
+  "name": "c.3049G>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778489,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0001,
+   "East Asian": 0.0,
+   "European": 9.0985195e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778490,
+  "inferredfrequency": false,
+  "name": "c.3061G>C",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778491,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.044617835,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3283348e-05,
+   "Latino": 0.00089275226,
+   "Sub-Saharan African": 0.034825396
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778492,
+  "inferredfrequency": false,
+  "name": "c.3067C>A",
+  "strength": "Limited",
+  "version": 390
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778339,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.36468225e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778340,
+  "inferredfrequency": false,
+  "name": "c.313G>A",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778341,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3736458e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778342,
+  "inferredfrequency": false,
+  "name": "c.343A>G",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778343,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.00035729833,
+   "European": 1.3283231e-05,
+   "Latino": 0.011174424,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778344,
+  "inferredfrequency": false,
+  "name": "c.451A>G",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778329,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3740047e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778330,
+  "inferredfrequency": false,
+  "name": "c.46C>G",
+  "strength": "Limited",
+  "version": 402
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778345,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.03187898,
+   "Central/South Asian": 0.085167445,
+   "East Asian": 0.015562055,
+   "European": 0.11037259,
+   "Latino": 0.036260653,
+   "Sub-Saharan African": 0.03082738
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778346,
+  "inferredfrequency": false,
+  "name": "c.496A>G",
+  "strength": "Moderate",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778347,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778348,
+  "inferredfrequency": false,
+  "name": "c.498G>A",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "23588312"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778349,
+  "findings": "5-fluorouracil (ex vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 8.1102364e-05,
+   "European": 0.0,
+   "Latino": 0.00014510652,
+   "Sub-Saharan African": 0.0019642857
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778350,
+  "inferredfrequency": false,
+  "name": "c.525G>A",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778351,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.01233121,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 8.854784e-05,
+   "Latino": 0.0012139219,
+   "Sub-Saharan African": 0.025914682
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778352,
+  "inferredfrequency": false,
+  "name": "c.557A>G",
+  "strength": "Moderate",
+  "version": 396
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778353,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 4.094045e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778354,
+  "inferredfrequency": false,
+  "name": "c.601A>C",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778331,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": null,
+   "East Asian": null,
+   "European": null,
+   "Latino": null,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778332,
+  "inferredfrequency": false,
+  "name": "c.61C>T",
+  "strength": "Limited",
+  "version": 402
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778333,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 3.7312337e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": "This rsID was orginially described as part of the *12 allele but based on more recent data this designation has changed.",
+  "genesymbol": "DPYD",
+  "id": 778334,
+  "inferredfrequency": false,
+  "name": "c.62G>A",
+  "strength": "Moderate",
+  "version": 402
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778355,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3646893e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778356,
+  "inferredfrequency": false,
+  "name": "c.632A>G",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "0.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "No function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778357,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0002,
+   "East Asian": 0.0,
+   "European": 9.098349e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "No function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778358,
+  "inferredfrequency": false,
+  "name": "c.703C>T (*8)",
+  "strength": "Moderate",
+  "version": 394
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "25410891"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778359,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0030573248,
+   "Central/South Asian": 0.0068804934,
+   "East Asian": 0.0,
+   "European": 0.015303651,
+   "Latino": 0.007314514,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778360,
+  "inferredfrequency": false,
+  "name": "c.775A>G",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "18452418"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778335,
+  "findings": "Dihydrouracil (in vivo)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.42713377,
+   "Central/South Asian": 0.25525716,
+   "East Asian": 0.076328315,
+   "European": 0.22749932,
+   "Latino": 0.20892397,
+   "Sub-Saharan African": 0.4464008
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778336,
+  "inferredfrequency": false,
+  "name": "c.85T>C (*9A)",
+  "strength": "Strong",
+  "version": 394
+ },
+ {
+  "activityvalue": "0.5",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Decreased function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778361,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 0.0,
+   "Latino": 0.00033666822,
+   "Sub-Saharan African": 0.002017857
+  },
+  "functionalstatus": "Decreased function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778362,
+  "inferredfrequency": false,
+  "name": "c.868A>G",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778363,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3648342e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778364,
+  "inferredfrequency": false,
+  "name": "c.929T>C",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778365,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": null,
+   "Central/South Asian": 0.0,
+   "East Asian": 0.0,
+   "European": 1.3648715e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": null
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778366,
+  "inferredfrequency": false,
+  "name": "c.934C>T",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "24648345"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778367,
+  "findings": "5-fluorouracil (in vitro)",
+  "frequency": {
+   "African American/Afro-Caribbean": 0.0,
+   "Central/South Asian": 0.00017881511,
+   "East Asian": 0.0,
+   "European": 4.1703854e-05,
+   "Latino": 0.0,
+   "Sub-Saharan African": 0.0
+  },
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778368,
+  "inferredfrequency": false,
+  "name": "c.967G>A",
+  "strength": "Limited",
+  "version": 396
+ },
+ {
+  "activityvalue": "1.0",
+  "citations": [
+   "38129972"
+  ],
+  "clinicalfunctionalstatus": "Normal function",
+  "clinicalfunctionalsubstrate": null,
+  "definitionid": 778327,
+  "findings": "Individual patients have been reported (PMID 38129972) to carry only one of the two SNPs in the HapB3 haplotype (i.e., c.1236G>A without c.1129-5923C>G), suggesting that the two variants are not in complete linkage disequilibrium. To address this, c.1129-5923C>G SNP is listed separately as this is likely the causal variant leading to decreased function. The HapB3 haplotype definition was also retained for cases where only the c.1236G>A variant is tested (e.g. whole exome sequencing). While CPIC recommends to directly test the causal SNP if possible, in cases where only c.1236G>A is tested or results are available for, it should be clearly stated in the test report that \"decreased function\" was inferred by detecting the exonic tag SNP, and disclose that in rare cases, the causal decreased function variant c.1129-5923C>G may not be present despite having this tag SNP.",
+  "frequency": null,
+  "functionalstatus": "Normal function",
+  "functioncomments": null,
+  "genesymbol": "DPYD",
+  "id": 778328,
+  "inferredfrequency": false,
+  "name": "Reference",
+  "strength": null,
+  "version": 244
+ }
+]

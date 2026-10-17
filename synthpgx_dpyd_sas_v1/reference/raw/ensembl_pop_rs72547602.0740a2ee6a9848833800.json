@@ -1,0 +1,117 @@
+{
+ "MAF": null,
+ "ambiguity": "D",
+ "clinical_significance": [
+  "pathogenic"
+ ],
+ "evidence": [
+  "Frequency",
+  "Cited",
+  "Phenotype_or_Disease",
+  "gnomAD"
+ ],
+ "mappings": [
+  {
+   "allele_string": "T/A/G",
+   "ancestral_allele": "T",
+   "assembly_name": "GRCh38",
+   "coord_system": "chromosome",
+   "end": 97079133,
+   "location": "1:97079133-97079133",
+   "seq_region_name": "1",
+   "start": 97079133,
+   "strand": 1
+  }
+ ],
+ "minor_allele": null,
+ "most_severe_consequence": "missense_variant",
+ "name": "rs72547602",
+ "populations": [
+  {
+   "allele": "T",
+   "allele_count": 44700,
+   "frequency": 1,
+   "population": "gnomADe:amr"
+  },
+  {
+   "allele": "T",
+   "allele_count": 5714,
+   "frequency": 1,
+   "population": "gnomADe:mid"
+  },
+  {
+   "allele": "T",
+   "allele_count": 1111606,
+   "frequency": 1,
+   "population": "gnomADe:nfe"
+  },
+  {
+   "allele": "T",
+   "allele_count": 1461293,
+   "frequency": 1,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "G",
+   "allele_count": 1,
+   "frequency": 6.843e-07,
+   "population": "gnomADe:ALL"
+  },
+  {
+   "allele": "T",
+   "allele_count": 86248,
+   "frequency": 1,
+   "population": "gnomADe:sas"
+  },
+  {
+   "allele": "T",
+   "allele_count": 33446,
+   "frequency": 1,
+   "population": "gnomADe:afr"
+  },
+  {
+   "allele": "T",
+   "allele_count": 53420,
+   "frequency": 1,
+   "population": "gnomADe:fin"
+  },
+  {
+   "allele": "T",
+   "allele_count": 39692,
+   "frequency": 1,
+   "population": "gnomADe:eas"
+  },
+  {
+   "allele": "T",
+   "allele_count": 26104,
+   "frequency": 1,
+   "population": "gnomADe:asj"
+  },
+  {
+   "allele": "G",
+   "allele_count": 1,
+   "frequency": 1.657e-05,
+   "population": "gnomADe:remaining"
+  },
+  {
+   "allele": "T",
+   "allele_count": 60363,
+   "frequency": 1,
+   "population": "gnomADe:remaining"
+  }
+ ],
+ "source": "Variants (including SNPs and indels) imported from dbSNP",
+ "synonyms": [
+  "PA166159798",
+  "RCV000030869",
+  "VCV000000433",
+  "NM_000110.4:c.2921A>C",
+  "NM_000110.3:c.2921A>T",
+  "NM_000110.3:c.2921A>C",
+  "NP_000101.2:p.Asp974Val",
+  "NP_000101.2:p.Asp974Ala",
+  "NM_000110.4:c.2921A>T",
+  "612779.0002"
+ ],
+ "var_class": "SNP"
+}

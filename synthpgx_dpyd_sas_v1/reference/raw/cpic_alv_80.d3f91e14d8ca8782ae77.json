@@ -1,0 +1,518 @@
+[
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778244,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778245,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778246,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778247,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 948658,
+  "variantallele": "ATGA(2)",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778249,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778250,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778251,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778252,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778253,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778254,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778255,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778256,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778257,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778258,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778259,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778260,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778261,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778262,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778263,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778264,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778265,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778266,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778267,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778268,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778270,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778271,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778272,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778273,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778269,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778274,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778275,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778276,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778277,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778278,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778279,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778280,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778281,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778282,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778283,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778284,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778285,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778286,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778287,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778288,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778289,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778290,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778291,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778292,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778293,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778294,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778295,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778296,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 948707,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778298,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778299,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778300,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778301,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778302,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778303,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778304,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778305,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778306,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778307,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778308,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778309,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778310,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778311,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778312,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778313,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778314,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778315,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778316,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778317,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778318,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778319,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778320,
+  "variantallele": "T",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778322,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778321,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778323,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778324,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778325,
+  "variantallele": "C",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778327,
+  "locationid": 778326,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778363,
+  "locationid": 778261,
+  "variantallele": "G",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778365,
+  "locationid": 778262,
+  "variantallele": "A",
+  "version": 1
+ },
+ {
+  "alleledefinitionid": 778367,
+  "locationid": 778263,
+  "variantallele": "T",
+  "version": 1
+ }
+]

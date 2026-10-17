@@ -1,0 +1,16 @@
+[
+ {
+  "d_prime": "0.999978",
+  "population_name": "1000GENOMES:phase_3:CDX",
+  "r2": "0.056633",
+  "variation1": "rs1801159",
+  "variation2": "rs1801160"
+ },
+ {
+  "d_prime": "0.999983",
+  "population_name": "1000GENOMES:phase_3:LWK",
+  "r2": "0.148382",
+  "variation1": "rs1801159",
+  "variation2": "rs1801160"
+ }
+]
