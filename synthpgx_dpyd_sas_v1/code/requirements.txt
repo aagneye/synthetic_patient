@@ -1,0 +1,13 @@
+# SynthPGx-DPYD-SAS v1 -- pinned environment
+# Python 3.12
+
+numpy==2.5.4
+pandas==2.3.3
+pyarrow==26.0.0
+scipy==1.18.1
+PyYAML==6.0.3
+msprime==1.4.4
+stdpopsim==0.3.0
+tskit==1.0.3
+sdv==2.0.0
+copulas==0.14.1
