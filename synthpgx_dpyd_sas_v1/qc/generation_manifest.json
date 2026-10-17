@@ -1,0 +1,55 @@
+{
+  "coalescent": {
+    "background_sites": 25213,
+    "recombination_map": "HapMapII_GRCh38",
+    "trees": 17183
+  },
+  "covariate_provenance": {
+    "generator": "sdv.GaussianCopulaSynthesizer",
+    "seed_is_real_data": false,
+    "seed_rows": 600,
+    "seed_source": "config.yaml clinical_covariates marginals",
+    "warning": "No real patient profiles were available. The copula was fitted to a seed cohort built from declared assumptions, so these covariates carry no empirical support."
+  },
+  "cpic_version": "459",
+  "dataset": {
+    "cancer_type": "colorectal",
+    "gene": "DPYD",
+    "label": "SYNTHETIC. In silico cohort validation. Not clinical evidence.",
+    "name": "SynthPGx-DPYD-SAS",
+    "version": "1.0"
+  },
+  "demography_provenance": {
+    "AFR": "OutOfAfrica_4J17 population YRI (Jouganous et al. 2017)",
+    "AMR": "ASSUMPTION: admixture at 20 generations from {'CEU': 0.55, 'YRI': 0.15, 'CHB': 0.3}, Ne=18000. A three-way admixture standing in for the gnomAD \"amr\" grouping. Proportions are illustrative, not an ancestry estimate for any real population.",
+    "EAS": "OutOfAfrica_4J17 population CHB (Jouganous et al. 2017)",
+    "EUR": "OutOfAfrica_4J17 population CEU (Jouganous et al. 2017)",
+    "SAS": "ASSUMPTION: split from CEU at 1200 generations, Ne=25000. Placed on the Eurasian branch after the out-of-Africa bottleneck so that SAS sits between EUR and EAS in PCA space, which is the qualitative structure the equity analysis depends on."
+  },
+  "generated_utc": "2026-10-17T11:21:16Z",
+  "label": "SYNTHETIC. In silico cohort validation. Not clinical evidence.",
+  "layer_a_caller": "synthpgx.layer_a.DpydTableCaller",
+  "n_catalog_variants": 83,
+  "n_injected_variants": 78,
+  "n_patients": 20500,
+  "n_refusal_cases": 540,
+  "outcome_model_versions": [
+    "outcome-model-v1-draw0",
+    "outcome-model-v1-draw1",
+    "outcome-model-v1-draw2"
+  ],
+  "pharmvar_version": null,
+  "refusal_rule_ids_available": false,
+  "refusal_rule_source": null,
+  "region": {
+    "chrom": "chr1",
+    "end": 97903368,
+    "start": 97058987
+  },
+  "seed": 42,
+  "variants_without_frequency": [
+    "c.2921A>T",
+    "c.1777G>A",
+    "c.1003G>T"
+  ]
+}

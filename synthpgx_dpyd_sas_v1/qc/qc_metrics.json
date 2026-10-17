@@ -1,0 +1,155 @@
+{
+  "counts": {
+    "FAIL": 0,
+    "PASS": 9,
+    "REPORTED": 6,
+    "SKIPPED": 2
+  },
+  "gates": [
+    {
+      "metrics": {
+        "n_failures": 0
+      },
+      "name": "Allele frequency per variant per population",
+      "section": "8.1",
+      "status": "PASS",
+      "summary": "75 powered variant-population pairs checked; 0 outside tolerance; 315 underpowered pairs reported but not gated."
+    },
+    {
+      "metrics": {
+        "expected_by_chance": 1,
+        "n_failures": 0
+      },
+      "name": "Hardy-Weinberg equilibrium",
+      "section": "8.1",
+      "status": "PASS",
+      "summary": "18 powered tests; 0 with p<=0.01 (up to 1 expected by chance); 93 underpowered."
+    },
+    {
+      "metrics": {
+        "frobenius_distance": 0.15883687992502923,
+        "mean_abs_difference": 0.08554873580830076,
+        "mean_r2_reference": 0.08632366666666667,
+        "mean_r2_synthetic": 0.0007749308583659154
+      },
+      "name": "Linkage disequilibrium in DPYD",
+      "section": "8.1",
+      "status": "REPORTED",
+      "summary": "3 variant pairs compared against the mean r-squared across the five 1000 Genomes South Asian panels. Frobenius distance 0.159, mean |r2 difference| 0.086. Synthetic r-squared is lower than the reference (0.001 vs 0.086): injected variants are each placed on an independently chosen clade, so they carry realistic linkage to the background but not the real pairwise linkage to each other. Variants defining one compound allele are the exception and are injected as a unit."
+    },
+    {
+      "metrics": {},
+      "name": "Population structure (PCA)",
+      "section": "8.1",
+      "status": "REPORTED",
+      "summary": "PCA over 2000 background sites. PC1 explains 6.8% of variance. SAS and EUR centroids are 2.52 apart, 0.57 SAS standard deviations. Clustering against real 1000 Genomes samples is NOT tested: the reference genotypes are not bundled with this dataset."
+    },
+    {
+      "metrics": {},
+      "name": "Diplotype distribution",
+      "section": "8.1",
+      "status": "REPORTED",
+      "summary": "Diplotype diversity summarised across 5 populations."
+    },
+    {
+      "metrics": {
+        "identical": true
+      },
+      "name": "Engine determinism",
+      "section": "8.2",
+      "status": "PASS",
+      "summary": "Two independent Layer A runs produced byte-identical output."
+    },
+    {
+      "metrics": {
+        "agreement": 1.0
+      },
+      "name": "Ground-truth agreement (non-refusal rows)",
+      "section": "8.2",
+      "status": "PASS",
+      "summary": "100.0000% of 20358 non-refusal rows reproduced exactly (required 100%)."
+    },
+    {
+      "metrics": {
+        "agreement": 1.0
+      },
+      "name": "Refusal agreement",
+      "section": "8.2",
+      "status": "PASS",
+      "summary": "100.00% of 540 engineered cases returned the expected category. refusal_rule_id_expected is null throughout: no anukriti-swarm source was supplied, and rule IDs are never invented."
+    },
+    {
+      "metrics": {},
+      "name": "Engine path coverage",
+      "section": "8.2",
+      "status": "PASS",
+      "summary": "All 5 DrugSafetyOutcome values and all 4 phenotypes are exercised. Poor Metabolizer rows come from the enriched coverage panel, not from population sampling."
+    },
+    {
+      "metrics": {},
+      "name": "Parity with PharmCAT",
+      "section": "8.2",
+      "status": "SKIPPED",
+      "summary": "PharmCAT is not installed in this environment, so the 500-sample cross-check was not run. This is a genuine gap in v1, not a pass."
+    },
+    {
+      "metrics": {
+        "identical_records": 0
+      },
+      "name": "Nearest-neighbour distance to seed records",
+      "section": "8.3",
+      "status": "PASS",
+      "summary": "0 synthetic records sit at distance 0 from a seed record (must be 0). Median distance 0.354. Note: the seed cohort is itself synthetic, built from declared marginals, so no real individual's data is at risk in this build. These numbers establish the measurement path, not a clearance for training on real data."
+    },
+    {
+      "metrics": {
+        "nnaa": 0.5475000000000001
+      },
+      "name": "Nearest Neighbour Adversarial Accuracy",
+      "section": "8.3",
+      "status": "PASS",
+      "summary": "NNAA = 0.548 (ideal 0.5, tolerance +/-0.1). Note: the seed cohort is itself synthetic, built from declared marginals, so no real individual's data is at risk in this build. These numbers establish the measurement path, not a clearance for training on real data."
+    },
+    {
+      "metrics": {
+        "epsilon_identifiability": 0.435,
+        "gated": false
+      },
+      "name": "Epsilon-identifiability",
+      "section": "8.3",
+      "status": "REPORTED",
+      "summary": "epsilon-identifiability = 0.435 (Miletic benchmark: under 0.35). Note that when the synthetic set is the same size as the seed set and the generator is distributionally faithful, this statistic sits near 0.5 by construction: a synthetic neighbour is then as likely to be nearest as another real record. NNAA and the membership attack above are the discriminative tests. Note: the seed cohort is itself synthetic, built from declared marginals, so no real individual's data is at risk in this build. These numbers establish the measurement path, not a clearance for training on real data."
+    },
+    {
+      "metrics": {
+        "accuracy": 0.4866666666666667
+      },
+      "name": "Membership-inference attack",
+      "section": "8.3",
+      "status": "PASS",
+      "summary": "Distance-threshold attack distinguishes seed members from held-out records with accuracy 0.487 (chance is 0.5), over 600 members and 600 non-members. Note: the seed cohort is itself synthetic, built from declared marginals, so no real individual's data is at risk in this build. These numbers establish the measurement path, not a clearance for training on real data."
+    },
+    {
+      "metrics": {},
+      "name": "Per-stratum reporting",
+      "section": "8.4",
+      "status": "REPORTED",
+      "summary": "10 strata reported. All strata at or above the floor of 200."
+    },
+    {
+      "metrics": {},
+      "name": "Population-equity measurement (F4)",
+      "section": "8.4",
+      "status": "REPORTED",
+      "summary": "2122 of 12500 South Asian patients (17.0%) are called normal by a CPIC-only screen but flagged once the South Asian override applies."
+    },
+    {
+      "metrics": {},
+      "name": "ML utility, train-synthetic-test-real (F5)",
+      "section": "8.5",
+      "status": "SKIPPED",
+      "summary": "Needs the DPYD v4 missense classifier and a held-out set of REAL variants with functional labels (Offer 2014, ClinVar). Neither is present in this repository, so no utility claim is made."
+    }
+  ],
+  "label": "SYNTHETIC. In silico cohort validation. Not clinical evidence."
+}
