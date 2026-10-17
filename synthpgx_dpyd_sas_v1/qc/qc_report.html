@@ -34,9 +34,9 @@
 <h1>SynthPGx-DPYD-SAS &mdash; QC report</h1>
 <div class="warn">SYNTHETIC. In silico cohort validation. Not clinical evidence.</div>
 <div class="tally">
-  <div><strong>9</strong> passed</div>
+  <div><strong>10</strong> passed</div>
   <div><strong>0</strong> failed</div>
-  <div><strong>2</strong> skipped</div>
+  <div><strong>1</strong> skipped</div>
   <div><strong>6</strong> reported</div>
 </div>
 <section><h3>Dataset</h3><table class="dataframe data">
@@ -1725,11 +1725,56 @@
 </table>
             </section>
             <section>
-              <h3><span class="badge" style="background:#9a6700">SKIPPED</span>
-                  Parity with PharmCAT
+              <h3><span class="badge" style="background:#1a7f37">PASS</span>
+                  Parity with PharmCAT (DPYD)
                   <span class="sec">Part 8.2</span></h3>
-              <p>PharmCAT is not installed in this environment, so the 500-sample cross-check was not run. This is a genuine gap in v1, not a pass.</p>
-              
+              <p>PharmCAT 3.4.0 on 500 patients: 88.40% diplotype agreement, 98.20% phenotype agreement. Disagreements: tie_break_equal_activity 50, engine_refused_low_quality 8, engine_refused_ambiguous_phase 1. Every disagreement falls into a known class.</p>
+              <table class="dataframe data">
+  <thead>
+    <tr style="text-align: right;">
+      <th>disagreement_class</th>
+      <th>n</th>
+      <th>example_patient</th>
+      <th>share</th>
+      <th>example_expected</th>
+      <th>example_pharmcat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>agree</td>
+      <td>441</td>
+      <td>SYN-000009</td>
+      <td>0.882</td>
+      <td>Reference / c.1896T&gt;C</td>
+      <td>Reference / c.1896T&gt;C</td>
+    </tr>
+    <tr>
+      <td>tie_break_equal_activity</td>
+      <td>50</td>
+      <td>SYN-000107</td>
+      <td>0.100</td>
+      <td>c.1627A&gt;G / c.2194G&gt;A</td>
+      <td>c.1627A&gt;G / c.85T&gt;C</td>
+    </tr>
+    <tr>
+      <td>engine_refused_low_quality</td>
+      <td>8</td>
+      <td>SYN-000465</td>
+      <td>0.016</td>
+      <td>Indeterminate</td>
+      <td>c.1218G&gt;A / c.85T&gt;C</td>
+    </tr>
+    <tr>
+      <td>engine_refused_ambiguous_phase</td>
+      <td>1</td>
+      <td>SYN-018693</td>
+      <td>0.002</td>
+      <td>c.2279C&gt;T / c.2846A&gt;T</td>
+      <td>c.2279C&gt;T / c.2846A&gt;T</td>
+    </tr>
+  </tbody>
+</table>
             </section>
             <section>
               <h3><span class="badge" style="background:#1a7f37">PASS</span>

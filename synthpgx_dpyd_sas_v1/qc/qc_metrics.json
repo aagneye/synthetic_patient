@@ -1,9 +1,9 @@
 {
   "counts": {
     "FAIL": 0,
-    "PASS": 9,
+    "PASS": 10,
     "REPORTED": 6,
-    "SKIPPED": 2
+    "SKIPPED": 1
   },
   "gates": [
     {
@@ -86,11 +86,20 @@
       "summary": "All 5 DrugSafetyOutcome values and all 4 phenotypes are exercised. Poor Metabolizer rows come from the enriched coverage panel, not from population sampling."
     },
     {
-      "metrics": {},
-      "name": "Parity with PharmCAT",
+      "metrics": {
+        "diplotype_agreement": 0.884,
+        "java_version": "17",
+        "n_sampled": 500,
+        "n_unexplained": 0,
+        "pharmcat_allele_definition_version": "2026-07-13-11-40",
+        "pharmcat_jar": "pharmcat-3.4.0-all.jar",
+        "pharmcat_version": "3.4.0",
+        "phenotype_agreement": 0.982
+      },
+      "name": "Parity with PharmCAT (DPYD)",
       "section": "8.2",
-      "status": "SKIPPED",
-      "summary": "PharmCAT is not installed in this environment, so the 500-sample cross-check was not run. This is a genuine gap in v1, not a pass."
+      "status": "PASS",
+      "summary": "PharmCAT 3.4.0 on 500 patients: 88.40% diplotype agreement, 98.20% phenotype agreement. Disagreements: tie_break_equal_activity 50, engine_refused_low_quality 8, engine_refused_ambiguous_phase 1. Every disagreement falls into a known class."
     },
     {
       "metrics": {
