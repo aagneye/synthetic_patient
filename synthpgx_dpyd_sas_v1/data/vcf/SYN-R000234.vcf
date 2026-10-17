@@ -1,0 +1,17 @@
+##fileformat=VCFv4.2
+##reference=GRCh38
+##contig=<ID=chr1,length=248956422,assembly=GRCh38>
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=LowQual,Description="DP or GQ below the configured threshold">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype quality">
+##INFO=<ID=GENE,Number=1,Type=String,Description="Gene symbol">
+##INFO=<ID=HGVSC,Number=1,Type=String,Description="HGVS coding change on NM_000110.4">
+##INFO=<ID=SYNTHETIC,Number=0,Type=Flag,Description="Simulated call. In silico cohort validation. Not clinical evidence.">
+##source=synthpgx
+##synthpgx_warning=SYNTHETIC. In silico cohort validation. Not clinical evidence.
+##synthpgx_label=SYNTHETIC. In silico cohort validation. Not clinical evidence.
+##synthpgx_case_category=frameshift_not_in_tables
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SYN-R000234
+chr1	97738972	.	CACATACAATAGGAGAA	C	.	PASS	GENE=DPYD;HGVSC=None;SYNTHETIC	GT:DP:GQ	0/1:80:96
