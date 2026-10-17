@@ -68,7 +68,41 @@ def main() -> int:
     return 0
 
 
+PARITY_HEADING = "## PharmCAT parity"
+
+
+def _carry_over_section(path: Path, heading: str) -> list[str]:
+    """Keep a hand-written section when this file is regenerated.
+
+    The PharmCAT parity write-up analyses a quality gate's output, which
+    ``fetch_reference.py`` has no way to derive. Regenerating the reference
+    tables must not silently delete it, so the section is read back out of the
+    file about to be overwritten and re-emitted in place.
+    """
+    if not path.exists():
+        return []
+    lines = path.read_text(encoding="utf-8").splitlines()
+    start = next(
+        (i for i, line in enumerate(lines) if line.startswith(heading)), None
+    )
+    if start is None:
+        return []
+    end = next(
+        (
+            i
+            for i in range(start + 1, len(lines))
+            if lines[i].startswith("## ")
+        ),
+        len(lines),
+    )
+    section = lines[start:end]
+    while section and not section[-1].strip():
+        section.pop()
+    return section
+
+
 def write_open_questions(build, path: Path) -> None:
+    carried_over = _carry_over_section(path, PARITY_HEADING)
     lines = [
         "# Open questions and unsourced values",
         "",
@@ -88,6 +122,8 @@ def write_open_questions(build, path: Path) -> None:
     resolved = _resolved_notes(build)
     for note in resolved:
         lines.append(f"- {note}")
+    if carried_over:
+        lines += [""] + carried_over
     lines += ["", "## Still open", ""]
 
     if not build.open_questions:
