@@ -251,23 +251,33 @@ variant set, neither of which is in this repository.
 
 PharmCAT parity now runs. It is no longer a gap, but it is not a clean bill of
 health either. PharmCAT 3.4.0 over a seed-fixed sample of 500 patients agrees
-with `expected_engine_output.parquet` on **88.40%** of diplotypes and **98.20%**
-of phenotypes. The 59 disagreements fall into three classes, all understood,
-none of which changes a CPIC recommendation:
+with `expected_engine_output.parquet` on **98.40%** of diplotypes and **98.20%**
+of phenotypes. The 9 disagreements are the engine's two refusal paths, neither
+of which changes a CPIC recommendation:
 
 | Class | n | What it is |
 |---|---|---|
-| `tie_break_equal_activity` | 50 | Patient carries more than two variant alleles. CPIC says to use the two lowest activity values but does not say which of several equal-activity alleles to name. Layer A sorts by name; PharmCAT keeps a homozygous allele on both chromosomes. Activity score and phenotype agree in all 50. |
 | `engine_refused_low_quality` | 8 | A call below `min_dp` 20 or `min_gq` 30 makes Layer A return `Indeterminate`. The PharmCAT-shaped VCF carries `GT` only — DP and GQ are not invented for reference rows — so PharmCAT has no quality signal and calls normally. |
 | `engine_refused_ambiguous_phase` | 1 | Two Decreased-function variants, unphased. Both callers name the same diplotype and the same activity score; PharmCAT follows CPIC's unphased convention and reports a phenotype, Layer A declines because phase would change the answer. |
 
-In both refusal classes the engine is the more conservative of the two. The
-tie-break class is a difference in the diplotype *label* only, and is the one
-worth revisiting: anything that joins on the diplotype string will see a
-1-in-10 mismatch against PharmCAT on this cohort. It was not changed in v1
-because doing so would alter labels the deployed engine may already have
-produced. Full counts, worked examples and the reasoning are in
-`qc/open_questions.md`; the per-patient comparison is `qc/pharmcat_parity.csv`.
+In both the engine is the more conservative of the two.
+
+A third class, `tie_break_equal_activity`, accounted for 50 of 500 patients and
+held diplotype agreement at 88.40% in earlier drafts of this build. It was a
+difference in the diplotype *label* only: when a patient carries more than two
+variant alleles and three or more of them share the lowest activity value,
+CPIC's two-lowest rule does not say which to name, and the two callers ordered
+equal-activity names differently — Layer A as plain strings, PharmCAT by
+comparing each run of digits as a number, which is transcript order. Layer A
+adopted PharmCAT's ordering, which closed the class outright. It relabelled
+**2,201 of 20,500 patients** (10.74%) and `diplotype_expected` is the only
+column of `expected_engine_output.parquet` that changed: the selection is taken
+after the activity score is computed and cannot feed back into it, so every
+activity score, phenotype, recommendation and refusal category is unchanged.
+Anything that joined on the old diplotype string for one of those 2,201
+patients needs re-joining. Full counts, the rejected alternative and the
+reasoning are in `qc/open_questions.md`; the per-patient comparison is
+`qc/pharmcat_parity.csv`.
 
 PharmCAT is not bundled. On a machine without it the gate reports SKIPPED, which
 is a gap and not a pass. PharmCAT is a second implementation of the same CPIC

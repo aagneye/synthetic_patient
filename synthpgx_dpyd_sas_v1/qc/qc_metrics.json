@@ -87,7 +87,7 @@
     },
     {
       "metrics": {
-        "diplotype_agreement": 0.884,
+        "diplotype_agreement": 0.984,
         "java_version": "17",
         "n_sampled": 500,
         "n_unexplained": 0,
@@ -99,7 +99,7 @@
       "name": "Parity with PharmCAT (DPYD)",
       "section": "8.2",
       "status": "PASS",
-      "summary": "PharmCAT 3.4.0 on 500 patients: 88.40% diplotype agreement, 98.20% phenotype agreement. Disagreements: tie_break_equal_activity 50, engine_refused_low_quality 8, engine_refused_ambiguous_phase 1. Every disagreement falls into a known class."
+      "summary": "PharmCAT 3.4.0 on 500 patients: 98.40% diplotype agreement, 98.20% phenotype agreement. Disagreements: engine_refused_low_quality 8, engine_refused_ambiguous_phase 1. Every disagreement falls into a known class."
     },
     {
       "metrics": {

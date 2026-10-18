@@ -26,7 +26,7 @@
     "EUR": "OutOfAfrica_4J17 population CEU (Jouganous et al. 2017)",
     "SAS": "ASSUMPTION: split from CEU at 1200 generations, Ne=25000. Placed on the Eurasian branch after the out-of-Africa bottleneck so that SAS sits between EUR and EAS in PCA space, which is the qualitative structure the equity analysis depends on."
   },
-  "generated_utc": "2026-10-17T11:21:16Z",
+  "generated_utc": "2026-10-17T17:43:07Z",
   "label": "SYNTHETIC. In silico cohort validation. Not clinical evidence.",
   "layer_a_caller": "synthpgx.layer_a.DpydTableCaller",
   "n_catalog_variants": 83,

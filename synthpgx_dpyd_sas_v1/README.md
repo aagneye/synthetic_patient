@@ -207,15 +207,19 @@ throughout and `refusal_category_expected` carries the meaning instead. Pass
 Skipped gates in the QC report are gaps, not passes.
 
 - **PharmCAT parity runs, and it is not 100%.** PharmCAT 3.4.0 over a seed-fixed
-  sample of 500 patients agrees on **88.40%** of diplotypes and **98.20%** of
-  phenotypes. All 59 disagreements fall into three understood classes — a
-  diplotype tie-break among equal-activity alleles (50), and the engine's two
-  refusal paths, which PharmCAT has no counterpart for (8 low-quality calls, 1
-  ambiguous phase). None changes a CPIC recommendation. Counts, worked examples
-  and what to do about each are in `qc/open_questions.md`; the per-patient
-  comparison is `qc/pharmcat_parity.csv`. The gate fails on any disagreement
-  outside those classes. PharmCAT is not bundled, so on a machine without it the
-  gate reports SKIPPED rather than passing.
+  sample of 500 patients agrees on **98.40%** of diplotypes and **98.20%** of
+  phenotypes. All 9 disagreements are the engine's two refusal paths, which
+  PharmCAT has no counterpart for: 8 low-quality calls it is given no DP or GQ
+  to refuse on, and 1 ambiguous phase it resolves by CPIC convention where the
+  engine declines. None changes a CPIC recommendation. The equal-activity
+  diplotype tie-break that used to account for 50 of these was adopted from
+  PharmCAT in v1, which is what moved diplotype agreement up from 88.40%; it
+  relabelled 2,201 of 20,500 patients and changed no activity score, phenotype
+  or recommendation. Counts, worked examples and the reasoning are in
+  `qc/open_questions.md`; the per-patient comparison is
+  `qc/pharmcat_parity.csv`. The gate fails on any disagreement outside the known
+  classes. PharmCAT is not bundled, so on a machine without it the gate reports
+  SKIPPED rather than passing.
 - **`pharmvar_version` is null** because the PharmVar API needs credentials.
 - **PCA against real 1000 Genomes samples** was not run; the reference
   genotypes are not bundled. Population structure is reported for the synthetic

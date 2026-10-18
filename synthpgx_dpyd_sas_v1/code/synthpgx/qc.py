@@ -535,6 +535,12 @@ def gate_refusals(refusal_cases: pd.DataFrame, required: float,
 # Disagreements with PharmCAT that this build understands and can account for.
 # Anything outside this set is counted as unexplained and fails the gate: the
 # point of the cross-check is to surface differences, not to absorb them.
+#
+# ``tie_break_equal_activity`` is currently empty: Layer A adopted PharmCAT's
+# ordering of equal-activity alleles. It stays listed because a PharmCAT
+# release that ordered them differently would land here, where the gate summary
+# and qc/pharmcat_parity.csv report it by name, rather than being read as a
+# miscall by either caller.
 EXPLAINED_DISAGREEMENTS = {
     "engine_refused_low_quality",
     "engine_refused_ambiguous_phase",

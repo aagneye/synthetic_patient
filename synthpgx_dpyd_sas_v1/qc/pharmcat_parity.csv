@@ -1,25 +1,25 @@
 patient_id,diplotype_expected,expected_diplotype_normalised,pharmcat_diplotype,phenotype_expected,pharmcat_phenotype,activity_score_expected,pharmcat_activity_score,n_variant_copies,pharmcat_n_possible_diplotypes,refusal_category_expected,phase_ambiguous_expected,diplotype_agrees,phenotype_agrees,activity_score_agrees,disagreement_class
 SYN-000009,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-000107,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-000107,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-000151,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-000256,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-000279,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-000306,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-000306,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-000337,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-000462,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-000465,Indeterminate,Indeterminate,c.1218G>A / c.85T>C,Indeterminate,Normal Metabolizer,,2.0,4,4,low_quality_call,False,False,False,False,engine_refused_low_quality
 SYN-000486,Indeterminate,Indeterminate,c.557A>G / c.85T>C,Indeterminate,Intermediate Metabolizer,,1.5,3,3,low_quality_call,False,False,False,False,engine_refused_low_quality
-SYN-000511,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
-SYN-000535,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
-SYN-000582,c.1218G>A/c.1627A>G,c.1218G>A / c.1627A>G,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
-SYN-000591,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-000511,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
+SYN-000535,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
+SYN-000582,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
+SYN-000591,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-000597,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-000637,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-000640,c.3067C>A/c.85T>C,c.3067C>A / c.85T>C,c.3067C>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-000669,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-000671,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-000672,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-000673,c.1218G>A/c.1218G>A,c.1218G>A / c.1218G>A,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-000673,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-000720,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-000775,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-000822,Reference/c.1371C>T,Reference / c.1371C>T,Reference / c.1371C>T,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -35,7 +35,7 @@ SYN-001088,c.1218G>A/c.1627A>G,c.1218G>A / c.1627A>G,c.1218G>A / c.1627A>G,Norma
 SYN-001116,Indeterminate,Indeterminate,Reference / c.1627A>G,Indeterminate,Normal Metabolizer,,2.0,1,1,low_quality_call,False,False,False,False,engine_refused_low_quality
 SYN-001184,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-001191,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-001286,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-001286,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-001357,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-001365,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-001411,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
@@ -45,30 +45,30 @@ SYN-001464,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Meta
 SYN-001517,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-001541,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-001577,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-001611,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-001611,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-001612,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-001650,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-001668,c.1371C>T/c.1627A>G,c.1371C>T / c.1627A>G,c.1371C>T / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,False,True,True,tie_break_equal_activity
+SYN-001668,c.1371C>T/c.85T>C,c.1371C>T / c.85T>C,c.1371C>T / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,True,True,True,agree
 SYN-001755,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-001811,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-001863,c.1371C>T/c.1627A>G,c.1371C>T / c.1627A>G,c.1371C>T / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-001904,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-001909,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-001909,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-001989,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-001992,c.1218G>A/c.85T>C,c.1218G>A / c.85T>C,c.1218G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002005,Reference/c.1601G>A,Reference / c.1601G>A,Reference / c.1601G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-002077,c.1627A>G/c.451A>G,c.1627A>G / c.451A>G,c.1627A>G / c.451A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002107,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002140,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-002153,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,5,1,,False,False,True,True,tie_break_equal_activity
+SYN-002153,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,5,1,,False,True,True,True,agree
 SYN-002175,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002176,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-002177,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-002231,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-002231,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-002232,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-002249,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-002296,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
-SYN-002303,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-002303,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-002347,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-002444,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002548,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -80,7 +80,7 @@ SYN-002705,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.1896T>C / c.85T>C,Normal Meta
 SYN-002735,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002800,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002846,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-002908,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-002908,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-002920,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-002993,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-003028,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
@@ -123,13 +123,13 @@ SYN-004118,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Norma
 SYN-004121,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-004175,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-004184,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-004216,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-004216,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-004286,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-004375,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-004448,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-004489,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-004517,c.1601G>A/c.1627A>G,c.1601G>A / c.1627A>G,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
-SYN-004539,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-004517,c.1601G>A/c.85T>C,c.1601G>A / c.85T>C,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
+SYN-004539,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-004558,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-004595,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-004647,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -168,7 +168,7 @@ SYN-006018,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Meta
 SYN-006055,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-006060,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006121,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-006153,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,,False,False,True,True,tie_break_equal_activity
+SYN-006153,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,,False,True,True,True,agree
 SYN-006174,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006180,Reference/c.1601G>A,Reference / c.1601G>A,Reference / c.1601G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006218,Reference/c.775A>G,Reference / c.775A>G,Reference / c.775A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -177,13 +177,13 @@ SYN-006262,"Reference/c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-592
 SYN-006414,"c.1129-5923C>G, c.1236G>A (HapB3)/c.1627A>G","c.1129-5923C>G, c.1236G>A (HapB3) / c.1627A>G","c.1129-5923C>G, c.1236G>A (HapB3) / c.1627A>G",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,3,2,,False,True,True,True,agree
 SYN-006429,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006436,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-006451,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,,False,False,True,True,tie_break_equal_activity
+SYN-006451,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,,False,True,True,True,agree
 SYN-006469,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-006482,c.1679T>G/c.496A>G,c.1679T>G / c.496A>G,c.1679T>G / c.85T>C,Intermediate Metabolizer,Intermediate Metabolizer,1.0,1.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-006482,c.1679T>G/c.85T>C,c.1679T>G / c.85T>C,c.1679T>G / c.85T>C,Intermediate Metabolizer,Intermediate Metabolizer,1.0,1.0,3,3,,False,True,True,True,agree
 SYN-006567,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-006572,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-006631,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
-SYN-006642,c.1627A>G/c.1905+1G>A,c.1627A>G / c.1905+1G>A,c.1905+1G>A / c.85T>C,Intermediate Metabolizer,Intermediate Metabolizer,1.0,1.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-006631,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
+SYN-006642,c.1905+1G>A/c.85T>C,c.1905+1G>A / c.85T>C,c.1905+1G>A / c.85T>C,Intermediate Metabolizer,Intermediate Metabolizer,1.0,1.0,3,3,,False,True,True,True,agree
 SYN-006693,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-006773,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-006820,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
@@ -191,7 +191,7 @@ SYN-006830,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal M
 SYN-006918,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006958,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-006999,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-007007,c.1627A>G/c.775A>G,c.1627A>G / c.775A>G,c.775A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-007007,c.775A>G/c.85T>C,c.775A>G / c.85T>C,c.775A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-007015,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-007078,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-007081,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -205,14 +205,14 @@ SYN-007609,Reference/Reference,Reference / Reference,Reference / Reference,Norma
 SYN-007658,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-007714,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-007750,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-007812,c.1601G>A/c.2194G>A,c.1601G>A / c.2194G>A,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-007812,c.1601G>A/c.85T>C,c.1601G>A / c.85T>C,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-007873,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-007904,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-007942,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-008004,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-008031,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-008099,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-008168,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-008168,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,4,non_cpic_population_override,False,True,True,True,agree
 SYN-008226,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-008246,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-008282,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -220,7 +220,7 @@ SYN-008319,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Meta
 SYN-008373,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-008462,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-008518,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-008634,"c.1129-5923C>G, c.1236G>A (HapB3)/c.1896T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.1896T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,4,3,,False,False,True,True,tie_break_equal_activity
+SYN-008634,"c.1129-5923C>G, c.1236G>A (HapB3)/c.85T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,4,3,,False,True,True,True,agree
 SYN-008641,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-008654,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-008692,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -241,7 +241,7 @@ SYN-009375,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Meta
 SYN-009429,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-009452,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-009463,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-009533,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-009533,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-009668,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-009696,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-009717,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -252,11 +252,11 @@ SYN-009923,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Norma
 SYN-009986,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-009989,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-010014,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-010137,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-010137,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-010157,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-010182,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-010254,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.1896T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-010259,c.1896T>C/c.2194G>A,c.1896T>C / c.2194G>A,c.1896T>C / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-010259,c.1896T>C/c.496A>G,c.1896T>C / c.496A>G,c.1896T>C / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-010328,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-010354,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-010368,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -269,9 +269,9 @@ SYN-010726,Reference/Reference,Reference / Reference,Reference / Reference,Norma
 SYN-010885,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,non_cpic_population_override,False,True,True,True,agree
 SYN-011023,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-011043,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-011061,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-011061,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-011085,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-011109,c.2194G>A/c.2194G>A,c.2194G>A / c.2194G>A,c.2194G>A / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-011109,c.2194G>A/c.496A>G,c.2194G>A / c.496A>G,c.2194G>A / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,non_cpic_population_override,False,True,True,True,agree
 SYN-011138,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-011140,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-011143,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
@@ -282,7 +282,7 @@ SYN-011556,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Meta
 SYN-011621,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-011627,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-011655,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-011656,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-011656,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-011749,c.1627A>G/c.2279C>T,c.1627A>G / c.2279C>T,c.1627A>G / c.2279C>T,Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,2,2,,False,True,True,True,agree
 SYN-011813,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-011817,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -292,7 +292,7 @@ SYN-011947,Reference/Reference,Reference / Reference,Reference / Reference,Norma
 SYN-011951,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-011969,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.1896T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-012087,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-012102,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-012102,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-012140,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-012150,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-012169,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -309,7 +309,7 @@ SYN-012879,Reference/Reference,Reference / Reference,Reference / Reference,Norma
 SYN-012999,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-013087,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013138,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
-SYN-013169,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-013169,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-013179,c.1896T>C/c.496A>G,c.1896T>C / c.496A>G,c.1896T>C / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013204,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013246,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -318,7 +318,7 @@ SYN-013344,c.1896T>C/c.2194G>A,c.1896T>C / c.2194G>A,c.1896T>C / c.2194G>A,Norma
 SYN-013360,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013388,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013451,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-013501,c.2194G>A/c.496A>G,c.2194G>A / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-013501,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-013520,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-013645,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013664,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -331,18 +331,18 @@ SYN-013810,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Norma
 SYN-013812,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-013883,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-014011,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-014016,"c.1129-5923C>G, c.1236G>A (HapB3)/c.496A>G","c.1129-5923C>G, c.1236G>A (HapB3) / c.496A>G","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,5,3,,False,False,True,True,tie_break_equal_activity
+SYN-014016,"c.1129-5923C>G, c.1236G>A (HapB3)/c.85T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C","c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,5,3,,False,True,True,True,agree
 SYN-014029,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-014052,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-014213,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-014227,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-014285,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-014330,c.1601G>A/c.2194G>A,c.1601G>A / c.2194G>A,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-014330,c.1601G>A/c.85T>C,c.1601G>A / c.85T>C,c.1601G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-014343,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,non_cpic_population_override,False,True,True,True,agree
 SYN-014385,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-014424,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-014442,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
-SYN-014458,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-014458,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-014468,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-014475,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.1896T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-014551,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -360,7 +360,7 @@ SYN-014920,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Meta
 SYN-014953,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-014980,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015116,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
-SYN-015253,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-015253,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-015276,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015306,c.1627A>G/c.1627A>G,c.1627A>G / c.1627A>G,c.1627A>G / c.1627A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,,False,True,True,True,agree
 SYN-015308,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -371,7 +371,7 @@ SYN-015436,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Norma
 SYN-015443,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015480,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015558,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-015561,c.1627A>G/c.2194G>A,c.1627A>G / c.2194G>A,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-015561,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-015601,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015648,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-015650,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
@@ -403,16 +403,16 @@ SYN-016313,Reference/Reference,Reference / Reference,Reference / Reference,Norma
 SYN-016447,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016489,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016496,"Reference/c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,2,2,,False,True,True,True,agree
-SYN-016525,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,False,True,True,tie_break_equal_activity
+SYN-016525,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,True,True,True,agree
 SYN-016542,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016586,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-016589,c.2194G>A/c.496A>G,c.2194G>A / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-016589,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-016592,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-016598,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016651,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,non_cpic_population_override,False,True,True,True,agree
 SYN-016720,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016732,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-016737,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-016737,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-016752,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-016760,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
 SYN-016774,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -429,7 +429,7 @@ SYN-017365,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.1896T>C / c.85T>C,Normal Meta
 SYN-017437,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-017499,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-017523,"Reference/c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,2,2,,False,True,True,True,agree
-SYN-017548,c.1896T>C/c.85T>C,c.1896T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
+SYN-017548,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
 SYN-017578,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-017670,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-017674,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.2194G>A / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,non_cpic_population_override,False,True,True,True,agree
@@ -443,12 +443,12 @@ SYN-017981,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Norma
 SYN-018029,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-018075,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-018100,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-018118,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,False,True,True,tie_break_equal_activity
+SYN-018118,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,4,3,,False,True,True,True,agree
 SYN-018147,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,non_cpic_population_override,False,True,True,True,agree
 SYN-018201,Reference/c.2194G>A,Reference / c.2194G>A,Reference / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,non_cpic_population_override,False,True,True,True,agree
 SYN-018241,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
-SYN-018347,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,False,True,True,tie_break_equal_activity
-SYN-018381,c.1627A>G/c.1896T>C,c.1627A>G / c.1896T>C,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-018347,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,,False,True,True,True,agree
+SYN-018381,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.1627A>G / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-018422,"Reference/c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,2,2,,False,True,True,True,agree
 SYN-018427,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-018472,c.1627A>G/c.85T>C,c.1627A>G / c.85T>C,c.1627A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,2,,False,True,True,True,agree
@@ -472,7 +472,7 @@ SYN-018992,Reference/c.1627A>G,Reference / c.1627A>G,Reference / c.1627A>G,Norma
 SYN-019008,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-019066,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-019153,"Reference/c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)","Reference / c.1129-5923C>G, c.1236G>A (HapB3)",Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,2,2,,False,True,True,True,agree
-SYN-019164,c.2194G>A/c.85T>C,c.2194G>A / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,non_cpic_population_override,False,False,True,True,tie_break_equal_activity
+SYN-019164,c.85T>C/c.85T>C,c.85T>C / c.85T>C,c.85T>C / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,1,non_cpic_population_override,False,True,True,True,agree
 SYN-019225,Reference/c.496A>G,Reference / c.496A>G,Reference / c.496A>G,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-019270,c.2194G>A/c.2194G>A,c.2194G>A / c.2194G>A,c.2194G>A / c.2194G>A,Normal Metabolizer,Normal Metabolizer,2.0,2.0,2,1,non_cpic_population_override,False,True,True,True,agree
 SYN-019276,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
@@ -487,7 +487,7 @@ SYN-019613,Reference/c.85T>C,Reference / c.85T>C,Reference / c.85T>C,Normal Meta
 SYN-019777,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-019900,Reference/c.2279C>T,Reference / c.2279C>T,Reference / c.2279C>T,Intermediate Metabolizer,Intermediate Metabolizer,1.5,1.5,1,1,,False,True,True,True,agree
 SYN-020056,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
-SYN-020085,c.1627A>G/c.496A>G,c.1627A>G / c.496A>G,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,False,True,True,tie_break_equal_activity
+SYN-020085,c.496A>G/c.85T>C,c.496A>G / c.85T>C,c.496A>G / c.85T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,3,3,,False,True,True,True,agree
 SYN-020144,Reference/c.1896T>C,Reference / c.1896T>C,Reference / c.1896T>C,Normal Metabolizer,Normal Metabolizer,2.0,2.0,1,1,,False,True,True,True,agree
 SYN-020173,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree
 SYN-020224,Reference/Reference,Reference / Reference,Reference / Reference,Normal Metabolizer,Normal Metabolizer,2.0,2.0,0,1,,False,True,True,True,agree

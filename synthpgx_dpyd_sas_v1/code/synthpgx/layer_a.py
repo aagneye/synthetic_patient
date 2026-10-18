@@ -19,6 +19,7 @@ wherever that engine is installed.
 from __future__ import annotations
 
 import json
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Iterable
@@ -123,8 +124,6 @@ class RuleRegistry:
         root = Path(path)
         if not root.exists():
             return cls(None, None)
-        import re
-
         pattern = re.compile(r"\b([RVU](?:1[0-2]|[1-9]))\b")
         found: set[str] = set()
         for file in root.rglob("*.py"):
@@ -236,6 +235,29 @@ class CpicTables:
 
     def is_known_variant(self, variant_id: str) -> bool:
         return variant_id in self.activity_by_variant
+
+
+_DIGITS = re.compile(r"(\d+)")
+
+
+def _allele_sort_key(name: str) -> tuple[object, ...]:
+    """Order allele names the way a reader reads them: c.85 before c.1627.
+
+    CPIC's two-lowest rule fixes *which activity values* the diplotype is
+    built from, but when three or more alleles share the lowest value it does
+    not say which of them to name. Some order has to be picked, and a plain
+    string sort picks a misleading one: ``"c.1627A>G" < "c.85T>C"`` because
+    ``"1" < "8"``, so the allele further along the transcript wins. Comparing
+    each run of digits as a number instead puts the alleles in transcript
+    order, which is also the order PharmCAT's DPYD caller uses, so the two
+    callers name the same pair (qc/open_questions.md, "PharmCAT parity").
+
+    The key alternates string and integer parts, so two keys always compare
+    like with like.
+    """
+    return tuple(
+        int(part) if part.isdigit() else part for part in _DIGITS.split(name)
+    )
 
 
 def _fmt_score(value: Any) -> str:
@@ -397,7 +419,12 @@ class DpydTableCaller:
                 homozygous_reduced, heterozygous_reduced
             )
 
-        copies.sort(key=lambda item: (item[1], item[0]))
+        # Lowest activity first, then transcript order. Sorting the copy
+        # multiset keeps the two copies of a homozygous allele adjacent, so
+        # when that allele sorts first the pair named is the phase-consistent
+        # one; with three heterozygous alleles no two-allele label can be,
+        # and the pair named is a lookup key rather than a genotype.
+        copies.sort(key=lambda item: (item[1], _allele_sort_key(item[0])))
         chosen = copies[:2]
         while len(chosen) < 2:
             chosen.append((REFERENCE_ALLELE, REFERENCE_ACTIVITY))

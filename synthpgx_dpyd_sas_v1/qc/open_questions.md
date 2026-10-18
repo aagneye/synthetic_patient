@@ -29,16 +29,16 @@ random sample of **500 patients**, and its DPYD call compared against
 
 | | agreement |
 |---|---|
-| Diplotype (order-normalised) | **88.40%** (442/500) |
+| Diplotype (order-normalised) | **98.40%** (492/500) |
 | Phenotype | **98.20%** (491/500) |
 | Activity score | 98.40% (492/500) |
 
 PharmCAT is **not** treated as a gold standard here. It is a second,
 independently maintained implementation of the same CPIC tables, so it can
 catch an error shared by this dataset's caller and its own expected output.
-Where the two differ, the question is which of these classes applies. All 59
-disagreements fall into one of three; **none is unexplained**, and an
-unexplained one fails the gate.
+Where the two differ, the question is which of these classes applies. Both
+remaining classes are the engine's own refusal paths; **none is unexplained**,
+and an unexplained one fails the gate.
 
 Both sides are compared after one purely cosmetic normalisation: PharmCAT
 writes DPYD allele names with the star designation appended (`c.85T>C (*9A)`),
@@ -48,46 +48,78 @@ suffix is stripped and the pair is sorted. The compound allele
 `c.1129-5923C>G, c.1236G>A (HapB3)` is spelled identically by both and is left
 alone — its `(HapB3)` suffix is not a star designation.
 
-### 1. `tie_break_equal_activity` — 50 patients (10.0%)
+### Resolved in v1: the equal-activity tie-break
 
-A patient carries **more than two** variant alleles (3 copies in 41 cases, 4 in
-7, 5 in 2). CPIC's rule is to use the two lowest activity values, but when three
-or more alleles share the same activity the rule does not say which of them to
-name. The two callers break that tie differently: this dataset's Layer A sorts
-by `(activity, variant_id)` and takes the first two, PharmCAT keeps a
-homozygous allele on both chromosomes.
+The largest class used to be `tie_break_equal_activity`, 50 of 500 patients
+(10.0%), and it was the whole of the gap between 88.40% and 98.40% diplotype
+agreement. The class is now empty.
 
-- `SYN-000107` — het `c.2194G>A`, het `c.1627A>G`, het `c.85T>C`, all Normal
-  function. Layer A names `c.1627A>G / c.2194G>A`; PharmCAT names
-  `c.1627A>G / c.85T>C`. Activity score 2.0 and Normal Metabolizer on both sides.
-- `SYN-000306` — het `c.1627A>G` plus **homozygous** `c.85T>C`. Layer A names
-  `c.1627A>G / c.85T>C`; PharmCAT names `c.85T>C / c.85T>C`. PharmCAT's pair is
-  the phase-consistent one: a 1/1 call puts `c.85T>C` on both chromosomes, so
-  `c.1627A>G` must be in cis with one of them. Layer A's two-lowest selection
-  does not carry that constraint. Activity score 2.0 and Normal Metabolizer on
-  both sides.
-- `SYN-008634` — the HapB3 case: `c.1129-5923C>G, c.1236G>A (HapB3) /
-  c.1896T>C` against `c.1129-5923C>G, c.1236G>A (HapB3) / c.85T>C`. Both reach
-  activity score 1.5, Intermediate Metabolizer. The compound allele itself is
-  resolved identically by both callers.
+A patient carrying **more than two** variant alleles has more copies than a
+two-allele label can name. CPIC's rule is to use the two lowest activity
+values, but when three or more alleles share the lowest value the rule does not
+say which of them to name, so each caller picks an order. Both callers do the
+same thing — sort the multiset of allele copies and take the first two — and
+they differed only in how equal-activity names are ordered. Layer A sorted the
+name as a plain string, where `"c.1627A>G" < "c.85T>C"` because `"1" < "8"`.
+PharmCAT compares each run of digits as a number, which puts the alleles in
+transcript order: c.85 before c.496 before c.1627. Layer A now does the same,
+through `_allele_sort_key` in `synthpgx/layer_a.py`.
 
-**Consequence: none, in all 50.** Activity score and phenotype agree in every
-case, so the CPIC recommendation is unchanged. That is not luck. The two-lowest
-rule sums the two smallest values in the multiset of allele activities, and
-this check confirms both callers derive the same multiset for all 500 patients;
-which *name* is attached to a tied activity cannot move the total. The
-difference is in the label, not the call.
+That one key reproduces PharmCAT's pair in **all 50** of the former
+disagreements and leaves all 442 already-agreeing patients unchanged. Across the
+full cohort it relabels **2,201 of 20,500 patients** (10.74%), and
+`diplotype_expected` is the only column of `expected_engine_output.parquet` that
+moved — checked by diffing the regenerated file against its predecessor column
+by column. The engineered refusal panel is relabelled on the same rule and by
+the same column: 7 of the 540 rows in `data/refusal_cases.parquet`, all of them
+`c.1024G>A/c.1057C>T` becoming `c.1024G>A/c.703C>T`. Nothing else in `data/`
+changed; `cohort.vcf.gz` differs only in its gzip header, its payload hashing
+identical.
 
-This is still a real finding, and it is the one to revisit first. A consumer
-joining on the diplotype string — a lookup table, a report, a regression test —
-will see a 1-in-10 mismatch against PharmCAT on this cohort. Adopting
-PharmCAT's homozygous-first tie-break in `layer_a.py` would close most of it,
-and would make Layer A's diplotype phase-consistent in cases like `SYN-000306`.
-It was **not** changed in v1: it would alter `expected_engine_output.parquet`
-for patients the deployed engine may already have called, and that is the
-engine team's decision, not this build's.
+**The tie-break cannot move the activity score, and not merely as an
+observation on these 500.** In `DpydTableCaller._alleles` the score is computed
+before the selection and never reads it: `_phase_changes_score` sums the lowest
+reduced-function activity on each of the two chromosomes over every phasing of
+the unphased copies, and the fully-phased branch reads the two sides straight
+off the `|` codes. The pair of names is taken afterwards and feeds only the
+diplotype string and the PMID list. No ordering of equal-activity alleles can
+therefore change the activity score, the phenotype, the recommendation or the
+refusal category. The regenerated file bears that out: every one of those
+columns is unchanged for all 20,500 patients, as is `pmid_list`.
 
-### 2. `engine_refused_low_quality` — 8 patients (1.6%)
+One correction to how this was written up before. The earlier note said
+PharmCAT "keeps a homozygous allele on both chromosomes", reading its call for
+`SYN-000306` — het `c.1627A>G` plus homozygous `c.85T>C`, named
+`c.85T>C / c.85T>C` — as a phase-consistency rule. It is not one. Sorting a
+multiset puts the two copies of a homozygous allele next to each other, so a
+homozygous allele *that sorts first* does take both chromosomes; that is a
+by-product of the ordering, not a constraint carried by it. Where another
+allele outranks the homozygous one, PharmCAT names a pair that is not
+phase-consistent, and this cohort contains such patients:
+
+- `SYN-000673` — homozygous `c.1218G>A` plus het `c.85T>C`. PharmCAT's
+  recommendation diplotype is `c.1218G>A / c.85T>C`, even though its own
+  `sourceDiplotypes` list holds exactly one entry. PharmCAT keeps the real
+  diplotype and the lookup pair in separate fields; only the lookup pair,
+  `recommendationDiplotypes`, is compared here.
+- `SYN-001668`, `SYN-002153`, `SYN-002231`, `SYN-002908`, `SYN-004539`,
+  `SYN-009533`, `SYN-011109`, `SYN-016525` — the same shape.
+
+A tie-break that genuinely preferred the homozygous allele was implemented and
+measured over these 500 patients before being rejected: it reaches 96.60%
+diplotype agreement against the transcript-order key's 98.40%, disagreeing on
+the nine patients above. It would also not buy what its name promises. Three
+*heterozygous* alleles admit no truthful two-allele label at all — whichever
+two are named, the third sits on one of the same two chromosomes — so
+phase-consistency is unreachable in general for this class, not just
+inconvenient. That settles what the field is. `diplotype_expected` is the CPIC
+lookup key for the two lowest activity values, which is what `_alleles` has
+always documented it to be and what PharmCAT keeps in
+`recommendationDiplotypes`; it is not a claim about which variant sits on which
+chromosome. Given that, the right convention is the one the reference
+implementation uses.
+
+### 1. `engine_refused_low_quality` — 8 patients (1.6%)
 
 Layer A returns `Indeterminate` with `refusal_category_expected =
 low_quality_call` when a call falls below `engine.min_dp` (20) or
@@ -107,7 +139,7 @@ never emitted, so there is no honest way to hand PharmCAT the quality signal
 this dataset's refusal path depends on. The engine is the more conservative of
 the two here, which is the intended behaviour of the refusal path.
 
-### 3. `engine_refused_ambiguous_phase` — 1 patient (0.2%)
+### 2. `engine_refused_ambiguous_phase` — 1 patient (0.2%)
 
 - `SYN-018693` — het `c.2279C>T` and het `c.2846A>T`, both Decreased function,
   unphased. **Both callers name the same diplotype**, `c.2279C>T / c.2846A>T`,
@@ -120,7 +152,9 @@ the two here, which is the intended behaviour of the refusal path.
 
 Again the engine is the more conservative. Whether to keep refusing or to follow
 CPIC's unphased convention is a product decision for the engine team; this build
-records the difference rather than resolving it.
+records the difference rather than resolving it. This is also the one patient on
+whom diplotype agreement and phenotype agreement part company, which is why the
+two rates now differ by 0.2 points.
 
 ### What this check does not cover
 
@@ -130,7 +164,7 @@ records the difference rather than resolving it.
   implements CPIC only and has no counterpart, so the override is out of scope
   for parity by construction — this is exactly the gap the override exists to
   fill. Override patients were sampled and compared like any other, and none of
-  them disagreed for any reason other than the three classes above.
+  them disagreed for any reason other than the two classes above.
 - **The two indels.** `c.1898del` (*3) and `c.299_302del` (*7) have no carrier
   anywhere in the cohort, so parity on them is untested. Their positions are
   emitted as homozygous reference using PharmCAT's own REF/ALT, which is
@@ -141,6 +175,12 @@ records the difference rather than resolving it.
 - **Drug-level recommendation text.** Only diplotype, phenotype and activity
   score are compared. PharmCAT's recommendation wording is its own rendering of
   the CPIC guideline and is not a like-for-like target.
+- **Whether the ordering is PharmCAT's published contract.** The tie-break key
+  adopted above was inferred from PharmCAT 3.4.0's output over these 500
+  patients, not read out of a specification. It accounts for every case in this
+  cohort. A PharmCAT release that ordered equal-activity alleles differently
+  would reappear here as a fresh `tie_break_equal_activity` class rather than
+  drift past unnoticed, which is what running the gate is for.
 
 ## Still open
 
