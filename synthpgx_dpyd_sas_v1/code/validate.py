@@ -220,6 +220,14 @@ def main() -> int:
         pd.read_parquet(coverage_path) if coverage_path.exists() else None
     )
     results.append(qc.gate_outcome_coverage(expected, coverage_cases))
+
+    # v2's intercept is DERIVED to match a sourced event rate, so nothing
+    # re-solves it when another coefficient moves. This gate is what notices.
+    v2_path = data_dir / "outcomes_v2.parquet"
+    outcomes_v2 = pd.read_parquet(v2_path) if v2_path.exists() else None
+    results.append(
+        qc.gate_outcome_v2_calibration(outcomes_v2, config.get("outcomes_v2"))
+    )
     log("8.2 PharmCAT parity (skipped quickly if PharmCAT is not installed) ...")
     with tempfile.TemporaryDirectory(prefix="synthpgx_pharmcat_") as scratch:
         results.append(

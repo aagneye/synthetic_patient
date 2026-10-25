@@ -283,6 +283,129 @@ outcomes:
     max_if_death: 4
 
 # ----------------------------------------------------------------------
+# Layer B, model v2: a life-threatening endpoint with sourced effect sizes
+# ----------------------------------------------------------------------
+# v1 above is unchanged and still the primary outcome file. v2 is emitted
+# alongside it, to data/outcomes_v2.parquet, and nothing reads v2 back into
+# v1 or into Layer A.
+#
+# Why v2 exists. v1's endpoint is grade 3+ at a ~41 percent event rate, and
+# almost all of its variance is non-genetic, so the best achievable
+# discrimination against its own labels is AUC 0.602 — a perfect model cannot
+# do better, which makes v1 unsuitable for asking whether a model has learned
+# the genotype signal. v2 targets the endpoint the literature actually models:
+# 12-week grade 4-5 toxicity, where the events are rarer and far more
+# genotype-driven. Measured ceiling on this cohort: AUC 0.662.
+#
+# The headline source is Boige et al., J Natl Cancer Inst 2026;118(4):699-710
+# (PMID 41386266): 3,437 colorectal patients, 267 events, full DPYD sequencing,
+# reported AUC 0.76 (95% CI 0.73-0.78). Two of its odds ratios are transcribed
+# directly below. Provenance tags are strict: SOURCED means the number is in a
+# cited record, DERIVED means it was solved to match one, ASSUMPTION means it
+# was chosen to be plausible and is not evidence.
+outcomes_v2:
+  version: "outcome-model-v2"
+  enabled: true
+  endpoint: grade45          # 12-week grade 4-5, nested inside v1's grade 3+
+  sensitivity_draws: 3
+
+  centring:
+    age_years: 62
+    renal_function_egfr: 90
+
+  target_event_rate: 0.078   # SOURCED: 267/3437 in Boige et al.
+
+  coefficients:
+    intercept:
+      value: -3.1265
+      uncertainty_sd: 0.15
+      provenance: DERIVED
+      note: >-
+        Solved by bisection over this cohort's own covariates so the mean
+        predicted probability equals target_event_rate, 0.078, which is the
+        267/3437 rate Boige et al. report. Not an independent measurement: it
+        is whatever intercept reproduces that sourced rate given the other
+        coefficients here. Regenerating after changing any other coefficient
+        requires re-solving it, and the qc gate_outcome_v2_calibration check
+        fails if the realised rate drifts.
+      source_pmids: [41386266]
+    activity_deficit_per_unit:
+      value: 2.50
+      uncertainty_sd: 0.50
+      provenance: ASSUMPTION
+      note: >-
+        Larger than v1's 1.60 because the endpoint is more severe: CPIC states
+        decreased DPD activity carries increased risk of severe or fatal
+        toxicity, so the effect on grade 4-5 should exceed the effect on
+        grade 3+. The ordering is SOURCED; this magnitude is not, and it is
+        the single largest assumption in v2.
+      source_pmids: [29152729]
+    rare_deleterious_burden:
+      value: 1.16315          # ln(3.20)
+      uncertainty_sd: 0.25
+      provenance: SOURCED
+      note: >-
+        Boige et al. report OR 3.20 for carrying one allele of an aggregate of
+        rare (MAF < 0.01) predicted-deleterious DPYD variants. Transcribed as
+        ln(3.20). The carrier flag is built from this catalogue's own 24 rare
+        deleterious variants and reaches 1.90 percent of patients here, below
+        the ~4 percent Boige report, because carriage follows South Asian
+        frequencies rather than their European-majority cohort.
+      source_pmids: [41386266]
+    rs1801160_carrier:
+      value: 0.39878          # ln(1.49)
+      uncertainty_sd: 0.15
+      provenance: SOURCED
+      note: >-
+        Boige et al. report OR 1.49 for heterozygous rs1801160 (V732I).
+        Transcribed as ln(1.49). This REPLACES v1's assumed
+        sas_override_carrier of 0.55 (OR 1.73) and is deliberately weaker:
+        the sourced value is smaller than the one that was guessed. Note the
+        term is now carriage of the variant itself, not the South Asian
+        override flag, so it applies in every ancestry — the override remains
+        a Layer A policy, not a biological effect.
+      source_pmids: [41386266]
+    age_per_decade:
+      value: 0.12
+      uncertainty_sd: 0.06
+      provenance: ASSUMPTION
+      note: Carried over from v1 unchanged.
+      source_pmids: []
+    egfr_per_10_below_ref:
+      value: 0.10
+      uncertainty_sd: 0.05
+      provenance: ASSUMPTION
+      note: Carried over from v1 unchanged.
+      source_pmids: []
+    co_medication:
+      value: 0.30
+      uncertainty_sd: 0.15
+      provenance: ASSUMPTION
+      note: Carried over from v1 unchanged.
+      source_pmids: []
+
+  regimen_effects:   # ASSUMPTION, log-odds, carried over from v1
+    5FU_bolus: 0.25
+    5FU_infusional: 0.0
+    capecitabine: 0.10
+    FOLFOX: 0.30
+    FOLFIRI: 0.35
+    XELOX: 0.25
+
+  # A rare deleterious variant is one this catalogue assigns a reduced or
+  # absent function AND whose South Asian frequency is below the threshold
+  # Boige et al. used to define their aggregate.
+  rare_variant:
+    max_maf: 0.01            # SOURCED: Boige et al. aggregate definition
+    functions: ["No function", "Decreased function"]
+    maf_column: freq_gnomad_sas
+  rs1801160_variant_id: "c.2194G>A"
+
+  # Of the grade 4-5 events, the share that are fatal. Nested so v2 stays
+  # internally consistent: every death is a grade 5, every grade 5 a death.
+  p_fatal_given_grade45: 0.04   # ASSUMPTION
+
+# ----------------------------------------------------------------------
 # Splits (build brief Part 9)
 # ----------------------------------------------------------------------
 splits:

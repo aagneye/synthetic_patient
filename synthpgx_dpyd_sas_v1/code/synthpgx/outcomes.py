@@ -239,6 +239,174 @@ def simulate_outcomes(
 
 
 def _provenance_summary(effects: EffectSizes) -> str:
-    assumed = sorted(k for k, v in effects.provenance.items() if v.startswith("ASSUMPTION"))
-    sourced = sorted(k for k, v in effects.provenance.items() if v.startswith("SOURCED"))
-    return f"SOURCED=[{','.join(sourced)}];ASSUMPTION=[{','.join(assumed)}]"
+    """Bucket every coefficient by how its value was arrived at.
+
+    DERIVED sits between the other two: the number was solved to reproduce a
+    sourced quantity, so it is neither measured nor invented. It gets its own
+    bucket rather than being folded into either, and an unrecognised tag is
+    surfaced as UNKNOWN rather than dropped — a coefficient silently missing
+    from this string would read as though it had no provenance at all.
+    """
+    buckets: dict[str, list[str]] = {"SOURCED": [], "DERIVED": [], "ASSUMPTION": []}
+    unknown: list[str] = []
+    for name, tag in effects.provenance.items():
+        for prefix in buckets:
+            if tag.startswith(prefix):
+                buckets[prefix].append(name)
+                break
+        else:
+            unknown.append(name)
+
+    parts = [f"{k}=[{','.join(sorted(v))}]" for k, v in buckets.items() if k != "DERIVED" or v]
+    if unknown:
+        parts.append(f"UNKNOWN=[{','.join(sorted(unknown))}]")
+    return ";".join(parts)
+
+
+# ----------------------------------------------------------------------
+# Layer B, model v2
+# ----------------------------------------------------------------------
+
+OUTCOME_V2_COLUMNS = [
+    "patient_id",
+    "drug",
+    "severe_grade45",
+    "ctcae_grade_max_v2",
+    "treatment_related_death",
+    "rare_deleterious_carrier",
+    "rs1801160_carrier",
+    "outcome_model_version",
+    "endpoint",
+    "effect_size_source_pmids",
+    "effect_size_provenance",
+    "label_type",
+]
+
+
+def rare_deleterious_carriers(
+    genotypes: pd.DataFrame, catalog: pd.DataFrame, spec: dict[str, Any]
+) -> set[str]:
+    """Patients carrying at least one rare, predicted-deleterious variant.
+
+    "Rare" and "deleterious" are both read from the config rather than fixed
+    here, because the threshold is Boige et al.'s aggregate definition and a
+    reader has to be able to see which line produced the flag.
+    """
+    rare_spec = spec["rare_variant"]
+    maf_column = str(rare_spec["maf_column"])
+    functions = set(rare_spec["functions"])
+    max_maf = float(rare_spec["max_maf"])
+
+    maf = catalog[maf_column].fillna(0.0).astype(float)
+    selected = catalog["cpic_function"].isin(functions) & (maf < max_maf)
+    variant_ids = set(catalog.loc[selected, "variant_id"].astype(str))
+
+    called = genotypes[genotypes["genotype"].astype(str).str.contains("1")]
+    return set(called.loc[called["variant_id"].astype(str).isin(variant_ids), "patient_id"])
+
+
+def variant_carriers(genotypes: pd.DataFrame, variant_id: str) -> set[str]:
+    called = genotypes[genotypes["genotype"].astype(str).str.contains("1")]
+    return set(called.loc[called["variant_id"].astype(str) == str(variant_id), "patient_id"])
+
+
+def simulate_outcomes_v2(
+    patients: pd.DataFrame,
+    layer_a: pd.DataFrame,
+    genotypes: pd.DataFrame,
+    catalog: pd.DataFrame,
+    spec: dict[str, Any],
+    seed: int,
+    draw_index: int = 0,
+) -> tuple[pd.DataFrame, EffectSizes]:
+    """Sample the life-threatening endpoint: 12-week grade 4-5 toxicity.
+
+    Three things differ from v1, and all three exist to make the label
+    carry genotype signal that a model can actually be tested against.
+
+    The endpoint is grade 4-5 rather than grade 3+. v1's grade 3+ fires for
+    41 percent of patients and is mostly non-genetic, which caps the best
+    achievable AUC against its own labels at 0.602 — a perfect model does no
+    better, so v1 cannot distinguish a model that learned the genotype from
+    one that did not.
+
+    The genotype enters three times, not once: through the activity-score
+    deficit as before, and now through two terms transcribed from Boige et
+    al. — an aggregate of rare deleterious variants at OR 3.20, and
+    rs1801160 at OR 1.49.
+
+    rs1801160 is keyed on carriage of the variant, not on the South Asian
+    override flag. The override is a Layer A policy decision about who gets
+    looked at more closely; it is not a biological effect and must not be
+    modelled as one. v1 conflated the two.
+
+    Uses its own RNG offset so v1's stream, and therefore every v1 output,
+    is byte-identical whether or not v2 runs.
+    """
+    effects = draw_effect_sizes(spec, draw_index, seed)
+    rng = np.random.default_rng(seed + 70_000 + draw_index)
+
+    frame = patients.merge(
+        layer_a[["patient_id", "activity_score_expected"]],
+        on="patient_id",
+        how="left",
+    )
+    n = len(frame)
+
+    activity = frame["activity_score_expected"].to_numpy(dtype=float)
+    activity = np.where(np.isfinite(activity), activity, 2.0)
+    deficit = np.clip(2.0 - activity, 0.0, 2.0)
+
+    rare_ids = rare_deleterious_carriers(genotypes, catalog, spec)
+    rs_ids = variant_carriers(genotypes, spec["rs1801160_variant_id"])
+    rare = frame["patient_id"].isin(rare_ids).to_numpy(dtype=bool)
+    rs1801160 = frame["patient_id"].isin(rs_ids).to_numpy(dtype=bool)
+
+    age = frame["age_years"].to_numpy(dtype=float)
+    egfr = frame["renal_function_egfr"].to_numpy(dtype=float)
+    comed = frame["co_medication_interacting"].to_numpy(dtype=bool)
+    regimen = frame["regimen"].astype(str).to_numpy()
+
+    age_spec = spec["centring"]["age_years"]
+    egfr_spec = spec["centring"]["renal_function_egfr"]
+
+    logit = np.full(n, effects.get("intercept"))
+    logit += effects.get("activity_deficit_per_unit") * deficit
+    logit += effects.get("rare_deleterious_burden") * rare
+    logit += effects.get("rs1801160_carrier") * rs1801160
+    logit += effects.get("age_per_decade") * (age - float(age_spec)) / 10.0
+    logit += effects.get("egfr_per_10_below_ref") * np.clip(
+        (float(egfr_spec) - egfr) / 10.0, 0.0, None
+    )
+    logit += effects.get("co_medication") * comed
+    for name, value in spec["regimen_effects"].items():
+        logit += float(value) * (regimen == name)
+
+    severe = rng.random(n) < _logit_to_probability(logit)
+
+    # Nested and internally consistent: every death is a grade 5, every
+    # grade 5 a death, and both only happen inside a grade 4-5 event.
+    death = severe & (rng.random(n) < float(spec["p_fatal_given_grade45"]))
+    grade = np.where(severe, 4, 0).astype(int)
+    grade[death] = 5
+
+    oral = np.isin(regimen, list(ORAL_REGIMENS))
+    drug = np.where(oral, "capecitabine", "fluorouracil")
+
+    out = pd.DataFrame(
+        {
+            "patient_id": frame["patient_id"].to_numpy(),
+            "drug": drug,
+            "severe_grade45": severe,
+            "ctcae_grade_max_v2": grade,
+            "treatment_related_death": death,
+            "rare_deleterious_carrier": rare,
+            "rs1801160_carrier": rs1801160,
+            "outcome_model_version": effects.version,
+            "endpoint": str(spec["endpoint"]),
+            "effect_size_source_pmids": ";".join(effects.pmids),
+            "effect_size_provenance": _provenance_summary(effects),
+            "label_type": "SIMULATED",
+        }
+    )
+    return out[OUTCOME_V2_COLUMNS], effects

@@ -1120,3 +1120,82 @@ def gate_outcome_coverage(
         "come from the enriched coverage panel, not from population sampling.",
         pd.DataFrame(rows),
     )
+
+
+def gate_outcome_v2_calibration(
+    outcomes_v2: pd.DataFrame | None, spec: dict | None
+) -> GateResult:
+    """v2's realised event rate must still match the rate it was solved for.
+
+    v2's intercept is DERIVED: it was solved by bisection so the mean
+    predicted probability equals the 267/3437 grade 4-5 rate reported by
+    Boige et al. (PMID 41386266). That makes it the one coefficient that
+    silently stops being true if any other one changes, because nothing
+    re-solves it automatically. This gate is what catches that.
+
+    It also checks the two sourced odds ratios are still the transcribed
+    values, since a drifted coefficient with a SOURCED tag is worse than an
+    honest assumption.
+    """
+    if outcomes_v2 is None or outcomes_v2.empty or not spec:
+        return GateResult(
+            name="Layer B v2 calibration",
+            section="8.9",
+            status="SKIPPED",
+            summary="outcomes_v2 not generated; nothing to calibrate against.",
+        )
+
+    target = float(spec["target_event_rate"])
+    realised = float(outcomes_v2["severe_grade45"].mean())
+    tolerance = 0.005
+    drift = abs(realised - target)
+
+    coefficients = spec["coefficients"]
+    expected_or = {
+        "rare_deleterious_burden": 3.20,
+        "rs1801160_carrier": 1.49,
+    }
+    or_rows = []
+    or_bad = []
+    for name, want in expected_or.items():
+        got = float(np.exp(float(coefficients[name]["value"])))
+        ok = abs(got - want) < 0.01
+        or_rows.append({"coefficient": name, "expected_or": want,
+                        "realised_or": round(got, 4), "ok": ok})
+        if not ok:
+            or_bad.append(name)
+
+    failures = []
+    if drift > tolerance:
+        failures.append(
+            f"event rate {realised:.4f} vs target {target:.4f} "
+            f"(drift {drift:.4f} > {tolerance})"
+        )
+    if or_bad:
+        failures.append(f"sourced odds ratios no longer transcribed: {or_bad}")
+
+    details = pd.DataFrame(
+        or_rows + [{"coefficient": "intercept (DERIVED)", "expected_or": target,
+                    "realised_or": round(realised, 4), "ok": drift <= tolerance}]
+    )
+    return GateResult(
+        name="Layer B v2 calibration",
+        section="8.9",
+        status="FAIL" if failures else "PASS",
+        summary=(
+            f"grade 4-5 rate {realised:.4f} against the sourced target "
+            f"{target:.4f} (tolerance {tolerance}); OR 3.20 and OR 1.49 "
+            "transcribed as configured."
+            if not failures
+            else "; ".join(failures)
+        ),
+        details=details,
+        metrics={
+            "target_event_rate": target,
+            "realised_event_rate": realised,
+            "drift": drift,
+            "tolerance": tolerance,
+            "rare_carrier_rate": float(outcomes_v2["rare_deleterious_carrier"].mean()),
+            "rs1801160_carrier_rate": float(outcomes_v2["rs1801160_carrier"].mean()),
+        },
+    )

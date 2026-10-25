@@ -449,6 +449,32 @@ def main() -> int:
     primary_outcomes = outcome_frames[0]
     all_outcomes = pd.concat(outcome_frames, ignore_index=True)
 
+    # --- Layer B, model v2 -------------------------------------------------
+    # Emitted alongside v1, never instead of it, and on its own RNG offset so
+    # every v1 output stays byte-identical whether or not v2 runs.
+    v2_spec = config.get("outcomes_v2") or {}
+    outcomes_v2_primary = None
+    outcomes_v2_all = None
+    if v2_spec.get("enabled", False):
+        log("simulating Layer B v2 (grade 4-5, sourced effect sizes) ...")
+        v2_frames = []
+        for draw in range(int(v2_spec["sensitivity_draws"])):
+            frame, effects = outcomes.simulate_outcomes_v2(
+                patients, expected, genotypes_long, catalog, v2_spec, seed,
+                draw_index=draw,
+            )
+            v2_frames.append(frame)
+            rate = frame["severe_grade45"].mean()
+            target = float(v2_spec["target_event_rate"])
+            log(f"  draw {draw} ({effects.version}): grade4-5 rate {rate:.4f} "
+                f"(target {target:.4f})")
+        outcomes_v2_primary = v2_frames[0]
+        outcomes_v2_all = pd.concat(v2_frames, ignore_index=True)
+        log(f"  rare-deleterious carriers "
+            f"{outcomes_v2_primary['rare_deleterious_carrier'].mean():.4f}, "
+            f"rs1801160 carriers "
+            f"{outcomes_v2_primary['rs1801160_carrier'].mean():.4f}")
+
     # --- write ------------------------------------------------------------
     log("writing data files ...")
     patient_columns = [
@@ -463,6 +489,11 @@ def main() -> int:
     expected.to_parquet(data_dir / "expected_engine_output.parquet", index=False)
     primary_outcomes.to_parquet(data_dir / "outcomes.parquet", index=False)
     all_outcomes.to_parquet(data_dir / "outcomes_sensitivity.parquet", index=False)
+    if outcomes_v2_primary is not None:
+        outcomes_v2_primary.to_parquet(data_dir / "outcomes_v2.parquet", index=False)
+        outcomes_v2_all.to_parquet(
+            data_dir / "outcomes_v2_sensitivity.parquet", index=False
+        )
     refusal_frame.to_parquet(data_dir / "refusal_cases.parquet", index=False)
     if not coverage_frame.empty:
         coverage_frame.to_parquet(data_dir / "coverage_cases.parquet", index=False)
@@ -549,6 +580,32 @@ def main() -> int:
             "recombination_map": config["genotypes"]["recombination_map"],
         },
         "outcome_model_versions": sorted(all_outcomes["outcome_model_version"].unique()),
+        "outcomes_v2": (
+            {
+                "enabled": True,
+                "endpoint": str(v2_spec["endpoint"]),
+                "target_event_rate": float(v2_spec["target_event_rate"]),
+                "realised_event_rate": float(
+                    outcomes_v2_primary["severe_grade45"].mean()
+                ),
+                "rare_deleterious_carrier_rate": float(
+                    outcomes_v2_primary["rare_deleterious_carrier"].mean()
+                ),
+                "rs1801160_carrier_rate": float(
+                    outcomes_v2_primary["rs1801160_carrier"].mean()
+                ),
+                "versions": sorted(outcomes_v2_all["outcome_model_version"].unique()),
+                "source_pmids": sorted(
+                    {
+                        pmid
+                        for entry in v2_spec["coefficients"].values()
+                        for pmid in (entry.get("source_pmids") or [])
+                    }
+                ),
+            }
+            if outcomes_v2_primary is not None
+            else {"enabled": False}
+        ),
     }
     (root / "qc" / "generation_manifest.json").write_text(
         json.dumps(manifest, indent=2, sort_keys=True, default=str), encoding="utf-8"
