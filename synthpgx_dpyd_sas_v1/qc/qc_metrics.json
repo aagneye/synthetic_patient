@@ -1,7 +1,7 @@
 {
   "counts": {
     "FAIL": 0,
-    "PASS": 10,
+    "PASS": 11,
     "REPORTED": 6,
     "SKIPPED": 1
   },
@@ -84,6 +84,20 @@
       "section": "8.2",
       "status": "PASS",
       "summary": "All 5 DrugSafetyOutcome values and all 4 phenotypes are exercised. Poor Metabolizer rows come from the enriched coverage panel, not from population sampling."
+    },
+    {
+      "metrics": {
+        "drift": 0.00102439024390244,
+        "rare_carrier_rate": 0.01902439024390244,
+        "realised_event_rate": 0.07902439024390244,
+        "rs1801160_carrier_rate": 0.13219512195121952,
+        "target_event_rate": 0.078,
+        "tolerance": 0.005
+      },
+      "name": "Layer B v2 calibration",
+      "section": "8.9",
+      "status": "PASS",
+      "summary": "grade 4-5 rate 0.0790 against the sourced target 0.0780 (tolerance 0.005); OR 3.20 and OR 1.49 transcribed as configured."
     },
     {
       "metrics": {
