@@ -48,6 +48,45 @@ answers *what might happen to this virtual patient on the drug?* Layer B never
 feeds back into Layer A. Every Layer B row carries `label_type = SIMULATED` so
 this cannot be lost downstream.
 
+### Layer B has two models, and v2 is the one to model against
+
+`outcomes.parquet` (**v1**) targets grade 3+ toxicity at a ~41 percent event
+rate. Almost all of its variance is non-genetic, and the consequence is
+measurable: the best achievable discrimination against its own labels is
+**AUC 0.602**. That is not a modelling limit — a *perfect* model that knows
+each patient's true risk scores 0.602 — so v1 cannot distinguish a model that
+learned the genotype signal from one that did not.
+
+`outcomes_v2.parquet` (**v2**) targets the endpoint the literature actually
+models: 12-week **grade 4-5** toxicity. Rarer events, far more genotype-driven,
+measured ceiling **AUC 0.662** on this cohort.
+
+| | v1 | v2 |
+|---|---|---|
+| endpoint | grade 3+ | grade 4-5 |
+| event rate | 0.408 | 0.079 |
+| genotype terms | activity deficit, SAS override | activity deficit, rare-variant burden, rs1801160 |
+| best achievable AUC | 0.602 | 0.662 |
+| effect sizes | all `ASSUMPTION` | two `SOURCED`, one `DERIVED`, rest `ASSUMPTION` |
+
+v2 is **added, not substituted**. v1 is byte-identical to the previous build —
+verified by checksum — so every result computed against it still stands.
+
+The headline source is **Boige et al., *J Natl Cancer Inst* 2026;118(4):699-710
+(PMID 41386266)**: 3,437 colorectal patients, 267 events, full *DPYD*
+sequencing, reported AUC 0.76 (95% CI 0.73-0.78). Two of its odds ratios are
+transcribed directly — an aggregate of rare (MAF < 0.01) predicted-deleterious
+variants at **OR 3.20**, and rs1801160 at **OR 1.49** — and v2's intercept is
+solved so the event rate reproduces their 267/3437.
+
+Three honest limits on v2. Its `activity_deficit_per_unit` of 2.50 is still an
+assumption, and it is the largest one in the model. The gap from 0.662 to
+Boige's 0.76 is their full patient-and-treatment covariate set, which is not
+reproduced here. And rs1801160 is keyed on **carriage of the variant**, not on
+the South Asian override flag that v1 used — the override is a Layer A policy
+about who gets looked at more closely, not a biological effect, and modelling
+it as one was a conflation in v1.
+
 ## Layout
 
 ```
@@ -60,6 +99,8 @@ synthpgx_dpyd_sas_v1/
     expected_engine_output.parquet  Layer A ground truth
     outcomes.parquet              Layer B, primary draw
     outcomes_sensitivity.parquet  Layer B, every sensitivity draw
+    outcomes_v2.parquet           Layer B v2, grade 4-5, sourced effect sizes
+    outcomes_v2_sensitivity.parquet  v2, every sensitivity draw
     refusal_cases.parquet         engineered rows whose correct answer is a refusal
     coverage_cases.parquet        ENRICHED rows reaching the CPIC paths real frequencies miss
     refusal_genotypes_long.parquet  their variant calls
