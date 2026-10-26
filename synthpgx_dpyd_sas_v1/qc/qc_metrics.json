@@ -1,7 +1,7 @@
 {
   "counts": {
     "FAIL": 0,
-    "PASS": 11,
+    "PASS": 12,
     "REPORTED": 6,
     "SKIPPED": 1
   },
@@ -98,6 +98,20 @@
       "section": "8.9",
       "status": "PASS",
       "summary": "grade 4-5 rate 0.0790 against the sourced target 0.0780 (tolerance 0.005); OR 3.20 and OR 1.49 transcribed as configured."
+    },
+    {
+      "metrics": {
+        "dpyd_aggregate_carrier_rate": 0.007365853658536585,
+        "drift": 0.0016829268292682942,
+        "hapb3_carrier_rate": 0.025658536585365852,
+        "n_odds_ratios_checked": 11,
+        "realised_event_rate": 0.07468292682926829,
+        "target_event_rate": 0.073
+      },
+      "name": "Layer B v3 calibration",
+      "section": "8.10",
+      "status": "PASS",
+      "summary": "grade 4-5 rate 0.0747 against the sourced target 0.0730; all 11 odds ratios transcribed from FUSAFE Table 2 (PMID 38225422) still match."
     },
     {
       "metrics": {

@@ -182,6 +182,46 @@ two rates now differ by 0.2 points.
   would reappear here as a fresh `tie_break_equal_activity` class rather than
   drift past unnoticed, which is what running the gate is for.
 
+## Sourced effect sizes: what was transcribed, and one discrepancy
+
+Layer B v3 transcribes eleven odds ratios from the FUSAFE individual-patient-data
+meta-analysis (Le Teuff et al., Br J Cancer 2024;130(5):808-818, PMID 38225422,
+open access), Table 2. Gate 8.10 checks every one of them back against the
+published value on each validation run.
+
+**The BMI percentage column in that table appears transposed.** As published,
+Table 2 pairs "Normal" with 3 percent of patients and "Underweight" with 40
+percent. For a Caucasian cancer cohort that is backwards, and a 3 percent
+category would also be an odd choice of reference level. The clinically
+coherent reading is Normal 40 percent and Underweight 3 percent, and that is
+what `clinical_covariates.bmi` samples.
+
+The odds ratios are taken **as labelled**, not swapped: underweight raising
+risk (OR 1.4) and obesity lowering it (OR 0.7) is the direction the
+body-surface-area dosing literature predicts, so the labels on the OR column
+are very likely right even though the percentages beside them are not. Both
+readings are recorded here rather than one being silently chosen.
+
+**Why v3 does not reach FUSAFE's headline AUC.** FUSAFE reports an apparent
+AUC of 0.75 for its clinical-plus-DPYD model. v3's ceiling on this cohort is
+0.685. The difference is not a modelling gap: it is allele frequency. FUSAFE's
+aggregate of *2A/*13/p.D949V reaches 2.2 percent of their Caucasian patients
+and HapB3 4.0 percent, where in this South Asian cohort the same variants
+reach 0.74 percent and 2.6 percent. The strongest predictor in the model is
+rarer here, so the same effect sizes buy less discrimination. That is a
+faithful property of the population, and arguably the most clinically
+interesting thing this dataset says: a European-derived risk model transfers
+to South Asian patients with less of its discriminating power intact than its
+published AUC implies.
+
+**Read the apparent AUC with care.** FUSAFE also report cross-validated,
+overfitting-corrected figures: 0.62 for clinical plus DPYD, 0.58 for clinical
+alone, 0.55 for DPYD variants alone. The 0.75 is what the model scores on the
+data it was fitted to. A synthetic generator reproduces the apparent number,
+because it has neither model misspecification nor between-study heterogeneity,
+so a v3 ceiling must never be compared to 0.75 as though they measured the
+same thing.
+
 ## Still open
 
 - GenomeIndia (9,768 genomes, IBDC portal ibdc.dbt.gov.in) exposes no machine-readable aggregate-frequency endpoint that this build could reach; every freq_genomeindia value is null. Supply a downloaded frequency file to populate it.
