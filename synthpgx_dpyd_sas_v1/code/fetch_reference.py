@@ -69,6 +69,10 @@ def main() -> int:
 
 
 PARITY_HEADING = "## PharmCAT parity"
+SOURCED_EFFECTS_HEADING = "## Sourced effect sizes"
+
+# Sections written by hand that must survive a regeneration of this file.
+CARRIED_OVER_HEADINGS = (PARITY_HEADING, SOURCED_EFFECTS_HEADING)
 
 
 def _carry_over_section(path: Path, heading: str) -> list[str]:
@@ -102,7 +106,13 @@ def _carry_over_section(path: Path, heading: str) -> list[str]:
 
 
 def write_open_questions(build, path: Path) -> None:
-    carried_over = _carry_over_section(path, PARITY_HEADING)
+    carried_over: list[str] = []
+    for heading in CARRIED_OVER_HEADINGS:
+        section = _carry_over_section(path, heading)
+        if section:
+            carried_over.extend(section + [""])
+    while carried_over and not carried_over[-1].strip():
+        carried_over.pop()
     lines = [
         "# Open questions and unsourced values",
         "",

@@ -228,6 +228,11 @@ def main() -> int:
     results.append(
         qc.gate_outcome_v2_calibration(outcomes_v2, config.get("outcomes_v2"))
     )
+    v3_path = data_dir / "outcomes_v3.parquet"
+    outcomes_v3 = pd.read_parquet(v3_path) if v3_path.exists() else None
+    results.append(
+        qc.gate_outcome_v3_calibration(outcomes_v3, config.get("outcomes_v3"))
+    )
     log("8.2 PharmCAT parity (skipped quickly if PharmCAT is not installed) ...")
     with tempfile.TemporaryDirectory(prefix="synthpgx_pharmcat_") as scratch:
         results.append(

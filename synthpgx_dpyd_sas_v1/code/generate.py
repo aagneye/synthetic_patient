@@ -314,6 +314,26 @@ def main() -> int:
         [patients.reset_index(drop=True), covariate_frame.reset_index(drop=True)], axis=1
     )
     patients["cancer_type"] = config["dataset"]["cancer_type"]
+
+    # BMI, on its own RNG stream so the copula's draws — and therefore every
+    # pre-existing covariate and all of Layer B v1 — are byte-identical
+    # whether or not this runs. Marginals are SOURCED from FUSAFE; see the
+    # config note for the transposition caveat in the published table.
+    bmi_spec = config["clinical_covariates"].get("bmi")
+    if bmi_spec:
+        bmi_rng = np.random.default_rng(seed + 80_000)
+        names = list(bmi_spec["bands"])
+        weights = np.array([bmi_spec["bands"][k][0] for k in names], dtype=float)
+        weights = weights / weights.sum()
+        picked = bmi_rng.choice(len(names), size=len(patients), p=weights)
+        lows = np.array([bmi_spec["bands"][k][1] for k in names], dtype=float)
+        highs = np.array([bmi_spec["bands"][k][2] for k in names], dtype=float)
+        patients["bmi_category"] = [names[i] for i in picked]
+        patients["bmi"] = np.round(
+            lows[picked] + bmi_rng.random(len(patients)) * (highs[picked] - lows[picked]),
+            1,
+        )
+        log(f"  BMI: {patients['bmi_category'].value_counts(normalize=True).round(3).to_dict()}")
     patients["admixture_json"] = [
         json.dumps({"SAS": 1.0}) if p == "SAS" else None
         for p in patients["ancestry_super_pop"]
@@ -475,6 +495,27 @@ def main() -> int:
             f"rs1801160 carriers "
             f"{outcomes_v2_primary['rs1801160_carrier'].mean():.4f}")
 
+    # --- Layer B, model v3 -------------------------------------------------
+    v3_spec = config.get("outcomes_v3") or {}
+    outcomes_v3_primary = None
+    outcomes_v3_all = None
+    if v3_spec.get("enabled", False) and "bmi_category" in patients.columns:
+        log("simulating Layer B v3 (FUSAFE clinical + DPYD) ...")
+        v3_frames = []
+        for draw in range(int(v3_spec["sensitivity_draws"])):
+            frame, effects = outcomes.simulate_outcomes_v3(
+                patients, genotypes_long, v3_spec, seed, draw_index=draw
+            )
+            v3_frames.append(frame)
+            log(f"  draw {draw} ({effects.version}): grade4-5 rate "
+                f"{frame['severe_grade45'].mean():.4f} "
+                f"(target {float(v3_spec['target_event_rate']):.4f})")
+        outcomes_v3_primary = v3_frames[0]
+        outcomes_v3_all = pd.concat(v3_frames, ignore_index=True)
+        log(f"  DPYD *2A/*13/D949V carriers "
+            f"{outcomes_v3_primary['dpyd_aggregate_carrier'].mean():.4f}, "
+            f"HapB3 {outcomes_v3_primary['hapb3_carrier'].mean():.4f}")
+
     # --- write ------------------------------------------------------------
     log("writing data files ...")
     patient_columns = [
@@ -483,12 +524,19 @@ def main() -> int:
         "renal_function_egfr", "co_medication_flags", "generation_method", "seed",
         "is_real_variant_anchor", "cohort", "label_type",
     ]
+    if "bmi" in patients.columns:
+        patient_columns = patient_columns[:-1] + ["bmi", "bmi_category", "label_type"]
     patients_out = patients[patient_columns]
     patients_out.to_parquet(data_dir / "patients.parquet", index=False)
     genotypes_long.to_parquet(data_dir / "genotypes_long.parquet", index=False)
     expected.to_parquet(data_dir / "expected_engine_output.parquet", index=False)
     primary_outcomes.to_parquet(data_dir / "outcomes.parquet", index=False)
     all_outcomes.to_parquet(data_dir / "outcomes_sensitivity.parquet", index=False)
+    if outcomes_v3_primary is not None:
+        outcomes_v3_primary.to_parquet(data_dir / "outcomes_v3.parquet", index=False)
+        outcomes_v3_all.to_parquet(
+            data_dir / "outcomes_v3_sensitivity.parquet", index=False
+        )
     if outcomes_v2_primary is not None:
         outcomes_v2_primary.to_parquet(data_dir / "outcomes_v2.parquet", index=False)
         outcomes_v2_all.to_parquet(

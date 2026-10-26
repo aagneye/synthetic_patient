@@ -1199,3 +1199,78 @@ def gate_outcome_v2_calibration(
             "rs1801160_carrier_rate": float(outcomes_v2["rs1801160_carrier"].mean()),
         },
     )
+
+
+def gate_outcome_v3_calibration(
+    outcomes_v3: pd.DataFrame | None, spec: dict | None
+) -> GateResult:
+    """v3's realised rate and its eleven transcribed odds ratios.
+
+    v3 carries more sourced numbers than any other part of this dataset, so
+    it has more that can silently drift. Every odds ratio taken from FUSAFE
+    Table 2 is checked back against the published value, and the DERIVED
+    intercept against the rate it was solved for.
+    """
+    if outcomes_v3 is None or outcomes_v3.empty or not spec:
+        return GateResult(
+            name="Layer B v3 calibration",
+            section="8.10",
+            status="SKIPPED",
+            summary="outcomes_v3 not generated; nothing to calibrate against.",
+        )
+
+    target = float(spec["target_event_rate"])
+    realised = float(outcomes_v3["severe_grade45"].mean())
+    tolerance = 0.005
+    drift = abs(realised - target)
+
+    # FUSAFE Table 2, M2 column (M3 for HapB3).
+    published = {
+        "age_50_59": 1.3, "age_60_69": 2.0, "age_70_plus": 2.4,
+        "sex_female": 1.9, "bmi_underweight": 1.4, "bmi_overweight": 0.8,
+        "bmi_obesity": 0.7, "schedule_continuous_or_oral": 0.4,
+        "concomitant_one": 2.3, "dpyd_deleterious_aggregate": 9.5,
+        "hapb3": 1.8,
+    }
+    coefficients = spec["coefficients"]
+    rows, bad = [], []
+    for name, want in published.items():
+        got = float(np.exp(float(coefficients[name]["value"])))
+        ok = abs(got - want) < 0.05
+        rows.append({"coefficient": name, "published_or": want,
+                     "realised_or": round(got, 3), "ok": ok})
+        if not ok:
+            bad.append(name)
+
+    failures = []
+    if drift > tolerance:
+        failures.append(
+            f"event rate {realised:.4f} vs target {target:.4f} "
+            f"(drift {drift:.4f} > {tolerance})"
+        )
+    if bad:
+        failures.append(f"odds ratios no longer match FUSAFE Table 2: {bad}")
+
+    return GateResult(
+        name="Layer B v3 calibration",
+        section="8.10",
+        status="FAIL" if failures else "PASS",
+        summary=(
+            f"grade 4-5 rate {realised:.4f} against the sourced target "
+            f"{target:.4f}; all {len(published)} odds ratios transcribed from "
+            "FUSAFE Table 2 (PMID 38225422) still match."
+            if not failures
+            else "; ".join(failures)
+        ),
+        details=pd.DataFrame(rows),
+        metrics={
+            "target_event_rate": target,
+            "realised_event_rate": realised,
+            "drift": drift,
+            "n_odds_ratios_checked": len(published),
+            "dpyd_aggregate_carrier_rate": float(
+                outcomes_v3["dpyd_aggregate_carrier"].mean()
+            ),
+            "hapb3_carrier_rate": float(outcomes_v3["hapb3_carrier"].mean()),
+        },
+    )

@@ -410,3 +410,122 @@ def simulate_outcomes_v2(
         }
     )
     return out[OUTCOME_V2_COLUMNS], effects
+
+
+# ----------------------------------------------------------------------
+# Layer B, model v3: the FUSAFE clinical + DPYD model
+# ----------------------------------------------------------------------
+
+OUTCOME_V3_COLUMNS = [
+    "patient_id",
+    "drug",
+    "severe_grade45",
+    "ctcae_grade_max_v3",
+    "treatment_related_death",
+    "dpyd_aggregate_carrier",
+    "hapb3_carrier",
+    "bmi_category",
+    "schedule_continuous_or_oral",
+    "n_concomitant",
+    "outcome_model_version",
+    "endpoint",
+    "effect_size_source_pmids",
+    "effect_size_provenance",
+    "label_type",
+]
+
+
+def simulate_outcomes_v3(
+    patients: pd.DataFrame,
+    genotypes: pd.DataFrame,
+    spec: dict[str, Any],
+    seed: int,
+    draw_index: int = 0,
+) -> tuple[pd.DataFrame, EffectSizes]:
+    """The FUSAFE model: clinical covariates plus the three named DPYD variants.
+
+    What v2 was missing was not a better genotype term but the clinical half
+    of the model. FUSAFE's M1, clinical covariates alone and no genetics at
+    all, reaches an apparent AUC of 0.73 — higher than v2's entire ceiling.
+    Age, sex, BMI, administration schedule and concomitant agents are doing
+    most of the discriminating, and v2 had only age.
+
+    The genotype term here is also narrower and far stronger than v2's: not a
+    generic rare-variant burden but the three variants EMA and CPIC already
+    recommend testing, merged, at OR 9.5.
+
+    Two honesty notes that belong next to any AUC computed from this. The
+    0.75 FUSAFE reports is an *apparent* AUC; cross-validated it is 0.62, and
+    a synthetic generator reproduces the apparent one because it has neither
+    model misspecification nor between-study heterogeneity. And sex is
+    causal here, which it is not in v1 or v2 — anything using sex as a
+    negative control must stop doing so for v3.
+
+    Runs on its own RNG offset, so v1 and v2 outputs are untouched.
+    """
+    effects = draw_effect_sizes(spec, draw_index, seed)
+    rng = np.random.default_rng(seed + 90_000 + draw_index)
+
+    frame = patients.reset_index(drop=True)
+    n = len(frame)
+
+    called = genotypes[genotypes["genotype"].astype(str).str.contains("1")]
+    aggregate_ids = set(map(str, spec["dpyd_aggregate_variant_ids"]))
+    hapb3_ids = set(map(str, spec["hapb3_variant_ids"]))
+    aggregate = frame["patient_id"].isin(
+        set(called.loc[called["variant_id"].astype(str).isin(aggregate_ids), "patient_id"])
+    ).to_numpy(dtype=bool)
+    hapb3 = frame["patient_id"].isin(
+        set(called.loc[called["variant_id"].astype(str).isin(hapb3_ids), "patient_id"])
+    ).to_numpy(dtype=bool)
+
+    age = frame["age_years"].to_numpy(dtype=float)
+    female = frame["sex"].astype(str).eq("F").to_numpy()
+    bmi_category = frame["bmi_category"].astype(str).to_numpy()
+    regimen = frame["regimen"].astype(str).to_numpy()
+
+    bolus = np.isin(regimen, list(spec["bolus_regimens"]))
+    continuous_or_oral = ~bolus
+    one_concomitant = np.isin(regimen, list(spec["one_concomitant_regimens"]))
+
+    logit = np.full(n, effects.get("intercept"))
+    logit += effects.get("age_50_59") * ((age >= 50) & (age < 60))
+    logit += effects.get("age_60_69") * ((age >= 60) & (age < 70))
+    logit += effects.get("age_70_plus") * (age >= 70)
+    logit += effects.get("sex_female") * female
+    logit += effects.get("bmi_underweight") * (bmi_category == "underweight")
+    logit += effects.get("bmi_overweight") * (bmi_category == "overweight")
+    logit += effects.get("bmi_obesity") * (bmi_category == "obesity")
+    logit += effects.get("schedule_continuous_or_oral") * continuous_or_oral
+    logit += effects.get("concomitant_one") * one_concomitant
+    logit += effects.get("dpyd_deleterious_aggregate") * aggregate
+    logit += effects.get("hapb3") * hapb3
+
+    severe = rng.random(n) < _logit_to_probability(logit)
+    death = severe & (rng.random(n) < float(spec["p_fatal_given_grade45"]))
+    grade = np.where(severe, 4, 0).astype(int)
+    grade[death] = 5
+
+    oral = np.isin(regimen, list(ORAL_REGIMENS))
+    drug = np.where(oral, "capecitabine", "fluorouracil")
+
+    out = pd.DataFrame(
+        {
+            "patient_id": frame["patient_id"].to_numpy(),
+            "drug": drug,
+            "severe_grade45": severe,
+            "ctcae_grade_max_v3": grade,
+            "treatment_related_death": death,
+            "dpyd_aggregate_carrier": aggregate,
+            "hapb3_carrier": hapb3,
+            "bmi_category": bmi_category,
+            "schedule_continuous_or_oral": continuous_or_oral,
+            "n_concomitant": one_concomitant.astype(int),
+            "outcome_model_version": effects.version,
+            "endpoint": str(spec["endpoint"]),
+            "effect_size_source_pmids": ";".join(effects.pmids),
+            "effect_size_provenance": _provenance_summary(effects),
+            "label_type": "SIMULATED",
+        }
+    )
+    return out[OUTCOME_V3_COLUMNS], effects
