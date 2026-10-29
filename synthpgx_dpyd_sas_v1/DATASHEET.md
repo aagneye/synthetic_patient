@@ -201,6 +201,11 @@ returned). Each injected variant is placed on an independently chosen clade, so
 it inherits realistic linkage to the *background* but not the real linkage to
 *other injected variants*. The one exception is handled explicitly: HapB3's two
 defining variants are injected as a unit and co-occur in 526 of 526 carriers.
+Turner et al. 2024 (PMID 38129972) report that linkage is not perfect in All
+of Us (LD 0.9985, n=245,394), but every discordant carrier they found was of
+European or "Other" ancestry, and their South Asian frequencies for the two
+variants are identical at 0.01687. Perfect co-occurrence is therefore the
+sourced behaviour for this cohort rather than a simplification.
 
 This matters for anything that depends on tag-SNP behaviour across the gene. It
 does not affect per-variant frequency, Hardy-Weinberg, or the Layer A call.

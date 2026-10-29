@@ -114,6 +114,15 @@ def read_haplotype_groups(reference_dir: Path) -> dict[str, list[str]]:
     and c.1236G>A, which are in near-complete linkage. Injecting them
     independently would hand some patients one without the other, which is not
     a genotype that occurs at any meaningful rate in real data.
+
+    Linking them is right for this cohort specifically, not merely convenient.
+    Turner et al. 2024 (PMID 38129972) found 14 carriers of c.1236G>A without
+    c.1129-5923C>G in All of Us (n=245,394), reporting LD 0.9985 -- but 13 of
+    the 14 were of European genetic ancestry and one was "Other". Their
+    per-ancestry frequencies are identical in South Asians (0.01687 for both
+    variants) where they differ in Europeans (0.02091 against 0.02085). At the
+    resolution of that cohort the South Asian discordance rate is zero, so a
+    unit injection is the sourced choice for a South Asian cohort.
     """
     path = reference_dir / "cpic_allele_definitions.csv"
     if not path.exists():

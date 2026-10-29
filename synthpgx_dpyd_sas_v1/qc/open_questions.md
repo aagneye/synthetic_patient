@@ -222,6 +222,93 @@ because it has neither model misspecification nor between-study heterogeneity,
 so a v3 ceiling must never be compared to 0.75 as though they measured the
 same thing.
 
+## Published Indian DPYD frequencies disagree, so none was adopted
+
+A search of the published Indian and South Asian literature returns
+frequencies for the two most actionable *DPYD* variants that differ by more
+than an order of magnitude:
+
+| Source | HapB3 | c.1905+1G>A (*2A) |
+|---|---|---|
+| Indian breast-cancer cohort | 3.13% | 1.67% |
+| Commercial laboratory document, n=1,401 | 1.97% | 0.51% |
+| gnomAD-derived summary table | not given | 0.05% |
+| This build (`freq_gnomad_sas`) | 1.61% | 0.27% |
+
+The breast-cancer figure is the least trustworthy of the three: that source
+labels HapB3 as c.1679T>G, which is *13, not HapB3 (c.1236G>A together with
+c.1129-5923C>G). A source that misnames the variant cannot be trusted for its
+frequency.
+
+No value from this table was adopted. The build continues to use gnomAD SAS,
+which is what every other frequency in the catalog is sourced to, and mixing a
+single literature value into a gnomAD-derived catalog would leave the
+frequencies internally inconsistent. The disagreement is recorded rather than
+resolved, because resolving it needs the primary papers and their sample
+definitions, not their abstracts.
+
+This matters most for V732I (c.2194G>A, rs1801160), whose gnomAD SAS frequency
+of 9.17 percent is what puts it over the 5 percent line and drives the South
+Asian override in 17.0 percent of this cohort. The one Indian paper already in
+the catalog (PMID 33105068) reports 8.44 percent, which agrees. No other
+Indian-specific frequency for that variant was found.
+
+## Two 1000 Genomes frequencies are reported against the opposite allele
+
+`freq_1kg_gih` for c.1236G>A reads 0.9515, where its HapB3 partner
+c.1129-5923C>G reads 0.0485. The two sit on one haplotype in near-complete
+linkage and must have near-equal frequencies; 1 - 0.9515 = 0.0485 recovers
+exactly that. The same pattern appears for c.1905C>G, which reads 1.0000 where
+gnomAD SAS reports 0.0. Both are consistent with Ensembl reporting the
+frequency of the allele this catalog calls `ref`.
+
+These columns are supplemental and nothing is generated from them. Injection
+targets are built from `freq_gnomad_*` alone (`frequency_targets` in
+`generate.py`), and no QC gate reads `freq_1kg_*`. They are recorded here
+because a reader comparing the catalog's own columns would otherwise conclude
+that HapB3 is near-fixed in Gujarati Indians, which it is not.
+
+## HapB3 is injected as one unit, and for South Asians that is correct
+
+The two variants defining HapB3, c.1129-5923C>G (causal, intronic) and
+c.1236G>A (the benign exonic tagSNP), are injected together: every carrier of
+one is a carrier of the other, 526 of 526 in this cohort. That was originally
+an assumption about near-complete linkage. It is now sourced.
+
+Turner et al. 2024 (PMID 38129972) showed the two are *not* in perfect
+linkage. In the All of Us WGS cohort (n = 245,394) they found 14 participants
+carrying c.1236G>A without c.1129-5923C>G, against 6,265 (2.55 percent)
+carrying both, and report variant LD of 0.9985.
+
+The ancestry breakdown is what decides the question for this build. Thirteen
+of those 14 were of European genetic ancestry and one was "Other". None was
+South Asian, and their Table 1 frequencies are identical in South Asians
+where they separate in Europeans:
+
+| Ancestry | c.1236G>A | c.1129-5923C>G | Differ? |
+|---|---|---|---|
+| South Asian | 0.01687 | 0.01687 | no |
+| European | 0.02091 | 0.02085 | yes |
+| Other | 0.00920 | 0.00915 | yes |
+
+So the discordance Turner et al. found is a European phenomenon at the
+resolution of a 245,394-person cohort. A South Asian cohort that injects the
+pair as a unit is reproducing what the best available data says, and adding a
+discordance rate here would import a European haplotype structure into a South
+Asian population.
+
+Two caveats. First, 245,394 participants is not enough to exclude a rare South
+Asian discordant haplotype; absence of evidence at this depth is not evidence
+of absence, and a larger South Asian cohort could change the answer. Second,
+this build's own gnomAD frequencies are not perfectly equal for the pair
+(0.016136 against 0.016196 in SAS), where All of Us reports them identical;
+the difference is below the resolution at which injection operates and no
+carrier is affected, but the catalog columns are not self-consistent.
+
+For anyone extending this dataset to European patients, the unit injection
+would be wrong and a discordance rate of roughly 14 in 6,265 carriers would be
+the sourced value.
+
 ## Still open
 
 - GenomeIndia (9,768 genomes, IBDC portal ibdc.dbt.gov.in) exposes no machine-readable aggregate-frequency endpoint that this build could reach; every freq_genomeindia value is null. Supply a downloaded frequency file to populate it.
